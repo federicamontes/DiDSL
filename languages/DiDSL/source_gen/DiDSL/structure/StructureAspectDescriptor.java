@@ -16,12 +16,18 @@ import jetbrains.mps.smodel.adapter.ids.MetaIdFactory;
 import jetbrains.mps.smodel.adapter.ids.PrimitiveTypeId;
 
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
+  /*package*/ final ConceptDescriptor myConceptAll = createDescriptorForAll();
+  /*package*/ final ConceptDescriptor myConceptBasedOn = createDescriptorForBasedOn();
   /*package*/ final ConceptDescriptor myConceptCheckParallelTrendsStaggered = createDescriptorForCheckParallelTrendsStaggered();
+  /*package*/ final ConceptDescriptor myConceptColumnReference = createDescriptorForColumnReference();
   /*package*/ final ConceptDescriptor myConceptComputePrePostMeans = createDescriptorForComputePrePostMeans();
+  /*package*/ final ConceptDescriptor myConceptEmptyLine = createDescriptorForEmptyLine();
   /*package*/ final ConceptDescriptor myConceptGroupColumnClause = createDescriptorForGroupColumnClause();
+  /*package*/ final ConceptDescriptor myConceptIColumnClause = createDescriptorForIColumnClause();
+  /*package*/ final ConceptDescriptor myConceptIReferenceOutcomeColumn = createDescriptorForIReferenceOutcomeColumn();
   /*package*/ final ConceptDescriptor myConceptImputeMissingMultiple = createDescriptorForImputeMissingMultiple();
   /*package*/ final ConceptDescriptor myConceptLoadDataset = createDescriptorForLoadDataset();
-  /*package*/ final ConceptDescriptor myConceptOutcomeColumn = createDescriptorForOutcomeColumn();
+  /*package*/ final ConceptDescriptor myConceptOmit = createDescriptorForOmit();
   /*package*/ final ConceptDescriptor myConceptPValue = createDescriptorForPValue();
   /*package*/ final ConceptDescriptor myConceptPlotEventStudyMeans = createDescriptorForPlotEventStudyMeans();
   /*package*/ final ConceptDescriptor myConceptRunAttEstimations = createDescriptorForRunAttEstimations();
@@ -29,15 +35,14 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptSet = createDescriptorForSet();
   /*package*/ final ConceptDescriptor myConceptSetCovariates = createDescriptorForSetCovariates();
   /*package*/ final ConceptDescriptor myConceptShowDataset = createDescriptorForShowDataset();
-  /*package*/ final ConceptDescriptor myConceptShowRows = createDescriptorForShowRows();
   /*package*/ final ConceptDescriptor myConceptSignificanceLevel = createDescriptorForSignificanceLevel();
   /*package*/ final ConceptDescriptor myConceptStatement = createDescriptorForStatement();
   /*package*/ final ConceptDescriptor myConceptTimeColumnClause = createDescriptorForTimeColumnClause();
   /*package*/ final ConceptDescriptor myConceptTreatmentValues = createDescriptorForTreatmentValues();
+  /*package*/ final ConceptDescriptor myConceptUsing = createDescriptorForUsing();
   /*package*/ final EnumerationDescriptor myEnumerationCSVHeader = new EnumerationDescriptor_CSVHeader();
   /*package*/ final EnumerationDescriptor myEnumerationClusteringType = new EnumerationDescriptor_ClusteringType();
   /*package*/ final EnumerationDescriptor myEnumerationColumnType = new EnumerationDescriptor_ColumnType();
-  /*package*/ final EnumerationDescriptor myEnumerationControlGroupStrategy = new EnumerationDescriptor_ControlGroupStrategy();
   /*package*/ final EnumerationDescriptor myEnumerationControlStrategy = new EnumerationDescriptor_ControlStrategy();
   /*package*/ final EnumerationDescriptor myEnumerationEstimationMethod = new EnumerationDescriptor_EstimationMethod();
   private final LanguageConceptSwitch myIndexSwitch;
@@ -54,25 +59,37 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptCheckParallelTrendsStaggered, myConceptComputePrePostMeans, myConceptGroupColumnClause, myConceptImputeMissingMultiple, myConceptLoadDataset, myConceptOutcomeColumn, myConceptPValue, myConceptPlotEventStudyMeans, myConceptRunAttEstimations, myConceptScript, myConceptSet, myConceptSetCovariates, myConceptShowDataset, myConceptShowRows, myConceptSignificanceLevel, myConceptStatement, myConceptTimeColumnClause, myConceptTreatmentValues);
+    return Arrays.asList(myConceptAll, myConceptBasedOn, myConceptCheckParallelTrendsStaggered, myConceptColumnReference, myConceptComputePrePostMeans, myConceptEmptyLine, myConceptGroupColumnClause, myConceptIColumnClause, myConceptIReferenceOutcomeColumn, myConceptImputeMissingMultiple, myConceptLoadDataset, myConceptOmit, myConceptPValue, myConceptPlotEventStudyMeans, myConceptRunAttEstimations, myConceptScript, myConceptSet, myConceptSetCovariates, myConceptShowDataset, myConceptSignificanceLevel, myConceptStatement, myConceptTimeColumnClause, myConceptTreatmentValues, myConceptUsing);
   }
 
   @Override
   @Nullable
   public ConceptDescriptor getDescriptor(SConceptId id) {
     switch (myIndexSwitch.index(id)) {
+      case LanguageConceptSwitch.All:
+        return myConceptAll;
+      case LanguageConceptSwitch.BasedOn:
+        return myConceptBasedOn;
       case LanguageConceptSwitch.CheckParallelTrendsStaggered:
         return myConceptCheckParallelTrendsStaggered;
+      case LanguageConceptSwitch.ColumnReference:
+        return myConceptColumnReference;
       case LanguageConceptSwitch.ComputePrePostMeans:
         return myConceptComputePrePostMeans;
+      case LanguageConceptSwitch.EmptyLine:
+        return myConceptEmptyLine;
       case LanguageConceptSwitch.GroupColumnClause:
         return myConceptGroupColumnClause;
+      case LanguageConceptSwitch.IColumnClause:
+        return myConceptIColumnClause;
+      case LanguageConceptSwitch.IReferenceOutcomeColumn:
+        return myConceptIReferenceOutcomeColumn;
       case LanguageConceptSwitch.ImputeMissingMultiple:
         return myConceptImputeMissingMultiple;
       case LanguageConceptSwitch.LoadDataset:
         return myConceptLoadDataset;
-      case LanguageConceptSwitch.OutcomeColumn:
-        return myConceptOutcomeColumn;
+      case LanguageConceptSwitch.Omit:
+        return myConceptOmit;
       case LanguageConceptSwitch.PValue:
         return myConceptPValue;
       case LanguageConceptSwitch.PlotEventStudyMeans:
@@ -87,8 +104,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptSetCovariates;
       case LanguageConceptSwitch.ShowDataset:
         return myConceptShowDataset;
-      case LanguageConceptSwitch.ShowRows:
-        return myConceptShowRows;
       case LanguageConceptSwitch.SignificanceLevel:
         return myConceptSignificanceLevel;
       case LanguageConceptSwitch.Statement:
@@ -97,6 +112,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptTimeColumnClause;
       case LanguageConceptSwitch.TreatmentValues:
         return myConceptTreatmentValues;
+      case LanguageConceptSwitch.Using:
+        return myConceptUsing;
       default:
         return null;
     }
@@ -104,28 +121,53 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<DataTypeDescriptor> getDataTypeDescriptors() {
-    return Arrays.asList(myEnumerationCSVHeader, myEnumerationClusteringType, myEnumerationColumnType, myEnumerationControlGroupStrategy, myEnumerationControlStrategy, myEnumerationEstimationMethod);
+    return Arrays.asList(myEnumerationCSVHeader, myEnumerationClusteringType, myEnumerationColumnType, myEnumerationControlStrategy, myEnumerationEstimationMethod);
   }
 
   /*package*/ int internalIndex(SAbstractConcept c) {
     return myIndexSwitch.index(c);
   }
 
+  private static ConceptDescriptor createDescriptorForAll() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("DiDSL", "All", 0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x32a4f45c8acf7e13L);
+    b.class_(false, false, false);
+    // extends: DiDSL.structure.Statement
+    b.super_(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x3d7090ceae0fe3c5L);
+    b.origin("r:fddcec65-b03d-485e-ad0f-90dc64caa764(DiDSL.structure)/3649310276379966995");
+    b.version(3);
+    b.alias("all");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForBasedOn() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("DiDSL", "BasedOn", 0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x780e609f84c7c293L);
+    b.class_(false, false, false);
+    b.origin("r:fddcec65-b03d-485e-ad0f-90dc64caa764(DiDSL.structure)/8650958172469052051");
+    b.version(3);
+    b.property("controlStrategy", 0x780e609f84c7c298L).type(MetaIdFactory.dataTypeId(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x32a4f45c8ade1053L)).origin("8650958172469052056").done();
+    b.alias("based on");
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForCheckParallelTrendsStaggered() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("DiDSL", "CheckParallelTrendsStaggered", 0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x32a4f45c8ade1065L);
     b.class_(false, false, false);
     // extends: DiDSL.structure.Statement
     b.super_(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x3d7090ceae0fe3c5L);
+    b.parent(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x43695e8c6843ccc1L);
     b.origin("r:fddcec65-b03d-485e-ad0f-90dc64caa764(DiDSL.structure)/3649310276380921957");
     b.version(3);
-    b.property("controlStrategy", 0x32a4f45c8ade1068L).type(MetaIdFactory.dataTypeId(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x32a4f45c8ade1053L)).origin("3649310276380921960").done();
-    b.property("naOmit", 0x32a4f45c8ade1071L).type(PrimitiveTypeId.BOOLEAN).origin("3649310276380921969").done();
-    b.property("clusteringType", 0x32a4f45c8ade1075L).type(MetaIdFactory.dataTypeId(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x32a4f45c8ade105dL)).origin("3649310276380921973").done();
-    b.property("clusteringColumns", 0x32a4f45c8ade1077L).type(PrimitiveTypeId.STRING).origin("3649310276380921975").done();
-    b.associate("dataset", 0x32a4f45c8ade107aL).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x3d7090ceae0fe3ccL).optional(false).origin("3649310276380921978").done();
-    b.aggregate("outcomeColumn", 0x32a4f45c8ade106aL).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x32a4f45c8adb78daL).optional(true).ordered(true).multiple(false).origin("3649310276380921962").done();
     b.aggregate("pValue", 0x32a4f45c8ade1094L).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x32a4f45c8ade1095L).optional(true).ordered(true).multiple(false).origin("3649310276380922004").done();
+    b.aggregate("using", 0x43695e8c685102d4L).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x43695e8c685102d7L).optional(true).ordered(true).multiple(false).origin("4857517630234362580").done();
+    b.aggregate("naOmit", 0x43695e8c68521db2L).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x43695e8c68521db3L).optional(true).ordered(true).multiple(false).origin("4857517630234434994").done();
+    b.aggregate("controlStrategy", 0x780e609f84d5806cL).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x780e609f84c7c293L).optional(true).ordered(true).multiple(false).origin("8650958172469952620").done();
     b.alias("check parallel trends staggered");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForColumnReference() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("DiDSL", "ColumnReference", 0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x43695e8c6851034aL);
+    b.class_(false, false, false);
+    b.origin("r:fddcec65-b03d-485e-ad0f-90dc64caa764(DiDSL.structure)/4857517630234362698");
+    b.version(3);
+    b.associate("column", 0x43695e8c6851034bL).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x3d7090ceae11373cL).optional(false).origin("4857517630234362699").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForComputePrePostMeans() {
@@ -133,22 +175,45 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, false);
     // extends: DiDSL.structure.Statement
     b.super_(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x3d7090ceae0fe3c5L);
+    b.parent(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x43695e8c6843ccc1L);
     b.origin("r:fddcec65-b03d-485e-ad0f-90dc64caa764(DiDSL.structure)/3649310276380132958");
     b.version(3);
-    b.property("naOmit", 0x32a4f45c8ad20661L).type(PrimitiveTypeId.BOOLEAN).origin("3649310276380132961").done();
-    b.associate("dataset", 0x32a4f45c8ad20663L).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x3d7090ceae0fe3ccL).optional(false).origin("3649310276380132963").done();
-    b.aggregate("outcomeColumn", 0x32a4f45c8adb78d9L).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x32a4f45c8adb78daL).optional(true).ordered(true).multiple(false).origin("3649310276380752089").done();
+    b.aggregate("naomit", 0x780e609f84b8dff5L).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x43695e8c68521db3L).optional(true).ordered(true).multiple(false).origin("8650958172468076533").done();
     b.alias("compute pre post means");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForEmptyLine() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("DiDSL", "EmptyLine", 0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x43695e8c686579c3L);
+    b.class_(false, false, false);
+    // extends: DiDSL.structure.Statement
+    b.super_(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x3d7090ceae0fe3c5L);
+    b.origin("r:fddcec65-b03d-485e-ad0f-90dc64caa764(DiDSL.structure)/4857517630235703747");
+    b.version(3);
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForGroupColumnClause() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("DiDSL", "GroupColumnClause", 0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x32a4f45c8acd44b5L);
     b.class_(false, false, false);
-    // extends: DiDSL.structure.Statement
-    b.super_(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x3d7090ceae0fe3c5L);
+    b.parent(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x43695e8c684875d3L);
     b.origin("r:fddcec65-b03d-485e-ad0f-90dc64caa764(DiDSL.structure)/3649310276379821237");
     b.version(3);
     b.aggregate("treatmentValues", 0x32a4f45c8acd44b8L).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x32a4f45c8aca9c81L).optional(true).ordered(true).multiple(false).origin("3649310276379821240").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForIColumnClause() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("DiDSL", "IColumnClause", 0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x43695e8c684875d3L);
+    b.interface_();
+    b.origin("r:fddcec65-b03d-485e-ad0f-90dc64caa764(DiDSL.structure)/4857517630233802195");
+    b.version(3);
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForIReferenceOutcomeColumn() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("DiDSL", "IReferenceOutcomeColumn", 0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x43695e8c6843ccc1L);
+    b.interface_();
+    b.origin("r:fddcec65-b03d-485e-ad0f-90dc64caa764(DiDSL.structure)/4857517630233496769");
+    b.version(3);
+    b.associate("column", 0x43695e8c6843ccc2L).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x3d7090ceae11373cL).optional(false).origin("4857517630233496770").done();
+    b.associate("dataset", 0x43695e8c685fdda1L).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x3d7090ceae0fe3ccL).optional(false).origin("4857517630235336097").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForImputeMissingMultiple() {
@@ -156,10 +221,9 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, false);
     // extends: DiDSL.structure.Statement
     b.super_(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x3d7090ceae0fe3c5L);
+    b.parent(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x43695e8c6843ccc1L);
     b.origin("r:fddcec65-b03d-485e-ad0f-90dc64caa764(DiDSL.structure)/3649310276380071356");
     b.version(3);
-    b.property("columnName", 0x32a4f45c8ad115c5L).type(PrimitiveTypeId.STRING).origin("3649310276380071365").done();
-    b.associate("dataset", 0x32a4f45c8ad115c2L).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x3d7090ceae0fe3ccL).optional(false).origin("3649310276380071362").done();
     b.alias("impute missing data for");
     return b.create();
   }
@@ -175,14 +239,11 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("header", 0x32a4f45c8b0765fcL).type(MetaIdFactory.dataTypeId(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x32a4f45c8b0765f7L)).origin("3649310276383630844").done();
     return b.create();
   }
-  private static ConceptDescriptor createDescriptorForOutcomeColumn() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("DiDSL", "OutcomeColumn", 0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x32a4f45c8adb78daL);
+  private static ConceptDescriptor createDescriptorForOmit() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("DiDSL", "Omit", 0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x43695e8c68521db3L);
     b.class_(false, false, false);
-    // extends: DiDSL.structure.Statement
-    b.super_(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x3d7090ceae0fe3c5L);
-    b.origin("r:fddcec65-b03d-485e-ad0f-90dc64caa764(DiDSL.structure)/3649310276380752090");
+    b.origin("r:fddcec65-b03d-485e-ad0f-90dc64caa764(DiDSL.structure)/4857517630234434995");
     b.version(3);
-    b.property("columnName", 0x32a4f45c8adb78dbL).type(PrimitiveTypeId.STRING).origin("3649310276380752091").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForPValue() {
@@ -190,7 +251,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, false);
     b.origin("r:fddcec65-b03d-485e-ad0f-90dc64caa764(DiDSL.structure)/3649310276380922005");
     b.version(3);
-    b.property("pValue", 0x32a4f45c8ade1096L).type(PrimitiveTypeId.STRING).origin("3649310276380922006").done();
+    b.property("pValue", 0x32a4f45c8ade1096L).type(MetaIdFactory.dataTypeId(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0x10324579ea7L)).origin("3649310276380922006").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForPlotEventStudyMeans() {
@@ -198,11 +259,10 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, false);
     // extends: DiDSL.structure.Statement
     b.super_(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x3d7090ceae0fe3c5L);
+    b.parent(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x43695e8c6843ccc1L);
     b.origin("r:fddcec65-b03d-485e-ad0f-90dc64caa764(DiDSL.structure)/3649310276380837595");
     b.version(3);
-    b.property("controlGroupStrategy", 0x32a4f45c8adcc6e4L).type(MetaIdFactory.dataTypeId(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x32a4f45c8adcc6d3L)).origin("3649310276380837604").done();
-    b.associate("dataset", 0x32a4f45c8adcc6dfL).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x3d7090ceae0fe3ccL).optional(false).origin("3649310276380837599").done();
-    b.aggregate("outcomeColumn", 0x32a4f45c8adcc6e1L).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x32a4f45c8adb78daL).optional(true).ordered(true).multiple(false).origin("3649310276380837601").done();
+    b.aggregate("controlStrategy", 0x780e609f84d25039L).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x780e609f84c7c293L).optional(true).ordered(true).multiple(false).origin("8650958172469743673").done();
     b.alias("plot eventstudy means");
     return b.create();
   }
@@ -211,14 +271,13 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, false);
     // extends: DiDSL.structure.Statement
     b.super_(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x3d7090ceae0fe3c5L);
+    b.parent(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x43695e8c6843ccc1L);
     b.origin("r:fddcec65-b03d-485e-ad0f-90dc64caa764(DiDSL.structure)/3649310276384080661");
     b.version(3);
     b.property("estimation", 0x32a4f45c8b0e431cL).type(MetaIdFactory.dataTypeId(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x32a4f45c8b0e429aL)).origin("3649310276384080668").done();
-    b.property("controlGroupStrategy", 0x32a4f45c8b0ffad1L).type(MetaIdFactory.dataTypeId(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x32a4f45c8adcc6d3L)).origin("3649310276384193233").done();
-    b.associate("dataset", 0x32a4f45c8b0e4371L).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x3d7090ceae0fe3ccL).optional(false).origin("3649310276384080753").done();
-    b.aggregate("outcomeColumn", 0x32a4f45c8b0e431aL).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x32a4f45c8adb78daL).optional(true).ordered(true).multiple(false).origin("3649310276384080666").done();
     b.aggregate("pValue", 0x32a4f45c8b0e431fL).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x32a4f45c8ade1095L).optional(true).ordered(true).multiple(false).origin("3649310276384080671").done();
     b.aggregate("alpha", 0x32a4f45c8b0e435bL).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x32a4f45c8b0e435dL).optional(true).ordered(true).multiple(false).origin("3649310276384080731").done();
+    b.aggregate("controlStrategy", 0x780e609f84e825cfL).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x780e609f84c7c293L).optional(true).ordered(true).multiple(false).origin("8650958172471174607").done();
     b.alias("run att estimations");
     return b.create();
   }
@@ -235,13 +294,12 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, false);
     // extends: DiDSL.structure.Statement
     b.super_(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x3d7090ceae0fe3c5L);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:fddcec65-b03d-485e-ad0f-90dc64caa764(DiDSL.structure)/4427197651063224124");
     b.version(3);
-    b.property("column", 0x3d7090ceae12b0b5L).type(MetaIdFactory.dataTypeId(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x3d7090ceae12b0adL)).origin("4427197651063320757").done();
-    b.property("columnName", 0x32a4f45c8aca9c7dL).type(PrimitiveTypeId.STRING).origin("3649310276379647101").done();
+    b.property("columnType", 0x3d7090ceae12b0b5L).type(MetaIdFactory.dataTypeId(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x3d7090ceae12b0adL)).origin("4427197651063320757").done();
     b.associate("dataset", 0x3d7090ceae11373dL).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x3d7090ceae0fe3ccL).optional(false).origin("4427197651063224125").done();
-    b.aggregate("groupClause", 0x32a4f45c8aca9c7fL).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x32a4f45c8acd44b5L).optional(true).ordered(true).multiple(false).origin("3649310276379647103").done();
-    b.aggregate("timeClause", 0x32a4f45c8acd44b1L).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x32a4f45c8acd44c1L).optional(true).ordered(true).multiple(false).origin("3649310276379821233").done();
+    b.aggregate("clause", 0x43695e8c68489541L).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x43695e8c684875d3L).optional(true).ordered(true).multiple(false).origin("4857517630233810241").done();
     b.alias("set");
     return b.create();
   }
@@ -250,9 +308,9 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, false);
     // extends: DiDSL.structure.Statement
     b.super_(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x3d7090ceae0fe3c5L);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:fddcec65-b03d-485e-ad0f-90dc64caa764(DiDSL.structure)/3649310276379921647");
     b.version(3);
-    b.property("columnName", 0x32a4f45c8acecd03L).type(PrimitiveTypeId.STRING).origin("3649310276379921667").done();
     b.associate("dataset", 0x32a4f45c8aceccf7L).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x3d7090ceae0fe3ccL).optional(false).origin("3649310276379921655").done();
     b.alias("set covariates");
     return b.create();
@@ -265,19 +323,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:fddcec65-b03d-485e-ad0f-90dc64caa764(DiDSL.structure)/3649310276379966988");
     b.version(3);
     b.associate("dataset", 0x32a4f45c8acf7e0fL).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x3d7090ceae0fe3ccL).optional(false).origin("3649310276379966991").done();
-    b.aggregate("showRows", 0x32a4f45c8acf7e11L).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x32a4f45c8acf7e13L).optional(true).ordered(true).multiple(false).origin("3649310276379966993").done();
+    b.aggregate("all", 0x32a4f45c8acf7e11L).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x32a4f45c8acf7e13L).optional(true).ordered(true).multiple(false).origin("3649310276379966993").done();
     b.alias("show dataset");
-    return b.create();
-  }
-  private static ConceptDescriptor createDescriptorForShowRows() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("DiDSL", "ShowRows", 0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x32a4f45c8acf7e13L);
-    b.class_(false, false, false);
-    // extends: DiDSL.structure.Statement
-    b.super_(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x3d7090ceae0fe3c5L);
-    b.origin("r:fddcec65-b03d-485e-ad0f-90dc64caa764(DiDSL.structure)/3649310276379966995");
-    b.version(3);
-    b.property("rows", 0x32a4f45c8acf7e14L).type(PrimitiveTypeId.STRING).origin("3649310276379966996").done();
-    b.alias("all");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForSignificanceLevel() {
@@ -285,7 +332,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, false);
     b.origin("r:fddcec65-b03d-485e-ad0f-90dc64caa764(DiDSL.structure)/3649310276384080733");
     b.version(3);
-    b.property("alpha", 0x32a4f45c8b0e435eL).type(PrimitiveTypeId.STRING).origin("3649310276384080734").done();
+    b.property("alpha", 0x32a4f45c8b0e435eL).type(MetaIdFactory.dataTypeId(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0x10324579ea7L)).origin("3649310276384080734").done();
     b.alias("alpha");
     return b.create();
   }
@@ -299,8 +346,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForTimeColumnClause() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("DiDSL", "TimeColumnClause", 0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x32a4f45c8acd44c1L);
     b.class_(false, false, false);
-    // extends: DiDSL.structure.Statement
-    b.super_(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x3d7090ceae0fe3c5L);
+    b.parent(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x43695e8c684875d3L);
     b.origin("r:fddcec65-b03d-485e-ad0f-90dc64caa764(DiDSL.structure)/3649310276379821249");
     b.version(3);
     b.property("prePeriodValues", 0x32a4f45c8acd44c4L).type(PrimitiveTypeId.STRING).origin("3649310276379821252").done();
@@ -310,12 +356,20 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForTreatmentValues() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("DiDSL", "TreatmentValues", 0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x32a4f45c8aca9c81L);
     b.class_(false, false, false);
-    // extends: DiDSL.structure.Statement
-    b.super_(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x3d7090ceae0fe3c5L);
     b.origin("r:fddcec65-b03d-485e-ad0f-90dc64caa764(DiDSL.structure)/3649310276379647105");
     b.version(3);
     b.property("values", 0x32a4f45c8aca9c84L).type(PrimitiveTypeId.STRING).origin("3649310276379647108").done();
     b.alias("with treatment values");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForUsing() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("DiDSL", "Using", 0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x43695e8c685102d7L);
+    b.class_(false, false, false);
+    b.origin("r:fddcec65-b03d-485e-ad0f-90dc64caa764(DiDSL.structure)/4857517630234362583");
+    b.version(3);
+    b.property("clusteringMethod", 0x43695e8c685102d8L).type(MetaIdFactory.dataTypeId(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x32a4f45c8ade105dL)).origin("4857517630234362584").done();
+    b.aggregate("columns", 0x43695e8c6851034cL).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x43695e8c6851034aL).optional(true).ordered(true).multiple(true).origin("4857517630234362700").done();
+    b.alias("using");
     return b.create();
   }
 }

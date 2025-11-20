@@ -9,33 +9,45 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 
 public final class LanguageConceptSwitch {
   private final LanguageConceptIndex myIndex;
-  public static final int CheckParallelTrendsStaggered = 0;
-  public static final int ComputePrePostMeans = 1;
-  public static final int GroupColumnClause = 2;
-  public static final int ImputeMissingMultiple = 3;
-  public static final int LoadDataset = 4;
-  public static final int OutcomeColumn = 5;
-  public static final int PValue = 6;
-  public static final int PlotEventStudyMeans = 7;
-  public static final int RunAttEstimations = 8;
-  public static final int Script = 9;
-  public static final int Set = 10;
-  public static final int SetCovariates = 11;
-  public static final int ShowDataset = 12;
-  public static final int ShowRows = 13;
-  public static final int SignificanceLevel = 14;
-  public static final int Statement = 15;
-  public static final int TimeColumnClause = 16;
-  public static final int TreatmentValues = 17;
+  public static final int All = 0;
+  public static final int BasedOn = 1;
+  public static final int CheckParallelTrendsStaggered = 2;
+  public static final int ColumnReference = 3;
+  public static final int ComputePrePostMeans = 4;
+  public static final int EmptyLine = 5;
+  public static final int GroupColumnClause = 6;
+  public static final int IColumnClause = 7;
+  public static final int IReferenceOutcomeColumn = 8;
+  public static final int ImputeMissingMultiple = 9;
+  public static final int LoadDataset = 10;
+  public static final int Omit = 11;
+  public static final int PValue = 12;
+  public static final int PlotEventStudyMeans = 13;
+  public static final int RunAttEstimations = 14;
+  public static final int Script = 15;
+  public static final int Set = 16;
+  public static final int SetCovariates = 17;
+  public static final int ShowDataset = 18;
+  public static final int SignificanceLevel = 19;
+  public static final int Statement = 20;
+  public static final int TimeColumnClause = 21;
+  public static final int TreatmentValues = 22;
+  public static final int Using = 23;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0xe61e3c2843b94790L, 0x9950a30830b7e20fL);
+    builder.put(0x32a4f45c8acf7e13L, All);
+    builder.put(0x780e609f84c7c293L, BasedOn);
     builder.put(0x32a4f45c8ade1065L, CheckParallelTrendsStaggered);
+    builder.put(0x43695e8c6851034aL, ColumnReference);
     builder.put(0x32a4f45c8ad2065eL, ComputePrePostMeans);
+    builder.put(0x43695e8c686579c3L, EmptyLine);
     builder.put(0x32a4f45c8acd44b5L, GroupColumnClause);
+    builder.put(0x43695e8c684875d3L, IColumnClause);
+    builder.put(0x43695e8c6843ccc1L, IReferenceOutcomeColumn);
     builder.put(0x32a4f45c8ad115bcL, ImputeMissingMultiple);
     builder.put(0x3d7090ceae0fe3ccL, LoadDataset);
-    builder.put(0x32a4f45c8adb78daL, OutcomeColumn);
+    builder.put(0x43695e8c68521db3L, Omit);
     builder.put(0x32a4f45c8ade1095L, PValue);
     builder.put(0x32a4f45c8adcc6dbL, PlotEventStudyMeans);
     builder.put(0x32a4f45c8b0e4315L, RunAttEstimations);
@@ -43,11 +55,11 @@ public final class LanguageConceptSwitch {
     builder.put(0x3d7090ceae11373cL, Set);
     builder.put(0x32a4f45c8aceccefL, SetCovariates);
     builder.put(0x32a4f45c8acf7e0cL, ShowDataset);
-    builder.put(0x32a4f45c8acf7e13L, ShowRows);
     builder.put(0x32a4f45c8b0e435dL, SignificanceLevel);
     builder.put(0x3d7090ceae0fe3c5L, Statement);
     builder.put(0x32a4f45c8acd44c1L, TimeColumnClause);
     builder.put(0x32a4f45c8aca9c81L, TreatmentValues);
+    builder.put(0x43695e8c685102d7L, Using);
     myIndex = builder.seal();
   }
 

@@ -9,12 +9,18 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
+  private ConceptPresentation props_All;
+  private ConceptPresentation props_BasedOn;
   private ConceptPresentation props_CheckParallelTrendsStaggered;
+  private ConceptPresentation props_ColumnReference;
   private ConceptPresentation props_ComputePrePostMeans;
+  private ConceptPresentation props_EmptyLine;
   private ConceptPresentation props_GroupColumnClause;
+  private ConceptPresentation props_IColumnClause;
+  private ConceptPresentation props_IReferenceOutcomeColumn;
   private ConceptPresentation props_ImputeMissingMultiple;
   private ConceptPresentation props_LoadDataset;
-  private ConceptPresentation props_OutcomeColumn;
+  private ConceptPresentation props_Omit;
   private ConceptPresentation props_PValue;
   private ConceptPresentation props_PlotEventStudyMeans;
   private ConceptPresentation props_RunAttEstimations;
@@ -22,17 +28,32 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Set;
   private ConceptPresentation props_SetCovariates;
   private ConceptPresentation props_ShowDataset;
-  private ConceptPresentation props_ShowRows;
   private ConceptPresentation props_SignificanceLevel;
   private ConceptPresentation props_Statement;
   private ConceptPresentation props_TimeColumnClause;
   private ConceptPresentation props_TreatmentValues;
+  private ConceptPresentation props_Using;
 
   @Override
   @Nullable
   public ConceptPresentation getDescriptor(SAbstractConcept c) {
     StructureAspectDescriptor structureDescriptor = (StructureAspectDescriptor) myLanguageRuntime.getAspect(jetbrains.mps.smodel.runtime.StructureAspectDescriptor.class);
     switch (structureDescriptor.internalIndex(c)) {
+      case LanguageConceptSwitch.All:
+        if (props_All == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("Optional clause for Show Dataset, it allows showing the entire dataset");
+          cpb.rawPresentation("all");
+          props_All = cpb.create();
+        }
+        return props_All;
+      case LanguageConceptSwitch.BasedOn:
+        if (props_BasedOn == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("based on");
+          props_BasedOn = cpb.create();
+        }
+        return props_BasedOn;
       case LanguageConceptSwitch.CheckParallelTrendsStaggered:
         if (props_CheckParallelTrendsStaggered == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -40,6 +61,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_CheckParallelTrendsStaggered = cpb.create();
         }
         return props_CheckParallelTrendsStaggered;
+      case LanguageConceptSwitch.ColumnReference:
+        if (props_ColumnReference == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x43695e8c6851034aL, 0x43695e8c6851034bL, "column", "", "");
+          props_ColumnReference = cpb.create();
+        }
+        return props_ColumnReference;
       case LanguageConceptSwitch.ComputePrePostMeans:
         if (props_ComputePrePostMeans == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -48,6 +76,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ComputePrePostMeans = cpb.create();
         }
         return props_ComputePrePostMeans;
+      case LanguageConceptSwitch.EmptyLine:
+        if (props_EmptyLine == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("EmptyLine");
+          props_EmptyLine = cpb.create();
+        }
+        return props_EmptyLine;
       case LanguageConceptSwitch.GroupColumnClause:
         if (props_GroupColumnClause == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -56,6 +91,18 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_GroupColumnClause = cpb.create();
         }
         return props_GroupColumnClause;
+      case LanguageConceptSwitch.IColumnClause:
+        if (props_IColumnClause == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_IColumnClause = cpb.create();
+        }
+        return props_IColumnClause;
+      case LanguageConceptSwitch.IReferenceOutcomeColumn:
+        if (props_IReferenceOutcomeColumn == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_IReferenceOutcomeColumn = cpb.create();
+        }
+        return props_IReferenceOutcomeColumn;
       case LanguageConceptSwitch.ImputeMissingMultiple:
         if (props_ImputeMissingMultiple == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -72,14 +119,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_LoadDataset = cpb.create();
         }
         return props_LoadDataset;
-      case LanguageConceptSwitch.OutcomeColumn:
-        if (props_OutcomeColumn == null) {
+      case LanguageConceptSwitch.Omit:
+        if (props_Omit == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.shortDesc("Optional clause for Impute missing data, it sets the outcome column");
-          cpb.rawPresentation("OutcomeColumn");
-          props_OutcomeColumn = cpb.create();
+          cpb.rawPresentation("Omit");
+          props_Omit = cpb.create();
         }
-        return props_OutcomeColumn;
+        return props_Omit;
       case LanguageConceptSwitch.PValue:
         if (props_PValue == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -112,7 +158,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_Set == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.shortDesc("Command for setting different column values using column types");
-          cpb.rawPresentation("set");
+          cpb.presentationByName();
           props_Set = cpb.create();
         }
         return props_Set;
@@ -120,7 +166,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_SetCovariates == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.shortDesc("Command for seting covariates");
-          cpb.rawPresentation("set covariates");
+          cpb.presentationByName();
           props_SetCovariates = cpb.create();
         }
         return props_SetCovariates;
@@ -132,14 +178,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ShowDataset = cpb.create();
         }
         return props_ShowDataset;
-      case LanguageConceptSwitch.ShowRows:
-        if (props_ShowRows == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.shortDesc("Optional clause for Show Dataset, it allows showing the entire dataset");
-          cpb.rawPresentation("all");
-          props_ShowRows = cpb.create();
-        }
-        return props_ShowRows;
       case LanguageConceptSwitch.SignificanceLevel:
         if (props_SignificanceLevel == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -168,6 +206,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_TreatmentValues = cpb.create();
         }
         return props_TreatmentValues;
+      case LanguageConceptSwitch.Using:
+        if (props_Using == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("using");
+          props_Using = cpb.create();
+        }
+        return props_Using;
     }
     return null;
   }

@@ -26,7 +26,7 @@ public class EnumerationDescriptor_ColumnType extends EnumerationDescriptorBase 
   @Nullable
   @Override
   public EnumerationDescriptor.MemberDescriptor getDefault() {
-    return myMember_id_0;
+    return null;
   }
 
   @NotNull

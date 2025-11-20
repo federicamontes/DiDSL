@@ -16,8 +16,8 @@ public class EnumerationDescriptor_ClusteringType extends EnumerationDescriptorB
   }
 
   private final EnumerationDescriptor.MemberDescriptor myMember_robust_0 = new EnumerationDescriptor.MemberDescriptor("robust", "robust", 0x32a4f45c8ade105eL, "r:fddcec65-b03d-485e-ad0f-90dc64caa764(DiDSL.structure)/3649310276380921950");
-  private final EnumerationDescriptor.MemberDescriptor myMember_clustered_id_0 = new EnumerationDescriptor.MemberDescriptor("clustered_id", "clustered_id", 0x32a4f45c8ade1060L, "r:fddcec65-b03d-485e-ad0f-90dc64caa764(DiDSL.structure)/3649310276380921952");
-  private final EnumerationDescriptor.MemberDescriptor myMember_clustered_by_0 = new EnumerationDescriptor.MemberDescriptor("clustered_by", "clustered_by", 0x32a4f45c8ade1062L, "r:fddcec65-b03d-485e-ad0f-90dc64caa764(DiDSL.structure)/3649310276380921954");
+  private final EnumerationDescriptor.MemberDescriptor myMember_clustered_id_0 = new EnumerationDescriptor.MemberDescriptor("clustered_id", "clustered", 0x32a4f45c8ade1060L, "r:fddcec65-b03d-485e-ad0f-90dc64caa764(DiDSL.structure)/3649310276380921952");
+  private final EnumerationDescriptor.MemberDescriptor myMember_clustered_by_0 = new EnumerationDescriptor.MemberDescriptor("clustered_by", "clustered by", 0x32a4f45c8ade1062L, "r:fddcec65-b03d-485e-ad0f-90dc64caa764(DiDSL.structure)/3649310276380921954");
 
   private final EnumerationLiteralsIndex myIndex = EnumerationLiteralsIndex.build(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x32a4f45c8ade105dL, 0x32a4f45c8ade105eL, 0x32a4f45c8ade1060L, 0x32a4f45c8ade1062L);
   private final List<EnumerationDescriptor.MemberDescriptor> myMembers = new EnumerationDescriptorBase.MembersList(myIndex, myMember_robust_0, myMember_clustered_id_0, myMember_clustered_by_0);
