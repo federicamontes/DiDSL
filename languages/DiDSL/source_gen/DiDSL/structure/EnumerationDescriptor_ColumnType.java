@@ -19,9 +19,10 @@ public class EnumerationDescriptor_ColumnType extends EnumerationDescriptorBase 
   private final EnumerationDescriptor.MemberDescriptor myMember_group_0 = new EnumerationDescriptor.MemberDescriptor("group", "group", 0x3d7090ceae12b0b0L, "r:fddcec65-b03d-485e-ad0f-90dc64caa764(DiDSL.structure)/4427197651063320752");
   private final EnumerationDescriptor.MemberDescriptor myMember_time_0 = new EnumerationDescriptor.MemberDescriptor("time", "time", 0x3d7090ceae12b0b1L, "r:fddcec65-b03d-485e-ad0f-90dc64caa764(DiDSL.structure)/4427197651063320753");
   private final EnumerationDescriptor.MemberDescriptor myMember_outcome_0 = new EnumerationDescriptor.MemberDescriptor("outcome", "outcome", 0x3d7090ceae12b0b3L, "r:fddcec65-b03d-485e-ad0f-90dc64caa764(DiDSL.structure)/4427197651063320755");
+  private final EnumerationDescriptor.MemberDescriptor myMember_subgroup_0 = new EnumerationDescriptor.MemberDescriptor("subgroup", "subgroup", 0x165025d304908309L, "r:fddcec65-b03d-485e-ad0f-90dc64caa764(DiDSL.structure)/1607826655216173833");
 
-  private final EnumerationLiteralsIndex myIndex = EnumerationLiteralsIndex.build(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x3d7090ceae12b0adL, 0x3d7090ceae12b0afL, 0x3d7090ceae12b0b0L, 0x3d7090ceae12b0b1L, 0x3d7090ceae12b0b3L);
-  private final List<EnumerationDescriptor.MemberDescriptor> myMembers = new EnumerationDescriptorBase.MembersList(myIndex, myMember_id_0, myMember_group_0, myMember_time_0, myMember_outcome_0);
+  private final EnumerationLiteralsIndex myIndex = EnumerationLiteralsIndex.build(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x3d7090ceae12b0adL, 0x3d7090ceae12b0afL, 0x3d7090ceae12b0b0L, 0x3d7090ceae12b0b1L, 0x3d7090ceae12b0b3L, 0x165025d304908309L);
+  private final List<EnumerationDescriptor.MemberDescriptor> myMembers = new EnumerationDescriptorBase.MembersList(myIndex, myMember_id_0, myMember_group_0, myMember_time_0, myMember_outcome_0, myMember_subgroup_0);
 
   @Nullable
   @Override
@@ -50,6 +51,8 @@ public class EnumerationDescriptor_ColumnType extends EnumerationDescriptorBase 
         return myMember_time_0;
       case "outcome":
         return myMember_outcome_0;
+      case "subgroup":
+        return myMember_subgroup_0;
     }
     return null;
   }

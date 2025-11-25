@@ -7,6 +7,9 @@
   <imports />
   <registry>
     <language id="e61e3c28-43b9-4790-9950-a30830b7e20f" name="DiDSL">
+      <concept id="1607826655212854986" name="DiDSL.structure.Covariates" flags="ng" index="i3vGp" />
+      <concept id="1607826655214186665" name="DiDSL.structure.Include" flags="ng" index="i8xlU" />
+      <concept id="1607826655213967959" name="DiDSL.structure.Exclude" flags="ng" index="ifJY4" />
       <concept id="4427197651063224124" name="DiDSL.structure.Set" flags="ng" index="2joqvM">
         <property id="4427197651063320757" name="columnType" index="2joy1V" />
         <reference id="4427197651063224125" name="dataset" index="2joqvN" />
@@ -14,9 +17,14 @@
       </concept>
       <concept id="4427197651063137228" name="DiDSL.structure.LoadDataset" flags="ng" index="2jvRc2">
         <property id="4427197651063137229" name="datasetName" index="2jvRc3" />
+        <child id="1607826655206433198" name="with" index="lEWhX" />
       </concept>
       <concept id="4427197651063137219" name="DiDSL.structure.Script" flags="ng" index="2jvRcd">
         <child id="4427197651063137222" name="Statements" index="2jvRc8" />
+      </concept>
+      <concept id="1607826655202415572" name="DiDSL.structure.With" flags="ng" index="lVFo7">
+        <property id="1607826655204032894" name="pValue" index="lxQiH" />
+        <property id="1607826655204754416" name="alpha" index="lGAoz" />
       </concept>
       <concept id="4857517630235703747" name="DiDSL.structure.EmptyLine" flags="ng" index="F32tf" />
       <concept id="4857517630233496769" name="DiDSL.structure.IReferenceOutcomeColumn" flags="ngI" index="FaD9d">
@@ -24,7 +32,9 @@
         <reference id="4857517630235336097" name="dataset" index="FdCcH" />
       </concept>
       <concept id="4857517630234362583" name="DiDSL.structure.Using" flags="ng" index="Fe5Lr">
+        <property id="1607826655215071054" name="control" index="ibSEt" />
         <property id="4857517630234362584" name="clusteringMethod" index="Fe5Lk" />
+        <child id="1607826655213091485" name="covariates" index="iclXe" />
       </concept>
       <concept id="4857517630234434995" name="DiDSL.structure.Omit" flags="ng" index="FeOcZ" />
       <concept id="3649310276379821249" name="DiDSL.structure.TimeColumnClause" flags="ng" index="2Sqr2t">
@@ -53,17 +63,17 @@
         <child id="8650958172469743673" name="controlStrategy" index="3WR32A" />
       </concept>
       <concept id="3649310276380921957" name="DiDSL.structure.CheckParallelTrendsStaggered" flags="ng" index="2SuIgT">
+        <child id="1607826655202419502" name="with" index="lVCrX" />
         <child id="4857517630234362580" name="using" index="Fe5Lo" />
         <child id="4857517630234434994" name="naOmit" index="FeOcY" />
-        <child id="3649310276380922004" name="pValue" index="2SuIj8" />
         <child id="8650958172469952620" name="controlStrategy" index="3WQY3N" />
       </concept>
-      <concept id="3649310276380922005" name="DiDSL.structure.PValue" flags="ng" index="2SuIj9">
-        <property id="3649310276380922006" name="pValue" index="2SuIja" />
-      </concept>
       <concept id="3649310276384080661" name="DiDSL.structure.RunAttEstimations" flags="ng" index="2TEFt9">
-        <child id="3649310276384080671" name="pValue" index="2TEFt3" />
-        <child id="8650958172471174607" name="controlStrategy" index="3WT$lg" />
+        <child id="1607826655212414776" name="using" index="i1KbF" />
+        <child id="1607826655212636649" name="naomit" index="i2EKU" />
+        <child id="1607826655214186672" name="include" index="i8xlz" />
+        <child id="1607826655213967968" name="exclude" index="ifJYN" />
+        <child id="1607826655202980049" name="with" index="l_Lk2" />
       </concept>
       <concept id="8650958172469052051" name="DiDSL.structure.BasedOn" flags="ng" index="3WMq8c">
         <property id="8650958172469052056" name="controlStrategy" index="3WMq87" />
@@ -79,8 +89,9 @@
     <node concept="2jvRc2" id="3a$X5Mb2NtA" role="2jvRc8">
       <property role="2jvRc3" value="dataset.csv" />
       <property role="TrG5h" value="table" />
+      <node concept="lVFo7" id="1pg9tc4jiW0" role="lEWhX" />
     </node>
-    <node concept="F32tf" id="4dDnCLCq1u4" role="2jvRc8" />
+    <node concept="F32tf" id="1pg9tc4d9UT" role="2jvRc8" />
     <node concept="2joqvM" id="4dDnCLCiDTa" role="2jvRc8">
       <property role="2joy1V" value="3PK$cUI4F2K/group" />
       <property role="TrG5h" value="first.treat" />
@@ -91,15 +102,17 @@
         </node>
       </node>
     </node>
-    <node concept="2joqvM" id="4dDnCLCiDTf" role="2jvRc8">
+    <node concept="F32tf" id="3dc8XoeGHPa" role="2jvRc8" />
+    <node concept="2joqvM" id="3dc8XoeGHPc" role="2jvRc8">
       <property role="2joy1V" value="3PK$cUI4F2L/time" />
       <property role="TrG5h" value="year" />
       <ref role="2joqvN" node="3a$X5Mb2NtA" resolve="table" />
-      <node concept="2Sqr2t" id="4dDnCLCiDTh" role="F8sJd">
-        <property role="2Sqr2o" value="&quot;2003&quot;" />
-        <property role="2Sqr2p" value="&quot;2006,2007&quot;" />
+      <node concept="2Sqr2t" id="3dc8XoeGHPe" role="F8sJd">
+        <property role="2Sqr2o" value="&quot;2004&quot;" />
+        <property role="2Sqr2p" value="&quot;2005,2006,20007&quot;" />
       </node>
     </node>
+    <node concept="F32tf" id="1pg9tc4Ako5" role="2jvRc8" />
     <node concept="2joqvM" id="4dDnCLCvQxG" role="2jvRc8">
       <property role="2joy1V" value="3PK$cUI4F2N/outcome" />
       <property role="TrG5h" value="lemp" />
@@ -140,36 +153,42 @@
       </node>
     </node>
     <node concept="F32tf" id="4dDnCLCq1ud" role="2jvRc8" />
-    <node concept="2SuIgT" id="7weo9Y4Q9Sp" role="2jvRc8">
+    <node concept="2SuIgT" id="1pg9tc3OS$v" role="2jvRc8">
       <ref role="FaD9e" node="4dDnCLCvQxG" resolve="lemp" />
       <ref role="FdCcH" node="3a$X5Mb2NtA" resolve="table" />
-      <node concept="3WMq8c" id="7weo9Y4Q9Sr" role="3WQY3N" />
-      <node concept="2SuIj9" id="7weo9Y4Q9Ss" role="2SuIj8">
-        <property role="2SuIja" value="0.05" />
-      </node>
-      <node concept="Fe5Lr" id="7weo9Y4Q9Su" role="Fe5Lo">
+      <node concept="3WMq8c" id="1pg9tc3OS$x" role="3WQY3N" />
+      <node concept="Fe5Lr" id="1pg9tc3OS$$" role="Fe5Lo">
         <property role="Fe5Lk" value="3a$X5MaRx1w/clustered_id" />
       </node>
-      <node concept="FeOcZ" id="7weo9Y4Q9Sv" role="FeOcY" />
+      <node concept="FeOcZ" id="1pg9tc3OS$_" role="FeOcY" />
+      <node concept="lVFo7" id="1pg9tc3Y6yC" role="lVCrX">
+        <property role="lxQiH" value="0.05" />
+      </node>
     </node>
-    <node concept="F32tf" id="7weo9Y4Q9St" role="2jvRc8" />
     <node concept="F32tf" id="4dDnCLCq1ue" role="2jvRc8" />
     <node concept="2joqvM" id="4dDnCLCgWM6" role="2jvRc8">
       <property role="TrG5h" value="countyreal" />
       <property role="2joy1V" value="3PK$cUI4F2J/id" />
       <ref role="2joqvN" node="3a$X5Mb2NtA" resolve="table" />
     </node>
-    <node concept="F32tf" id="4dDnCLCq1uf" role="2jvRc8" />
-    <node concept="2TEFt9" id="4dDnCLC_SOX" role="2jvRc8">
+    <node concept="F32tf" id="1pg9tc4$7_w" role="2jvRc8" />
+    <node concept="2TEFt9" id="1pg9tc4xuk0" role="2jvRc8">
       <ref role="FaD9e" node="4dDnCLCvQxG" resolve="lemp" />
       <ref role="FdCcH" node="3a$X5Mb2NtA" resolve="table" />
-      <node concept="2SuIj9" id="4dDnCLC_SOZ" role="2TEFt3">
-        <property role="2SuIja" value="0.05" />
+      <node concept="lVFo7" id="1pg9tc4xuk2" role="l_Lk2">
+        <property role="lxQiH" value="0.05" />
+        <property role="lGAoz" value="0.05" />
       </node>
-      <node concept="3WMq8c" id="7weo9Y4VRyP" role="3WT$lg">
-        <property role="3WMq87" value="3a$X5MaRx1o/not_yet_treated" />
+      <node concept="ifJY4" id="1pg9tc4xuk3" role="ifJYN" />
+      <node concept="i8xlU" id="1pg9tc4xuk4" role="i8xlz" />
+      <node concept="Fe5Lr" id="1pg9tc4xuk5" role="i1KbF">
+        <property role="ibSEt" value="3a$X5MaRx1o/not_yet_treated" />
+        <property role="Fe5Lk" value="3a$X5MaRx1w/clustered_id" />
+        <node concept="i3vGp" id="1pg9tc4xuk6" role="iclXe" />
       </node>
+      <node concept="FeOcZ" id="1pg9tc4xuk7" role="i2EKU" />
     </node>
+    <node concept="F32tf" id="4dDnCLCq1uf" role="2jvRc8" />
   </node>
 </model>
 

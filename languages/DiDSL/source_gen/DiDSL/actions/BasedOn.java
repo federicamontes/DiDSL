@@ -29,19 +29,13 @@ public class BasedOn {
         }
       }
 
-      {
-        final SNode runAttEstimations = enclosingNode;
-        if (SNodeOperations.isInstanceOf(runAttEstimations, CONCEPTS.RunAttEstimations$3)) {
-          SPropertyOperations.assignEnum(newNode, PROPS.controlStrategy$awon, SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x32a4f45c8ade1053L, "DiDSL.structure.ControlStrategy"), 0x32a4f45c8ade1058L, "not_yet_treated"));
-        }
-      }
+
     }
   }
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept PlotEventStudyMeans$tr = MetaAdapterFactory.getConcept(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x32a4f45c8adcc6dbL, "DiDSL.structure.PlotEventStudyMeans");
     /*package*/ static final SConcept CheckParallelTrendsStaggered$YH = MetaAdapterFactory.getConcept(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x32a4f45c8ade1065L, "DiDSL.structure.CheckParallelTrendsStaggered");
-    /*package*/ static final SConcept RunAttEstimations$3 = MetaAdapterFactory.getConcept(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x32a4f45c8b0e4315L, "DiDSL.structure.RunAttEstimations");
   }
 
   private static final class PROPS {

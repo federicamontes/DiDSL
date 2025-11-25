@@ -14,25 +14,27 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_CheckParallelTrendsStaggered;
   private ConceptPresentation props_ColumnReference;
   private ConceptPresentation props_ComputePrePostMeans;
+  private ConceptPresentation props_Covariates;
   private ConceptPresentation props_EmptyLine;
+  private ConceptPresentation props_Exclude;
   private ConceptPresentation props_GroupColumnClause;
   private ConceptPresentation props_IColumnClause;
   private ConceptPresentation props_IReferenceOutcomeColumn;
   private ConceptPresentation props_ImputeMissingMultiple;
+  private ConceptPresentation props_Include;
   private ConceptPresentation props_LoadDataset;
   private ConceptPresentation props_Omit;
-  private ConceptPresentation props_PValue;
   private ConceptPresentation props_PlotEventStudyMeans;
   private ConceptPresentation props_RunAttEstimations;
   private ConceptPresentation props_Script;
   private ConceptPresentation props_Set;
   private ConceptPresentation props_SetCovariates;
   private ConceptPresentation props_ShowDataset;
-  private ConceptPresentation props_SignificanceLevel;
   private ConceptPresentation props_Statement;
   private ConceptPresentation props_TimeColumnClause;
   private ConceptPresentation props_TreatmentValues;
   private ConceptPresentation props_Using;
+  private ConceptPresentation props_With;
 
   @Override
   @Nullable
@@ -76,6 +78,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ComputePrePostMeans = cpb.create();
         }
         return props_ComputePrePostMeans;
+      case LanguageConceptSwitch.Covariates:
+        if (props_Covariates == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("using covariates");
+          props_Covariates = cpb.create();
+        }
+        return props_Covariates;
       case LanguageConceptSwitch.EmptyLine:
         if (props_EmptyLine == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -83,6 +92,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_EmptyLine = cpb.create();
         }
         return props_EmptyLine;
+      case LanguageConceptSwitch.Exclude:
+        if (props_Exclude == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("exclude");
+          props_Exclude = cpb.create();
+        }
+        return props_Exclude;
       case LanguageConceptSwitch.GroupColumnClause:
         if (props_GroupColumnClause == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -111,6 +127,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ImputeMissingMultiple = cpb.create();
         }
         return props_ImputeMissingMultiple;
+      case LanguageConceptSwitch.Include:
+        if (props_Include == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("include");
+          props_Include = cpb.create();
+        }
+        return props_Include;
       case LanguageConceptSwitch.LoadDataset:
         if (props_LoadDataset == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -126,13 +149,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Omit = cpb.create();
         }
         return props_Omit;
-      case LanguageConceptSwitch.PValue:
-        if (props_PValue == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("PValue");
-          props_PValue = cpb.create();
-        }
-        return props_PValue;
       case LanguageConceptSwitch.PlotEventStudyMeans:
         if (props_PlotEventStudyMeans == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -178,13 +194,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ShowDataset = cpb.create();
         }
         return props_ShowDataset;
-      case LanguageConceptSwitch.SignificanceLevel:
-        if (props_SignificanceLevel == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("alpha");
-          props_SignificanceLevel = cpb.create();
-        }
-        return props_SignificanceLevel;
       case LanguageConceptSwitch.Statement:
         if (props_Statement == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -213,6 +222,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Using = cpb.create();
         }
         return props_Using;
+      case LanguageConceptSwitch.With:
+        if (props_With == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("with");
+          props_With = cpb.create();
+        }
+        return props_With;
     }
     return null;
   }

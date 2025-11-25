@@ -15,6 +15,7 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.errors.messageTargets.MessageTarget;
 import jetbrains.mps.errors.messageTargets.NodeMessageTarget;
 import jetbrains.mps.errors.IErrorReporter;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import org.jetbrains.mps.openapi.language.SProperty;
@@ -29,6 +30,13 @@ public class check_Using_NonTypesystemRule extends AbstractNonTypesystemRule_Run
         final MessageTarget errorTarget = new NodeMessageTarget();
         IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(using, "You must select a column for clustered by", "r:ad55364e-4a37-4c47-b02e-004b1fbd2e17(DiDSL.typesystem)", "4857517630234433588", null, errorTarget);
       }
+    }
+    if (SNodeOperations.isInstanceOf(SNodeOperations.getParent(using), CONCEPTS.RunAttEstimations$3) && SPropertyOperations.getEnum(using, PROPS.control$gtYh) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x32a4f45c8ade1053L, "DiDSL.structure.ControlStrategy"), 0x32a4f45c8ade1054L, "interaction")) {
+      {
+        final MessageTarget errorTarget = new NodeMessageTarget();
+        IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(using, "It is not possible to choose this control strategy for this command", "r:ad55364e-4a37-4c47-b02e-004b1fbd2e17(DiDSL.typesystem)", "1607826655215260320", null, errorTarget);
+      }
+
     }
   }
   public SAbstractConcept getApplicableConcept() {
@@ -47,9 +55,11 @@ public class check_Using_NonTypesystemRule extends AbstractNonTypesystemRule_Run
 
   private static final class PROPS {
     /*package*/ static final SProperty clusteringMethod$uABN = MetaAdapterFactory.getProperty(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x43695e8c685102d7L, 0x43695e8c685102d8L, "clusteringMethod");
+    /*package*/ static final SProperty control$gtYh = MetaAdapterFactory.getProperty(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x43695e8c685102d7L, 0x165025d3047faf4eL, "control");
   }
 
   private static final class CONCEPTS {
+    /*package*/ static final SConcept RunAttEstimations$3 = MetaAdapterFactory.getConcept(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x32a4f45c8b0e4315L, "DiDSL.structure.RunAttEstimations");
     /*package*/ static final SConcept Using$Bu = MetaAdapterFactory.getConcept(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x43695e8c685102d7L, "DiDSL.structure.Using");
   }
 }

@@ -7,34 +7,28 @@ import org.jetbrains.mps.openapi.model.SNode;
 import org.jetbrains.mps.openapi.model.SModel;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
-import org.jetbrains.mps.openapi.language.SConcept;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SEnumOperations;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import org.jetbrains.mps.openapi.language.SConcept;
 import org.jetbrains.mps.openapi.language.SProperty;
 
-public class PValue {
-  public static class NodeFactory_4857517630234161094 implements NodeFactory {
+public class Using {
+  public static class NodeFactory_1607826655215087373 implements NodeFactory {
     public void setup(SNode newNode, SNode sampleNode, SNode enclosingNode, int index, SModel model) {
-      {
-        final SNode checkParallelTrendsStaggered = enclosingNode;
-        if (SNodeOperations.isInstanceOf(checkParallelTrendsStaggered, CONCEPTS.CheckParallelTrendsStaggered$YH)) {
-          SPropertyOperations.assign(newNode, PROPS.pValue$wcyN, "0.05");
-        }
-      }
       {
         final SNode runAttEstimations = enclosingNode;
         if (SNodeOperations.isInstanceOf(runAttEstimations, CONCEPTS.RunAttEstimations$3)) {
-          SPropertyOperations.assign(newNode, PROPS.pValue$wcyN, "0.05");
+          SPropertyOperations.assignEnum(newNode, PROPS.control$gtYh, SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x32a4f45c8ade1053L, "DiDSL.structure.ControlStrategy"), 0x32a4f45c8ade1058L, "not_yet_treated"));
         }
       }
     }
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept CheckParallelTrendsStaggered$YH = MetaAdapterFactory.getConcept(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x32a4f45c8ade1065L, "DiDSL.structure.CheckParallelTrendsStaggered");
     /*package*/ static final SConcept RunAttEstimations$3 = MetaAdapterFactory.getConcept(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x32a4f45c8b0e4315L, "DiDSL.structure.RunAttEstimations");
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty pValue$wcyN = MetaAdapterFactory.getProperty(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x32a4f45c8ade1095L, 0x32a4f45c8ade1096L, "pValue");
+    /*package*/ static final SProperty control$gtYh = MetaAdapterFactory.getProperty(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x43695e8c685102d7L, 0x165025d3047faf4eL, "control");
   }
 }
