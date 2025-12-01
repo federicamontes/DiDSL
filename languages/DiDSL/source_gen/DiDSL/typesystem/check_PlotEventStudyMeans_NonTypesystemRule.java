@@ -14,6 +14,8 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.errors.messageTargets.MessageTarget;
 import jetbrains.mps.errors.messageTargets.NodeMessageTarget;
 import jetbrains.mps.errors.IErrorReporter;
+import jetbrains.mps.internal.collections.runtime.ListSequence;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import org.jetbrains.mps.openapi.language.SProperty;
@@ -29,6 +31,14 @@ public class check_PlotEventStudyMeans_NonTypesystemRule extends AbstractNonType
         IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(plotEventStudyMeans, "It is not possible to choose this control strategy for this command", "r:ad55364e-4a37-4c47-b02e-004b1fbd2e17(DiDSL.typesystem)", "8650958172470937353", null, errorTarget);
       }
     }
+    if (ListSequence.fromList(SNodeOperations.getNodeDescendants(SNodeOperations.cast(SNodeOperations.getParent(plotEventStudyMeans), CONCEPTS.Script$3E), CONCEPTS.Set$Jg, false, new SAbstractConcept[]{})).where((it) -> SPropertyOperations.getEnum(it, PROPS.columnType$G6gV) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x3d7090ceae12b0adL, "DiDSL.structure.ColumnType"), 0x3d7090ceae12b0b0L, "group")).isEmpty() || ListSequence.fromList(SNodeOperations.getNodeDescendants(SNodeOperations.cast(SNodeOperations.getParent(plotEventStudyMeans), CONCEPTS.Script$3E), CONCEPTS.Set$Jg, false, new SAbstractConcept[]{})).where((it) -> SPropertyOperations.getEnum(it, PROPS.columnType$G6gV) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x3d7090ceae12b0adL, "DiDSL.structure.ColumnType"), 0x3d7090ceae12b0b1L, "time")).isEmpty() || ListSequence.fromList(SNodeOperations.getNodeDescendants(SNodeOperations.cast(SNodeOperations.getParent(plotEventStudyMeans), CONCEPTS.Script$3E), CONCEPTS.Set$Jg, false, new SAbstractConcept[]{})).where((it) -> SPropertyOperations.getEnum(it, PROPS.columnType$G6gV) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x3d7090ceae12b0adL, "DiDSL.structure.ColumnType"), 0x3d7090ceae12b0b3L, "outcome")).isEmpty() || ListSequence.fromList(SNodeOperations.getNodeDescendants(SNodeOperations.cast(SNodeOperations.getParent(plotEventStudyMeans), CONCEPTS.Script$3E), CONCEPTS.Set$Jg, false, new SAbstractConcept[]{})).where((it) -> SPropertyOperations.getEnum(it, PROPS.columnType$G6gV) == SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x3d7090ceae12b0adL, "DiDSL.structure.ColumnType"), 0x3d7090ceae12b0afL, "id")).isEmpty()) {
+      {
+        final MessageTarget errorTarget = new NodeMessageTarget();
+        IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(SNodeOperations.getParent(plotEventStudyMeans), "Error on set column: time, group, outcome and id must exist", "r:ad55364e-4a37-4c47-b02e-004b1fbd2e17(DiDSL.typesystem)", "3696368796442666058", null, errorTarget);
+      }
+    }
+
+
   }
   public SAbstractConcept getApplicableConcept() {
     return CONCEPTS.PlotEventStudyMeans$tr;
@@ -46,9 +56,12 @@ public class check_PlotEventStudyMeans_NonTypesystemRule extends AbstractNonType
 
   private static final class PROPS {
     /*package*/ static final SProperty controlStrategy$awon = MetaAdapterFactory.getProperty(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x780e609f84c7c293L, 0x780e609f84c7c298L, "controlStrategy");
+    /*package*/ static final SProperty columnType$G6gV = MetaAdapterFactory.getProperty(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x3d7090ceae11373cL, 0x3d7090ceae12b0b5L, "columnType");
   }
 
   private static final class CONCEPTS {
+    /*package*/ static final SConcept Script$3E = MetaAdapterFactory.getConcept(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x3d7090ceae0fe3c3L, "DiDSL.structure.Script");
+    /*package*/ static final SConcept Set$Jg = MetaAdapterFactory.getConcept(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x3d7090ceae11373cL, "DiDSL.structure.Set");
     /*package*/ static final SConcept PlotEventStudyMeans$tr = MetaAdapterFactory.getConcept(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x32a4f45c8adcc6dbL, "DiDSL.structure.PlotEventStudyMeans");
   }
 }

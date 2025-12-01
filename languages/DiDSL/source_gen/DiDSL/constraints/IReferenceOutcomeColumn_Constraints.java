@@ -9,9 +9,11 @@ import jetbrains.mps.smodel.runtime.ReferenceConstraintsDescriptor;
 import jetbrains.mps.smodel.runtime.base.BaseReferenceConstraintsDescriptor;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import java.util.HashMap;
 import org.jetbrains.mps.openapi.language.SInterfaceConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import org.jetbrains.mps.openapi.language.SConcept;
 
 public class IReferenceOutcomeColumn_Constraints extends BaseConstraintsDescriptor {
   public IReferenceOutcomeColumn_Constraints() {
@@ -28,7 +30,7 @@ public class IReferenceOutcomeColumn_Constraints extends BaseConstraintsDescript
       @Override
       public void onReferenceSet(final SNode referenceNode, final SNode oldReferentNode, final SNode newReferentNode) {
         SLinkOperations.setTarget(referenceNode, LINKS.column$5rZC, newReferentNode);
-        SLinkOperations.setTarget(referenceNode, LINKS.dataset$XAK3, SLinkOperations.getTarget(newReferentNode, LINKS.dataset$jawN));
+        SLinkOperations.setTarget(referenceNode, LINKS.dataset$XAK3, SNodeOperations.cast(SNodeOperations.getParent(newReferentNode), CONCEPTS.LoadDataset$ic));
       }
     };
     Map<SReferenceLink, ReferenceConstraintsDescriptor> references = new HashMap<SReferenceLink, ReferenceConstraintsDescriptor>();
@@ -38,11 +40,11 @@ public class IReferenceOutcomeColumn_Constraints extends BaseConstraintsDescript
 
   private static final class CONCEPTS {
     /*package*/ static final SInterfaceConcept IReferenceOutcomeColumn$8n = MetaAdapterFactory.getInterfaceConcept(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x43695e8c6843ccc1L, "DiDSL.structure.IReferenceOutcomeColumn");
+    /*package*/ static final SConcept LoadDataset$ic = MetaAdapterFactory.getConcept(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x3d7090ceae0fe3ccL, "DiDSL.structure.LoadDataset");
   }
 
   private static final class LINKS {
     /*package*/ static final SReferenceLink column$5rZC = MetaAdapterFactory.getReferenceLink(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x43695e8c6843ccc1L, 0x43695e8c6843ccc2L, "column");
     /*package*/ static final SReferenceLink dataset$XAK3 = MetaAdapterFactory.getReferenceLink(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x43695e8c6843ccc1L, 0x43695e8c685fdda1L, "dataset");
-    /*package*/ static final SReferenceLink dataset$jawN = MetaAdapterFactory.getReferenceLink(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x3d7090ceae11373cL, 0x3d7090ceae11373dL, "dataset");
   }
 }

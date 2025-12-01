@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
+  <root nodeRef="r:ca774a30-28e7-4e14-84ce-7110bf8dee4c(DiDSL.test)/3696368796446215461">
+    <file name="tester_Test.java">
+      <node id="3696368796446215461" at="19,24,20,60" concept="4" />
+      <node id="3696368796446215461" at="24,46,25,36" concept="1" />
+      <node id="3696368796446215461" at="30,52,31,19" concept="4" />
+      <node id="3696368796446215461" at="35,51,36,72" concept="1" />
+      <node id="3696368796446216687" at="36,72,37,36" concept="1" />
+      <node id="3696368796446215461" at="16,0,18,0" concept="3" trace="ourParametersCacheExtension" />
+      <node id="3696368796446215461" at="19,0,22,0" concept="0" trace="tester_Test#()V" />
+      <node id="3696368796446215461" at="30,0,33,0" concept="0" trace="TestBody#(Ljetbrains/mps/lang/test/runtime/TransformationTest;)V" />
+      <node id="3696368796446215461" at="23,0,27,0" concept="2" trace="test_tester#()V" />
+      <node id="3696368796446215461" at="34,0,39,0" concept="2" trace="testMethodImpl#()V" />
+      <scope id="3696368796446215461" at="19,24,20,60" />
+      <scope id="3696368796446215461" at="24,46,25,36" />
+      <scope id="3696368796446215461" at="30,52,31,19" />
+      <scope id="3696368796446215461" at="35,51,37,36" />
+      <scope id="3696368796446215461" at="19,0,22,0" />
+      <scope id="3696368796446215461" at="30,0,33,0">
+        <var name="owner" id="3696368796446215461" />
+      </scope>
+      <scope id="3696368796446215461" at="23,0,27,0" />
+      <scope id="3696368796446215461" at="34,0,39,0" />
+      <unit id="3696368796446215461" at="28,0,40,0" name="DiDSL.test.tester_Test$TestBody" />
+      <unit id="3696368796446215461" at="14,0,41,0" name="DiDSL.test.tester_Test" />
+    </file>
+  </root>
+</debug-info>
+

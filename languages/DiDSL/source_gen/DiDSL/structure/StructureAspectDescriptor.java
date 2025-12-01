@@ -19,6 +19,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptAll = createDescriptorForAll();
   /*package*/ final ConceptDescriptor myConceptBasedOn = createDescriptorForBasedOn();
   /*package*/ final ConceptDescriptor myConceptCheckParallelTrendsStaggered = createDescriptorForCheckParallelTrendsStaggered();
+  /*package*/ final ConceptDescriptor myConceptColumn = createDescriptorForColumn();
   /*package*/ final ConceptDescriptor myConceptColumnReference = createDescriptorForColumnReference();
   /*package*/ final ConceptDescriptor myConceptComputePrePostMeans = createDescriptorForComputePrePostMeans();
   /*package*/ final ConceptDescriptor myConceptCovariates = createDescriptorForCovariates();
@@ -61,7 +62,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAll, myConceptBasedOn, myConceptCheckParallelTrendsStaggered, myConceptColumnReference, myConceptComputePrePostMeans, myConceptCovariates, myConceptEmptyLine, myConceptExclude, myConceptGroupColumnClause, myConceptIColumnClause, myConceptIReferenceOutcomeColumn, myConceptImputeMissingMultiple, myConceptInclude, myConceptLoadDataset, myConceptOmit, myConceptPlotEventStudyMeans, myConceptRunAttEstimations, myConceptScript, myConceptSet, myConceptSetCovariates, myConceptShowDataset, myConceptStatement, myConceptTimeColumnClause, myConceptTreatmentValues, myConceptUsing, myConceptWith);
+    return Arrays.asList(myConceptAll, myConceptBasedOn, myConceptCheckParallelTrendsStaggered, myConceptColumn, myConceptColumnReference, myConceptComputePrePostMeans, myConceptCovariates, myConceptEmptyLine, myConceptExclude, myConceptGroupColumnClause, myConceptIColumnClause, myConceptIReferenceOutcomeColumn, myConceptImputeMissingMultiple, myConceptInclude, myConceptLoadDataset, myConceptOmit, myConceptPlotEventStudyMeans, myConceptRunAttEstimations, myConceptScript, myConceptSet, myConceptSetCovariates, myConceptShowDataset, myConceptStatement, myConceptTimeColumnClause, myConceptTreatmentValues, myConceptUsing, myConceptWith);
   }
 
   @Override
@@ -74,6 +75,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptBasedOn;
       case LanguageConceptSwitch.CheckParallelTrendsStaggered:
         return myConceptCheckParallelTrendsStaggered;
+      case LanguageConceptSwitch.Column:
+        return myConceptColumn;
       case LanguageConceptSwitch.ColumnReference:
         return myConceptColumnReference;
       case LanguageConceptSwitch.ComputePrePostMeans:
@@ -168,12 +171,20 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.alias("check parallel trends staggered");
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForColumn() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("DiDSL", "Column", 0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x334c23d60f2d704fL);
+    b.class_(false, false, false);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:fddcec65-b03d-485e-ad0f-90dc64caa764(DiDSL.structure)/3696368796448944207");
+    b.version(3);
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForColumnReference() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("DiDSL", "ColumnReference", 0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x43695e8c6851034aL);
     b.class_(false, false, false);
     b.origin("r:fddcec65-b03d-485e-ad0f-90dc64caa764(DiDSL.structure)/4857517630234362698");
     b.version(3);
-    b.associate("column", 0x43695e8c6851034bL).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x3d7090ceae11373cL).optional(false).origin("4857517630234362699").done();
+    b.associate("column", 0x43695e8c6851034bL).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x334c23d60f2d704fL).optional(false).origin("4857517630234362699").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForComputePrePostMeans() {
@@ -234,7 +245,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.interface_();
     b.origin("r:fddcec65-b03d-485e-ad0f-90dc64caa764(DiDSL.structure)/4857517630233496769");
     b.version(3);
-    b.associate("column", 0x43695e8c6843ccc2L).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x3d7090ceae11373cL).optional(false).origin("4857517630233496770").done();
+    b.associate("column", 0x43695e8c6843ccc2L).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x334c23d60f2d704fL).optional(false).origin("4857517630233496770").done();
     b.associate("dataset", 0x43695e8c685fdda1L).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x3d7090ceae0fe3ccL).optional(false).origin("4857517630235336097").done();
     return b.create();
   }
@@ -267,6 +278,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(3);
     b.property("datasetName", 0x3d7090ceae0fe3cdL).type(PrimitiveTypeId.STRING).origin("4427197651063137229").done();
     b.aggregate("with", 0x165025d303fbe1aeL).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x165025d303be93d4L).optional(true).ordered(true).multiple(false).origin("1607826655206433198").done();
+    b.aggregate("header", 0x334c23d60ee4d322L).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x334c23d60f2d704fL).optional(true).ordered(true).multiple(true).origin("3696368796444185378").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForOmit() {
@@ -300,7 +312,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.aggregate("using", 0x165025d304572738L).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x43695e8c685102d7L).optional(true).ordered(true).multiple(true).origin("1607826655212414776").done();
     b.aggregate("with", 0x165025d303c730d1L).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x165025d303be93d4L).optional(true).ordered(true).multiple(true).origin("1607826655202980049").done();
     b.aggregate("naomit", 0x165025d3045a89e9L).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x43695e8c68521db3L).optional(true).ordered(true).multiple(false).origin("1607826655212636649").done();
-    b.aggregate("exclude", 0x165025d3046eda60L).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x165025d3046eda57L).optional(true).ordered(true).multiple(false).origin("1607826655213967968").done();
+    b.aggregate("exclude", 0x334c23d60edb61d2L).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x165025d3046eda57L).optional(true).ordered(true).multiple(false).origin("3696368796443566546").done();
     b.aggregate("include", 0x165025d3047230b0L).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x165025d3047230a9L).optional(true).ordered(true).multiple(false).origin("1607826655214186672").done();
     b.alias("run att estimations");
     return b.create();
@@ -323,6 +335,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(3);
     b.property("columnType", 0x3d7090ceae12b0b5L).type(MetaIdFactory.dataTypeId(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x3d7090ceae12b0adL)).origin("4427197651063320757").done();
     b.associate("dataset", 0x3d7090ceae11373dL).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x3d7090ceae0fe3ccL).optional(false).origin("4427197651063224125").done();
+    b.associate("column", 0x334c23d60f2d9b91L).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x334c23d60f2d704fL).optional(false).origin("3696368796448955281").done();
     b.aggregate("clause", 0x43695e8c68489541L).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x43695e8c684875d3L).optional(true).ordered(true).multiple(false).origin("4857517630233810241").done();
     b.alias("set");
     return b.create();
@@ -335,7 +348,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:fddcec65-b03d-485e-ad0f-90dc64caa764(DiDSL.structure)/3649310276379921647");
     b.version(3);
-    b.associate("dataset", 0x32a4f45c8aceccf7L).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x3d7090ceae0fe3ccL).optional(false).origin("3649310276379921655").done();
+    b.associate("dataset", 0x334c23d60f68045cL).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x3d7090ceae0fe3ccL).optional(false).origin("3696368796452783196").done();
+    b.aggregate("columnList", 0x334c23d60f5f2988L).target(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x43695e8c6851034aL).optional(true).ordered(true).multiple(true).origin("3696368796452202888").done();
     b.alias("set covariates");
     return b.create();
   }

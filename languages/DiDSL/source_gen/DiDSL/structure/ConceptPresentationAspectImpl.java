@@ -12,6 +12,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_All;
   private ConceptPresentation props_BasedOn;
   private ConceptPresentation props_CheckParallelTrendsStaggered;
+  private ConceptPresentation props_Column;
   private ConceptPresentation props_ColumnReference;
   private ConceptPresentation props_ComputePrePostMeans;
   private ConceptPresentation props_Covariates;
@@ -63,6 +64,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_CheckParallelTrendsStaggered = cpb.create();
         }
         return props_CheckParallelTrendsStaggered;
+      case LanguageConceptSwitch.Column:
+        if (props_Column == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_Column = cpb.create();
+        }
+        return props_Column;
       case LanguageConceptSwitch.ColumnReference:
         if (props_ColumnReference == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

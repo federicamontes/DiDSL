@@ -101,6 +101,13 @@
       <property role="20kJfa" value="with" />
       <ref role="20lvS9" node="1pg9tc3JDfk" resolve="With" />
     </node>
+    <node concept="1TJgyj" id="3dc8XoeTdcy" role="1TKVEi">
+      <property role="IQ2ns" value="3696368796444185378" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="header" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="3dc8Xofbn1f" resolve="Column" />
+    </node>
   </node>
   <node concept="1TIwiD" id="3PK$cUI4jsW">
     <property role="EcuMT" value="4427197651063224124" />
@@ -114,6 +121,12 @@
       <property role="20kJfa" value="dataset" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="3PK$cUI3Yfc" resolve="LoadDataset" />
+    </node>
+    <node concept="1TJgyj" id="3dc8XofbpIh" role="1TKVEi">
+      <property role="IQ2ns" value="3696368796448955281" />
+      <property role="20kJfa" value="column" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="3dc8Xofbn1f" resolve="Column" />
     </node>
     <node concept="1TJgyi" id="3PK$cUI4F2P" role="1TKVEl">
       <property role="IQ2nx" value="4427197651063320757" />
@@ -207,14 +220,21 @@
     <property role="R4oN_" value="Command for seting covariates" />
     <property role="3GE5qa" value="statements" />
     <ref role="1TJDcQ" node="3PK$cUI3Yf5" resolve="Statement" />
-    <node concept="1TJgyj" id="3a$X5MaNGNR" role="1TKVEi">
-      <property role="IQ2ns" value="3649310276379921655" />
+    <node concept="PrWs8" id="7weo9Y4Yjwz" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1TJgyj" id="3dc8XofnMA8" role="1TKVEi">
+      <property role="IQ2ns" value="3696368796452202888" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="columnList" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="4dDnCLCkgda" resolve="ColumnReference" />
+    </node>
+    <node concept="1TJgyj" id="3dc8Xofq0hs" role="1TKVEi">
+      <property role="IQ2ns" value="3696368796452783196" />
       <property role="20kJfa" value="dataset" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="3PK$cUI3Yfc" resolve="LoadDataset" />
-    </node>
-    <node concept="PrWs8" id="7weo9Y4Yjwz" role="PzmwI">
-      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
   </node>
   <node concept="1TIwiD" id="3a$X5MaNRSc">
@@ -426,8 +446,8 @@
       <property role="20kJfa" value="naomit" />
       <ref role="20lvS9" node="4dDnCLCkxQN" resolve="Omit" />
     </node>
-    <node concept="1TJgyj" id="1pg9tc4rHDw" role="1TKVEi">
-      <property role="IQ2ns" value="1607826655213967968" />
+    <node concept="1TJgyj" id="3dc8XoeQQ7i" role="1TKVEi">
+      <property role="IQ2ns" value="3696368796443566546" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="exclude" />
       <ref role="20lvS9" node="1pg9tc4rHDn" resolve="Exclude" />
@@ -454,7 +474,7 @@
       <property role="IQ2ns" value="4857517630233496770" />
       <property role="20kJfa" value="column" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="3PK$cUI4jsW" resolve="Set" />
+      <ref role="20lvS9" node="3dc8Xofbn1f" resolve="Column" />
     </node>
     <node concept="1TJgyj" id="4dDnCLCnXQx" role="1TKVEi">
       <property role="IQ2ns" value="4857517630235336097" />
@@ -505,7 +525,7 @@
       <property role="IQ2ns" value="4857517630234362699" />
       <property role="20kJfa" value="column" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="3PK$cUI4jsW" resolve="Set" />
+      <ref role="20lvS9" node="3dc8Xofbn1f" resolve="Column" />
     </node>
   </node>
   <node concept="1TIwiD" id="4dDnCLCkxQN">
@@ -573,6 +593,14 @@
     <property role="TrG5h" value="Include" />
     <property role="34LRSv" value="include" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+  </node>
+  <node concept="1TIwiD" id="3dc8Xofbn1f">
+    <property role="EcuMT" value="3696368796448944207" />
+    <property role="TrG5h" value="Column" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="PrWs8" id="3dc8Xofbn1g" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
   </node>
 </model>
 
