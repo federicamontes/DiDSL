@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="-4e38yo7qhrcywjb581x8baazpypdzvc">
+<product version="3" modelHash="-bvdpwrny0b25umd3rlyax5jh87ags1l">
   <files names="TypesystemDescriptor.java:check_CheckParallelTrendsStaggered_NonTypesystemRule.java:check_ComputePrePostMeans_NonTypesystemRule.java:check_IReferenceOutcomeColumn_NonTypesystemRule.java:check_ImputeMissingMultiple_NonTypesystemRule.java:check_LoadDataset_NonTypesystemRule.java:check_PlotEventStudyMeans_NonTypesystemRule.java:check_RunAttEstimations_NonTypesystemRule.java:check_SetCovariates_NonTypesystemRule.java:check_Using_NonTypesystemRule.java" />
 </product>
 

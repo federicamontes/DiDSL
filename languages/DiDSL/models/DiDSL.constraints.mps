@@ -15,11 +15,9 @@
   </languages>
   <imports>
     <import index="tq4j" ref="r:fddcec65-b03d-485e-ad0f-90dc64caa764(DiDSL.structure)" />
-    <import index="vttr" ref="498d89d2-c2e9-11e2-ad49-6cf049e62fe5/java:com.intellij.execution.process.impl(MPS.IDEA/)" />
-    <import index="vtts" ref="39983771-4e9b-401b-a1a9-1da6c777c843/java:com.intellij.execution.process.impl(MPS.ThirdParty/)" />
-    <import index="tryi" ref="11045775-3aaf-4816-8077-8656c4e8fee1/java:au.com.bytecode.opencsv(com.opencsv/)" />
     <import index="guwi" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.io(JDK/)" />
     <import index="o8zo" ref="r:314576fc-3aee-4386-a0a5-a38348ac317d(jetbrains.mps.scope)" />
+    <import index="tryi" ref="11045775-3aaf-4816-8077-8656c4e8fee1/java:au.com.bytecode.opencsv(com.opencsv/)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
   <registry>
@@ -256,7 +254,7 @@
   <node concept="1M2fIO" id="4dDnCLCnXQy">
     <ref role="1M2myG" to="tq4j:4dDnCLCgWN1" resolve="IReferenceOutcomeColumn" />
     <node concept="1N5Pfh" id="4dDnCLCnXQz" role="1Mr941">
-      <ref role="1N5Vy1" to="tq4j:4dDnCLCgWN2" />
+      <ref role="1N5Vy1" to="tq4j:4dDnCLCgWN2" resolve="column" />
       <node concept="3k9gUc" id="4dDnCLCnXSA" role="3kmjI7">
         <node concept="3clFbS" id="4dDnCLCnXSB" role="2VODD2">
           <node concept="3clFbF" id="4dDnCLCnXU9" role="3cqZAp">
@@ -297,7 +295,7 @@
     <property role="3GE5qa" value="statements" />
     <ref role="1M2myG" to="tq4j:3PK$cUI4jsW" resolve="Set" />
     <node concept="1N5Pfh" id="3dc8XofjA8N" role="1Mr941">
-      <ref role="1N5Vy1" to="tq4j:3dc8XofbpIh" />
+      <ref role="1N5Vy1" to="tq4j:3dc8XofbpIh" resolve="column" />
       <node concept="3dgokm" id="3dc8XofjAfk" role="1N6uqs">
         <node concept="3clFbS" id="3dc8XofjAfl" role="2VODD2">
           <node concept="3clFbF" id="3dc8XofjAjD" role="3cqZAp">
@@ -439,7 +437,7 @@
                       </node>
                       <node concept="2OqwBi" id="3dc8XoeTtvP" role="37vLTJ">
                         <node concept="37vLTw" id="3dc8XoeTsHV" role="2Oq$k0">
-                          <ref role="3cqZAo" node="3dc8XoeTrpH" resolve="newStringLiteral" />
+                          <ref role="3cqZAo" node="3dc8XoeTrpH" resolve="newColumn" />
                         </node>
                         <node concept="3TrcHB" id="3dc8XoeTtJE" role="2OqNvi">
                           <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
@@ -457,7 +455,7 @@
                       </node>
                       <node concept="TSZUe" id="3dc8XoeTHr8" role="2OqNvi">
                         <node concept="37vLTw" id="3dc8XoeTH$z" role="25WWJ7">
-                          <ref role="3cqZAo" node="3dc8XoeTrpH" resolve="newStringLiteral" />
+                          <ref role="3cqZAo" node="3dc8XoeTrpH" resolve="newColumn" />
                         </node>
                       </node>
                     </node>

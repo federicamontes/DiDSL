@@ -14,258 +14,251 @@
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/5351203823916750322:jetbrains.mps.baseLanguage.structure.TryUniversalStatement" />
   <root>
     <file name="ConstraintsAspectDescriptor.java">
-      <unit at="13,0,39,0" name="DiDSL.constraints.ConstraintsAspectDescriptor" />
+      <unit at="15,0,42,0" name="DiDSL.constraints.ConstraintsAspectDescriptor" />
     </file>
   </root>
   <root nodeRef="r:00157fb0-c75e-4d31-9e26-8f7ef56d0eb8(DiDSL.constraints)/3696368796443918361">
     <file name="Set_Constraints.java">
-      <node id="3696368796443918361" at="25,28,26,27" concept="10" />
-      <node id="3696368796451103283" at="37,63,38,120" concept="6" />
-      <node id="3696368796451103977" at="41,80,42,170" concept="6" />
-      <node id="3696368796443918361" at="46,6,47,131" concept="5" />
-      <node id="3696368796451103283" at="47,131,48,42" concept="1" />
-      <node id="3696368796443918361" at="48,42,49,22" concept="6" />
-      <node id="3696368796443918361" at="53,0,54,0" concept="8" trace="Set$Jg" />
-      <node id="3696368796443918361" at="57,0,58,0" concept="8" trace="column$S6YT" />
-      <node id="3696368796443918361" at="58,0,59,0" concept="8" trace="dataset$jawN" />
-      <node id="3696368796443918361" at="59,0,60,0" concept="8" trace="header$vLi_" />
-      <node id="3696368796443918361" at="25,0,28,0" concept="0" trace="Set_Constraints#()V" />
-      <node id="3696368796451103283" at="36,0,40,0" concept="4" trace="getSearchScopeValidatorNode#()Lorg/jetbrains/mps/openapi/model/SNodeReference;" />
-      <node id="3696368796451103283" at="40,0,44,0" concept="4" trace="createScope#(Ljetbrains/mps/smodel/runtime/ReferenceConstraintsContext;)Ljetbrains/mps/scope/Scope;" />
-      <node id="3696368796451103283" at="34,56,44,10" concept="6" />
-      <node id="3696368796451103283" at="32,0,46,0" concept="4" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
-      <node id="3696368796451103283" at="30,90,46,6" concept="5" />
-      <node id="3696368796443918361" at="29,0,51,0" concept="4" trace="getSpecifiedReferences#()Ljava/util/Map;" />
-      <scope id="3696368796443918361" at="25,28,26,27" />
-      <scope id="3696368796451103283" at="37,63,38,120" />
-      <scope id="3696368796451103283" at="41,80,42,170" />
-      <scope id="3696368796443918361" at="25,0,28,0" />
-      <scope id="3696368796451103283" at="36,0,40,0" />
-      <scope id="3696368796451103283" at="40,0,44,0">
+      <node id="3696368796443918361" at="24,77,25,40" concept="10" />
+      <node id="3696368796451103283" at="25,40,26,26" concept="1" />
+      <node id="3696368796451103283" at="30,54,31,55" concept="10" />
+      <node id="3696368796451103283" at="38,61,39,118" concept="6" />
+      <node id="3696368796451103977" at="42,78,43,168" concept="6" />
+      <node id="3696368796443918361" at="50,0,51,0" concept="8" trace="Set$Jg" />
+      <node id="3696368796443918361" at="54,0,55,0" concept="8" trace="column$S6YT" />
+      <node id="3696368796443918361" at="55,0,56,0" concept="8" trace="dataset$jawN" />
+      <node id="3696368796443918361" at="56,0,57,0" concept="8" trace="header$vLi_" />
+      <node id="3696368796451103283" at="30,0,33,0" concept="0" trace="RD1#(Ljetbrains/mps/smodel/runtime/ConstraintsDescriptor;)V" />
+      <node id="3696368796443918361" at="24,0,28,0" concept="0" trace="Set_Constraints#(Ljetbrains/mps/smodel/runtime/ConstraintsDescriptorInitContext;)V" />
+      <node id="3696368796451103283" at="37,0,41,0" concept="4" trace="getSearchScopeValidatorNode#()Lorg/jetbrains/mps/openapi/model/SNodeReference;" />
+      <node id="3696368796451103283" at="41,0,45,0" concept="4" trace="createScope#(Ljetbrains/mps/smodel/runtime/ReferenceConstraintsContext;)Ljetbrains/mps/scope/Scope;" />
+      <node id="3696368796451103283" at="35,54,45,8" concept="6" />
+      <node id="3696368796451103283" at="33,0,47,0" concept="4" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
+      <scope id="3696368796451103283" at="30,54,31,55" />
+      <scope id="3696368796451103283" at="38,61,39,118" />
+      <scope id="3696368796451103283" at="42,78,43,168" />
+      <scope id="3696368796443918361" at="24,77,26,26" />
+      <scope id="3696368796451103283" at="30,0,33,0">
+        <var name="container" id="3696368796451103283" />
+      </scope>
+      <scope id="3696368796443918361" at="24,0,28,0">
+        <var name="initContext" id="3696368796443918361" />
+      </scope>
+      <scope id="3696368796451103283" at="37,0,41,0" />
+      <scope id="3696368796451103283" at="41,0,45,0">
         <var name="_context" id="3696368796451103283" />
       </scope>
-      <scope id="3696368796451103283" at="34,56,44,10" />
-      <scope id="3696368796451103283" at="32,0,46,0" />
-      <scope id="3696368796443918361" at="30,90,49,22">
-        <var name="d0" id="3696368796451103283" />
-        <var name="references" id="3696368796443918361" />
-      </scope>
-      <scope id="3696368796443918361" at="29,0,51,0" />
-      <unit id="3696368796443918361" at="52,0,55,0" name="DiDSL.constraints.Set_Constraints$CONCEPTS" />
-      <unit id="3696368796443918361" at="56,0,61,0" name="DiDSL.constraints.Set_Constraints$LINKS" />
-      <unit id="3696368796451103283" at="35,19,44,9" name="DiDSL.constraints.Set_Constraints$1$1" />
-      <unit id="3696368796451103283" at="31,48,46,5" name="DiDSL.constraints.Set_Constraints$1" />
-      <unit id="3696368796443918361" at="24,0,62,0" name="DiDSL.constraints.Set_Constraints" />
+      <scope id="3696368796451103283" at="35,54,45,8" />
+      <scope id="3696368796451103283" at="33,0,47,0" />
+      <unit id="3696368796443918361" at="49,0,52,0" name="DiDSL.constraints.Set_Constraints$CONCEPTS" />
+      <unit id="3696368796443918361" at="53,0,58,0" name="DiDSL.constraints.Set_Constraints$LINKS" />
+      <unit id="3696368796451103283" at="36,17,45,7" name="DiDSL.constraints.Set_Constraints$RD1$1" />
+      <unit id="3696368796451103283" at="29,0,48,0" name="DiDSL.constraints.Set_Constraints$RD1" />
+      <unit id="3696368796443918361" at="23,0,59,0" name="DiDSL.constraints.Set_Constraints" />
     </file>
   </root>
   <root nodeRef="r:00157fb0-c75e-4d31-9e26-8f7ef56d0eb8(DiDSL.constraints)/3696368796444190011">
     <file name="LoadDataset_Constraints.java">
-      <node id="3696368796444190011" at="26,36,27,35" concept="10" />
-      <node id="3696368796444190012" at="31,66,32,67" concept="10" />
-      <node id="3696368796444190012" at="35,68,36,82" concept="1" />
-      <node id="3696368796444649476" at="38,82,39,78" concept="1" />
-      <node id="3696368796444190288" at="40,11,41,122" concept="5" />
-      <node id="3696368796444190296" at="41,122,42,44" concept="5" />
-      <node id="3696368796446230564" at="42,44,43,86" concept="1" />
-      <node id="3696368796444243562" at="44,33,45,181" concept="5" />
-      <node id="3696368796444248957" at="45,181,46,68" concept="1" />
-      <node id="3696368796444283296" at="46,68,47,108" concept="1" />
-      <node id="3696368796446232821" at="49,32,50,80" concept="1" />
-      <node id="3696368796444190011" at="55,84,56,119" concept="5" />
-      <node id="3696368796444190012" at="56,119,57,75" concept="1" />
-      <node id="3696368796444190011" at="57,75,58,22" concept="6" />
-      <node id="3696368796444190011" at="62,0,63,0" concept="8" trace="LoadDataset$ic" />
-      <node id="3696368796444190011" at="66,0,67,0" concept="8" trace="datasetName$tVYN" />
-      <node id="3696368796444190011" at="67,0,68,0" concept="8" trace="name$MnvL" />
-      <node id="3696368796444190011" at="71,0,72,0" concept="8" trace="header$vLi_" />
-      <node id="3696368796444190011" at="26,0,29,0" concept="0" trace="LoadDataset_Constraints#()V" />
-      <node id="3696368796444190012" at="31,0,34,0" concept="0" trace="DatasetName_Property#(Ljetbrains/mps/smodel/runtime/ConstraintsDescriptor;)V" />
-      <node id="3696368796444190012" at="34,0,38,0" concept="4" trace="setPropertyValue#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/Object;)V" />
-      <node id="3696368796444273051" at="43,86,48,9" concept="2" />
-      <node id="3696368796444190011" at="54,0,60,0" concept="4" trace="getSpecifiedProperties#()Ljava/util/Map;" />
-      <node id="3696368796444190279" at="39,78,51,7" concept="11" />
-      <node id="3696368796444190012" at="38,0,53,0" concept="9" trace="staticSetPropertyValue#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/String;)V" />
-      <scope id="3696368796444190011" at="26,36,27,35" />
-      <scope id="3696368796444190012" at="31,66,32,67" />
-      <scope id="3696368796444190012" at="35,68,36,82" />
-      <scope id="3696368796444190284" at="49,32,50,80" />
-      <scope id="3696368796444190280" at="49,7,51,7">
+      <node id="3696368796444190011" at="24,85,25,48" concept="10" />
+      <node id="3696368796444190012" at="25,48,26,37" concept="1" />
+      <node id="3696368796444190012" at="30,60,31,67" concept="10" />
+      <node id="3696368796444190012" at="34,68,35,82" concept="1" />
+      <node id="3696368796444649476" at="37,82,38,78" concept="1" />
+      <node id="3696368796444190288" at="39,11,40,122" concept="5" />
+      <node id="3696368796444190296" at="40,122,41,44" concept="5" />
+      <node id="3696368796446230564" at="41,44,42,86" concept="1" />
+      <node id="3696368796444243562" at="43,33,44,181" concept="5" />
+      <node id="3696368796444248957" at="44,181,45,68" concept="1" />
+      <node id="3696368796444283296" at="45,68,46,108" concept="1" />
+      <node id="3696368796446232821" at="48,32,49,80" concept="1" />
+      <node id="3696368796444190011" at="55,0,56,0" concept="8" trace="LoadDataset$ic" />
+      <node id="3696368796444190011" at="59,0,60,0" concept="8" trace="datasetName$tVYN" />
+      <node id="3696368796444190011" at="60,0,61,0" concept="8" trace="name$MnvL" />
+      <node id="3696368796444190011" at="64,0,65,0" concept="8" trace="header$vLi_" />
+      <node id="3696368796444190012" at="30,0,33,0" concept="0" trace="DatasetName_PD#(Ljetbrains/mps/smodel/runtime/ConstraintsDescriptor;)V" />
+      <node id="3696368796444190011" at="24,0,28,0" concept="0" trace="LoadDataset_Constraints#(Ljetbrains/mps/smodel/runtime/ConstraintsDescriptorInitContext;)V" />
+      <node id="3696368796444190012" at="33,0,37,0" concept="4" trace="setPropertyValue#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/Object;)V" />
+      <node id="3696368796444273051" at="42,86,47,9" concept="2" />
+      <node id="3696368796444190279" at="38,78,50,7" concept="11" />
+      <node id="3696368796444190012" at="37,0,52,0" concept="9" trace="staticSetPropertyValue#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/String;)V" />
+      <scope id="3696368796444190012" at="30,60,31,67" />
+      <scope id="3696368796444190012" at="34,68,35,82" />
+      <scope id="3696368796444190284" at="48,32,49,80" />
+      <scope id="3696368796444190011" at="24,85,26,37" />
+      <scope id="3696368796444190280" at="48,7,50,7">
         <var name="fe" id="3696368796444190281" />
       </scope>
-      <scope id="3696368796444190011" at="26,0,29,0" />
-      <scope id="3696368796444190012" at="31,0,34,0">
+      <scope id="3696368796444190012" at="30,0,33,0">
         <var name="container" id="3696368796444190012" />
       </scope>
-      <scope id="3696368796444273057" at="44,33,47,108">
+      <scope id="3696368796444273057" at="43,33,46,108">
         <var name="newColumn" id="3696368796444243565" />
       </scope>
-      <scope id="3696368796444190011" at="55,84,58,22">
-        <var name="properties" id="3696368796444190011" />
+      <scope id="3696368796444190011" at="24,0,28,0">
+        <var name="initContext" id="3696368796444190011" />
       </scope>
-      <scope id="3696368796444190012" at="34,0,38,0">
+      <scope id="3696368796444190012" at="33,0,37,0">
         <var name="node" id="3696368796444190012" />
         <var name="propertyValue" id="3696368796444190012" />
       </scope>
-      <scope id="3696368796444273051" at="43,86,48,9">
+      <scope id="3696368796444273051" at="42,86,47,9">
         <var name="s" id="3696368796444273053" />
       </scope>
-      <scope id="3696368796444190011" at="54,0,60,0" />
-      <scope id="3696368796444190287" at="40,11,48,9">
+      <scope id="3696368796444190287" at="39,11,47,9">
         <var name="header" id="3696368796444190297" />
         <var name="reader" id="3696368796444190289" />
       </scope>
-      <scope id="3696368796444190174" at="38,82,51,7" />
-      <scope id="3696368796444190012" at="38,0,53,0">
+      <scope id="3696368796444190174" at="37,82,50,7" />
+      <scope id="3696368796444190012" at="37,0,52,0">
         <var name="node" id="3696368796444190012" />
         <var name="propertyValue" id="3696368796444190012" />
       </scope>
-      <unit id="3696368796444190011" at="61,0,64,0" name="DiDSL.constraints.LoadDataset_Constraints$CONCEPTS" />
-      <unit id="3696368796444190011" at="70,0,73,0" name="DiDSL.constraints.LoadDataset_Constraints$LINKS" />
-      <unit id="3696368796444190011" at="65,0,69,0" name="DiDSL.constraints.LoadDataset_Constraints$PROPS" />
-      <unit id="3696368796444190012" at="30,0,54,0" name="DiDSL.constraints.LoadDataset_Constraints$DatasetName_Property" />
-      <unit id="3696368796444190011" at="25,0,74,0" name="DiDSL.constraints.LoadDataset_Constraints" />
+      <unit id="3696368796444190011" at="54,0,57,0" name="DiDSL.constraints.LoadDataset_Constraints$CONCEPTS" />
+      <unit id="3696368796444190011" at="63,0,66,0" name="DiDSL.constraints.LoadDataset_Constraints$LINKS" />
+      <unit id="3696368796444190011" at="58,0,62,0" name="DiDSL.constraints.LoadDataset_Constraints$PROPS" />
+      <unit id="3696368796444190012" at="29,0,53,0" name="DiDSL.constraints.LoadDataset_Constraints$DatasetName_PD" />
+      <unit id="3696368796444190011" at="23,0,67,0" name="DiDSL.constraints.LoadDataset_Constraints" />
     </file>
   </root>
   <root nodeRef="r:00157fb0-c75e-4d31-9e26-8f7ef56d0eb8(DiDSL.constraints)/3696368796452783197">
     <file name="SetCovariates_Constraints.java">
-      <node id="3696368796452783197" at="10,38,11,37" concept="10" />
-      <node id="3696368796452783197" at="15,0,16,0" concept="8" trace="SetCovariates$e_" />
-      <node id="3696368796452783197" at="10,0,13,0" concept="0" trace="SetCovariates_Constraints#()V" />
-      <scope id="3696368796452783197" at="10,38,11,37" />
-      <scope id="3696368796452783197" at="10,0,13,0" />
-      <unit id="3696368796452783197" at="14,0,17,0" name="DiDSL.constraints.SetCovariates_Constraints$CONCEPTS" />
-      <unit id="3696368796452783197" at="9,0,18,0" name="DiDSL.constraints.SetCovariates_Constraints" />
+      <node id="3696368796452783197" at="11,87,12,50" concept="10" />
+      <node id="3696368796452783197" at="16,0,17,0" concept="8" trace="SetCovariates$e_" />
+      <node id="3696368796452783197" at="11,0,14,0" concept="0" trace="SetCovariates_Constraints#(Ljetbrains/mps/smodel/runtime/ConstraintsDescriptorInitContext;)V" />
+      <scope id="3696368796452783197" at="11,87,12,50" />
+      <scope id="3696368796452783197" at="11,0,14,0">
+        <var name="initContext" id="3696368796452783197" />
+      </scope>
+      <unit id="3696368796452783197" at="15,0,18,0" name="DiDSL.constraints.SetCovariates_Constraints$CONCEPTS" />
+      <unit id="3696368796452783197" at="10,0,19,0" name="DiDSL.constraints.SetCovariates_Constraints" />
     </file>
   </root>
   <root nodeRef="r:00157fb0-c75e-4d31-9e26-8f7ef56d0eb8(DiDSL.constraints)/4857517630233625930">
     <file name="GroupColumnClause_Constraints.java">
-      <node id="4857517630233625930" at="23,42,24,41" concept="10" />
-      <node id="4857517630233625930" at="31,127,32,128" concept="5" />
-      <node id="4857517630233625930" at="32,128,33,0" concept="7" />
-      <node id="4857517630233625930" at="34,55,35,71" concept="1" />
-      <node id="4857517630233625930" at="36,9,37,0" concept="7" />
-      <node id="4857517630233625930" at="37,0,38,22" concept="6" />
-      <node id="4857517630233626805" at="42,128,43,300" concept="6" />
-      <node id="4857517630233625930" at="45,0,46,0" concept="8" trace="canBeChildBreakingPoint" />
-      <node id="4857517630233625930" at="48,0,49,0" concept="8" trace="GroupColumnClause$cB" />
-      <node id="4857517630233625930" at="49,0,50,0" concept="8" trace="Set$Jg" />
-      <node id="4857517630233625930" at="53,0,54,0" concept="8" trace="columnType$G6gV" />
-      <node id="4857517630233625930" at="23,0,26,0" concept="0" trace="GroupColumnClause_Constraints#()V" />
-      <node id="4857517630233625930" at="33,0,36,9" concept="3" />
-      <node id="4857517630233625930" at="42,0,45,0" concept="9" trace="staticCanBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
-      <node id="4857517630233625930" at="30,0,40,0" concept="4" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeChild;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
-      <node id="4857517630233625930" at="28,103,40,6" concept="6" />
-      <node id="4857517630233625930" at="27,0,42,0" concept="4" trace="calculateCanBeChildConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
-      <scope id="4857517630233625930" at="23,42,24,41" />
-      <scope id="4857517630233625930" at="34,55,35,71" />
-      <scope id="4857517630233625932" at="42,128,43,300" />
-      <scope id="4857517630233625930" at="23,0,26,0" />
-      <scope id="4857517630233625930" at="42,0,45,0">
+      <node id="4857517630233625930" at="24,91,25,54" concept="10" />
+      <node id="4857517630233625930" at="28,127,29,128" concept="5" />
+      <node id="4857517630233625930" at="29,128,30,0" concept="7" />
+      <node id="4857517630233625930" at="31,55,32,71" concept="1" />
+      <node id="4857517630233625930" at="33,9,34,0" concept="7" />
+      <node id="4857517630233625930" at="34,0,35,22" concept="6" />
+      <node id="4857517630233626805" at="40,128,41,300" concept="6" />
+      <node id="4857517630233625930" at="43,0,44,0" concept="8" trace="canBeChildBreakingPoint" />
+      <node id="4857517630233625930" at="46,0,47,0" concept="8" trace="GroupColumnClause$cB" />
+      <node id="4857517630233625930" at="47,0,48,0" concept="8" trace="Set$Jg" />
+      <node id="4857517630233625930" at="51,0,52,0" concept="8" trace="columnType$G6gV" />
+      <node id="4857517630233625930" at="30,0,33,9" concept="3" />
+      <node id="4857517630233625930" at="40,0,43,0" concept="9" trace="staticCanBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
+      <node id="4857517630233625930" at="27,0,37,0" concept="4" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeChild;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
+      <node id="4857517630233625930" at="25,54,37,7" concept="1" />
+      <node id="4857517630233625930" at="24,0,39,0" concept="0" trace="GroupColumnClause_Constraints#(Ljetbrains/mps/smodel/runtime/ConstraintsDescriptorInitContext;)V" />
+      <scope id="4857517630233625930" at="31,55,32,71" />
+      <scope id="4857517630233625932" at="40,128,41,300" />
+      <scope id="4857517630233625930" at="40,0,43,0">
         <var name="childConcept" id="4857517630233625930" />
         <var name="link" id="4857517630233625930" />
         <var name="node" id="4857517630233625930" />
         <var name="parentNode" id="4857517630233625930" />
       </scope>
-      <scope id="4857517630233625930" at="31,127,38,22">
+      <scope id="4857517630233625930" at="28,127,35,22">
         <var name="result" id="4857517630233625930" />
       </scope>
-      <scope id="4857517630233625930" at="30,0,40,0">
+      <scope id="4857517630233625930" at="27,0,37,0">
         <var name="checkingNodeContext" id="4857517630233625930" />
         <var name="context" id="4857517630233625930" />
       </scope>
-      <scope id="4857517630233625930" at="28,103,40,6" />
-      <scope id="4857517630233625930" at="27,0,42,0" />
-      <unit id="4857517630233625930" at="52,0,55,0" name="DiDSL.constraints.GroupColumnClause_Constraints$PROPS" />
-      <unit id="4857517630233625930" at="47,0,51,0" name="DiDSL.constraints.GroupColumnClause_Constraints$CONCEPTS" />
-      <unit id="4857517630233625930" at="29,15,40,5" name="DiDSL.constraints.GroupColumnClause_Constraints$1" />
-      <unit id="4857517630233625930" at="22,0,56,0" name="DiDSL.constraints.GroupColumnClause_Constraints" />
+      <scope id="4857517630233625930" at="24,91,37,7" />
+      <scope id="4857517630233625930" at="24,0,39,0">
+        <var name="initContext" id="4857517630233625930" />
+      </scope>
+      <unit id="4857517630233625930" at="50,0,53,0" name="DiDSL.constraints.GroupColumnClause_Constraints$PROPS" />
+      <unit id="4857517630233625930" at="45,0,49,0" name="DiDSL.constraints.GroupColumnClause_Constraints$CONCEPTS" />
+      <unit id="4857517630233625930" at="26,32,37,5" name="DiDSL.constraints.GroupColumnClause_Constraints$1" />
+      <unit id="4857517630233625930" at="23,0,54,0" name="DiDSL.constraints.GroupColumnClause_Constraints" />
     </file>
   </root>
   <root nodeRef="r:00157fb0-c75e-4d31-9e26-8f7ef56d0eb8(DiDSL.constraints)/4857517630233803559">
     <file name="TimeColumnClause_Constraints.java">
-      <node id="4857517630233803559" at="23,41,24,40" concept="10" />
-      <node id="4857517630233803559" at="31,127,32,128" concept="5" />
-      <node id="4857517630233803559" at="32,128,33,0" concept="7" />
-      <node id="4857517630233803559" at="34,55,35,71" concept="1" />
-      <node id="4857517630233803559" at="36,9,37,0" concept="7" />
-      <node id="4857517630233803559" at="37,0,38,22" concept="6" />
-      <node id="4857517630233804425" at="42,128,43,299" concept="6" />
-      <node id="4857517630233803559" at="45,0,46,0" concept="8" trace="canBeChildBreakingPoint" />
-      <node id="4857517630233803559" at="48,0,49,0" concept="8" trace="TimeColumnClause$sA" />
-      <node id="4857517630233803559" at="49,0,50,0" concept="8" trace="Set$Jg" />
-      <node id="4857517630233803559" at="53,0,54,0" concept="8" trace="columnType$G6gV" />
-      <node id="4857517630233803559" at="23,0,26,0" concept="0" trace="TimeColumnClause_Constraints#()V" />
-      <node id="4857517630233803559" at="33,0,36,9" concept="3" />
-      <node id="4857517630233803559" at="42,0,45,0" concept="9" trace="staticCanBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
-      <node id="4857517630233803559" at="30,0,40,0" concept="4" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeChild;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
-      <node id="4857517630233803559" at="28,103,40,6" concept="6" />
-      <node id="4857517630233803559" at="27,0,42,0" concept="4" trace="calculateCanBeChildConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
-      <scope id="4857517630233803559" at="23,41,24,40" />
-      <scope id="4857517630233803559" at="34,55,35,71" />
-      <scope id="4857517630233803561" at="42,128,43,299" />
-      <scope id="4857517630233803559" at="23,0,26,0" />
-      <scope id="4857517630233803559" at="42,0,45,0">
+      <node id="4857517630233803559" at="24,90,25,53" concept="10" />
+      <node id="4857517630233803559" at="28,127,29,128" concept="5" />
+      <node id="4857517630233803559" at="29,128,30,0" concept="7" />
+      <node id="4857517630233803559" at="31,55,32,71" concept="1" />
+      <node id="4857517630233803559" at="33,9,34,0" concept="7" />
+      <node id="4857517630233803559" at="34,0,35,22" concept="6" />
+      <node id="4857517630233804425" at="40,128,41,299" concept="6" />
+      <node id="4857517630233803559" at="43,0,44,0" concept="8" trace="canBeChildBreakingPoint" />
+      <node id="4857517630233803559" at="46,0,47,0" concept="8" trace="TimeColumnClause$sA" />
+      <node id="4857517630233803559" at="47,0,48,0" concept="8" trace="Set$Jg" />
+      <node id="4857517630233803559" at="51,0,52,0" concept="8" trace="columnType$G6gV" />
+      <node id="4857517630233803559" at="30,0,33,9" concept="3" />
+      <node id="4857517630233803559" at="40,0,43,0" concept="9" trace="staticCanBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
+      <node id="4857517630233803559" at="27,0,37,0" concept="4" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeChild;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
+      <node id="4857517630233803559" at="25,53,37,7" concept="1" />
+      <node id="4857517630233803559" at="24,0,39,0" concept="0" trace="TimeColumnClause_Constraints#(Ljetbrains/mps/smodel/runtime/ConstraintsDescriptorInitContext;)V" />
+      <scope id="4857517630233803559" at="31,55,32,71" />
+      <scope id="4857517630233803561" at="40,128,41,299" />
+      <scope id="4857517630233803559" at="40,0,43,0">
         <var name="childConcept" id="4857517630233803559" />
         <var name="link" id="4857517630233803559" />
         <var name="node" id="4857517630233803559" />
         <var name="parentNode" id="4857517630233803559" />
       </scope>
-      <scope id="4857517630233803559" at="31,127,38,22">
+      <scope id="4857517630233803559" at="28,127,35,22">
         <var name="result" id="4857517630233803559" />
       </scope>
-      <scope id="4857517630233803559" at="30,0,40,0">
+      <scope id="4857517630233803559" at="27,0,37,0">
         <var name="checkingNodeContext" id="4857517630233803559" />
         <var name="context" id="4857517630233803559" />
       </scope>
-      <scope id="4857517630233803559" at="28,103,40,6" />
-      <scope id="4857517630233803559" at="27,0,42,0" />
-      <unit id="4857517630233803559" at="52,0,55,0" name="DiDSL.constraints.TimeColumnClause_Constraints$PROPS" />
-      <unit id="4857517630233803559" at="47,0,51,0" name="DiDSL.constraints.TimeColumnClause_Constraints$CONCEPTS" />
-      <unit id="4857517630233803559" at="29,15,40,5" name="DiDSL.constraints.TimeColumnClause_Constraints$1" />
-      <unit id="4857517630233803559" at="22,0,56,0" name="DiDSL.constraints.TimeColumnClause_Constraints" />
+      <scope id="4857517630233803559" at="24,90,37,7" />
+      <scope id="4857517630233803559" at="24,0,39,0">
+        <var name="initContext" id="4857517630233803559" />
+      </scope>
+      <unit id="4857517630233803559" at="50,0,53,0" name="DiDSL.constraints.TimeColumnClause_Constraints$PROPS" />
+      <unit id="4857517630233803559" at="45,0,49,0" name="DiDSL.constraints.TimeColumnClause_Constraints$CONCEPTS" />
+      <unit id="4857517630233803559" at="26,32,37,5" name="DiDSL.constraints.TimeColumnClause_Constraints$1" />
+      <unit id="4857517630233803559" at="23,0,54,0" name="DiDSL.constraints.TimeColumnClause_Constraints" />
     </file>
   </root>
   <root nodeRef="r:00157fb0-c75e-4d31-9e26-8f7ef56d0eb8(DiDSL.constraints)/4857517630235336098">
     <file name="IReferenceOutcomeColumn_Constraints.java">
-      <node id="4857517630235336098" at="19,48,20,47" concept="10" />
-      <node id="4857517630235336099" at="27,116,28,20" concept="6" />
-      <node id="4857517630235336329" at="31,119,32,85" concept="1" />
-      <node id="4857517630235344366" at="32,85,33,160" concept="1" />
-      <node id="4857517630235336098" at="35,6,36,131" concept="5" />
-      <node id="4857517630235336099" at="36,131,37,42" concept="1" />
-      <node id="4857517630235336098" at="37,42,38,22" concept="6" />
-      <node id="4857517630235336098" at="42,0,43,0" concept="8" trace="IReferenceOutcomeColumn$8n" />
-      <node id="4857517630235336098" at="43,0,44,0" concept="8" trace="LoadDataset$ic" />
-      <node id="4857517630235336098" at="47,0,48,0" concept="8" trace="column$5rZC" />
-      <node id="4857517630235336098" at="48,0,49,0" concept="8" trace="dataset$XAK3" />
-      <node id="4857517630235336098" at="19,0,22,0" concept="0" trace="IReferenceOutcomeColumn_Constraints#()V" />
-      <node id="4857517630235336099" at="26,0,30,0" concept="4" trace="validate#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
-      <node id="4857517630235336099" at="30,0,35,0" concept="4" trace="onReferenceSet#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;)V" />
-      <node id="4857517630235336099" at="24,90,35,6" concept="5" />
-      <node id="4857517630235336098" at="23,0,40,0" concept="4" trace="getSpecifiedReferences#()Ljava/util/Map;" />
-      <scope id="4857517630235336098" at="19,48,20,47" />
-      <scope id="4857517630235336099" at="27,116,28,20" />
-      <scope id="4857517630235336231" at="31,119,33,160" />
-      <scope id="4857517630235336098" at="19,0,22,0" />
-      <scope id="4857517630235336099" at="26,0,30,0">
+      <node id="4857517630235336098" at="18,97,19,60" concept="10" />
+      <node id="4857517630235336099" at="19,60,20,26" concept="1" />
+      <node id="4857517630235336099" at="24,54,25,55" concept="10" />
+      <node id="4857517630235336099" at="28,114,29,18" concept="6" />
+      <node id="4857517630235336329" at="32,117,33,83" concept="1" />
+      <node id="4857517630235344366" at="33,83,34,158" concept="1" />
+      <node id="4857517630235336098" at="39,0,40,0" concept="8" trace="IReferenceOutcomeColumn$8n" />
+      <node id="4857517630235336098" at="40,0,41,0" concept="8" trace="LoadDataset$ic" />
+      <node id="4857517630235336098" at="44,0,45,0" concept="8" trace="column$5rZC" />
+      <node id="4857517630235336098" at="45,0,46,0" concept="8" trace="dataset$XAK3" />
+      <node id="4857517630235336099" at="24,0,27,0" concept="0" trace="RD1#(Ljetbrains/mps/smodel/runtime/ConstraintsDescriptor;)V" />
+      <node id="4857517630235336098" at="18,0,22,0" concept="0" trace="IReferenceOutcomeColumn_Constraints#(Ljetbrains/mps/smodel/runtime/ConstraintsDescriptorInitContext;)V" />
+      <node id="4857517630235336099" at="27,0,31,0" concept="4" trace="validate#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
+      <node id="4857517630235336099" at="31,0,36,0" concept="4" trace="onReferenceSet#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <scope id="4857517630235336099" at="24,54,25,55" />
+      <scope id="4857517630235336099" at="28,114,29,18" />
+      <scope id="4857517630235336098" at="18,97,20,26" />
+      <scope id="4857517630235336231" at="32,117,34,158" />
+      <scope id="4857517630235336099" at="24,0,27,0">
+        <var name="container" id="4857517630235336099" />
+      </scope>
+      <scope id="4857517630235336098" at="18,0,22,0">
+        <var name="initContext" id="4857517630235336098" />
+      </scope>
+      <scope id="4857517630235336099" at="27,0,31,0">
         <var name="newReferentNode" id="4857517630235336099" />
         <var name="oldReferentNode" id="4857517630235336099" />
         <var name="referenceNode" id="4857517630235336099" />
       </scope>
-      <scope id="4857517630235336099" at="30,0,35,0">
+      <scope id="4857517630235336099" at="31,0,36,0">
         <var name="newReferentNode" id="4857517630235336099" />
         <var name="oldReferentNode" id="4857517630235336099" />
         <var name="referenceNode" id="4857517630235336099" />
       </scope>
-      <scope id="4857517630235336098" at="24,90,38,22">
-        <var name="d0" id="4857517630235336099" />
-        <var name="references" id="4857517630235336098" />
-      </scope>
-      <scope id="4857517630235336098" at="23,0,40,0" />
-      <unit id="4857517630235336098" at="41,0,45,0" name="DiDSL.constraints.IReferenceOutcomeColumn_Constraints$CONCEPTS" />
-      <unit id="4857517630235336098" at="46,0,50,0" name="DiDSL.constraints.IReferenceOutcomeColumn_Constraints$LINKS" />
-      <unit id="4857517630235336099" at="25,48,35,5" name="DiDSL.constraints.IReferenceOutcomeColumn_Constraints$1" />
-      <unit id="4857517630235336098" at="18,0,51,0" name="DiDSL.constraints.IReferenceOutcomeColumn_Constraints" />
+      <unit id="4857517630235336098" at="38,0,42,0" name="DiDSL.constraints.IReferenceOutcomeColumn_Constraints$CONCEPTS" />
+      <unit id="4857517630235336098" at="43,0,47,0" name="DiDSL.constraints.IReferenceOutcomeColumn_Constraints$LINKS" />
+      <unit id="4857517630235336099" at="23,0,37,0" name="DiDSL.constraints.IReferenceOutcomeColumn_Constraints$RD1" />
+      <unit id="4857517630235336098" at="17,0,48,0" name="DiDSL.constraints.IReferenceOutcomeColumn_Constraints" />
     </file>
   </root>
 </debug-info>

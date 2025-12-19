@@ -1500,7 +1500,7 @@
                 <ref role="1YBMHb" node="68hPQGd2F$D" resolve="runAttEstimations" />
               </node>
               <node concept="3TrEf2" id="68hPQGd2ILJ" role="2OqNvi">
-                <ref role="3Tt5mk" to="tq4j:4dDnCLCgWN2" />
+                <ref role="3Tt5mk" to="tq4j:4dDnCLCgWN2" resolve="column" />
               </node>
             </node>
             <node concept="3w_OXm" id="68hPQGd2ILK" role="2OqNvi" />

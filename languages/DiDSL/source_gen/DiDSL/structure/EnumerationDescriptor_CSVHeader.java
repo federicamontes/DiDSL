@@ -19,7 +19,7 @@ public class EnumerationDescriptor_CSVHeader extends EnumerationDescriptorBase {
   private final EnumerationDescriptor.MemberDescriptor myMember_without_0 = new EnumerationDescriptor.MemberDescriptor("without", "without header", 0x32a4f45c8b0765f9L, "r:fddcec65-b03d-485e-ad0f-90dc64caa764(DiDSL.structure)/3649310276383630841");
 
   private final EnumerationLiteralsIndex myIndex = EnumerationLiteralsIndex.build(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x32a4f45c8b0765f7L, 0x32a4f45c8b0765f8L, 0x32a4f45c8b0765f9L);
-  private final List<EnumerationDescriptor.MemberDescriptor> myMembers = new EnumerationDescriptorBase.MembersList(myIndex, myMember_with_0, myMember_without_0);
+  private final List<EnumerationDescriptor.MemberDescriptor> myMembers = new EnumerationDescriptorBase.MembersList0(myIndex, myMember_with_0, myMember_without_0);
 
   @Nullable
   @Override

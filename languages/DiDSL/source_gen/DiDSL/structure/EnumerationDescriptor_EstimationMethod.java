@@ -21,7 +21,7 @@ public class EnumerationDescriptor_EstimationMethod extends EnumerationDescripto
   private final EnumerationDescriptor.MemberDescriptor myMember_GT_0 = new EnumerationDescriptor.MemberDescriptor("GT", "GT", 0x32a4f45c8b0e42a2L, "r:fddcec65-b03d-485e-ad0f-90dc64caa764(DiDSL.structure)/3649310276384080546");
 
   private final EnumerationLiteralsIndex myIndex = EnumerationLiteralsIndex.build(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x32a4f45c8b0e429aL, 0x32a4f45c8b0e429bL, 0x32a4f45c8b0e429eL, 0x32a4f45c8b0e42a0L, 0x32a4f45c8b0e42a2L);
-  private final List<EnumerationDescriptor.MemberDescriptor> myMembers = new EnumerationDescriptorBase.MembersList(myIndex, myMember_DR_0, myMember_IPW_0, myMember_OR_0, myMember_GT_0);
+  private final List<EnumerationDescriptor.MemberDescriptor> myMembers = new EnumerationDescriptorBase.MembersList0(myIndex, myMember_DR_0, myMember_IPW_0, myMember_OR_0, myMember_GT_0);
 
   @Nullable
   @Override

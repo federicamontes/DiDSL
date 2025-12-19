@@ -20,7 +20,7 @@ public class EnumerationDescriptor_ControlStrategy extends EnumerationDescriptor
   private final EnumerationDescriptor.MemberDescriptor myMember_never_treated_0 = new EnumerationDescriptor.MemberDescriptor("never_treated", "never-treated", 0x32a4f45c8ade105aL, "r:fddcec65-b03d-485e-ad0f-90dc64caa764(DiDSL.structure)/3649310276380921946");
 
   private final EnumerationLiteralsIndex myIndex = EnumerationLiteralsIndex.build(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x32a4f45c8ade1053L, 0x32a4f45c8ade1054L, 0x32a4f45c8ade1058L, 0x32a4f45c8ade105aL);
-  private final List<EnumerationDescriptor.MemberDescriptor> myMembers = new EnumerationDescriptorBase.MembersList(myIndex, myMember_interaction_0, myMember_not_yet_treated_0, myMember_never_treated_0);
+  private final List<EnumerationDescriptor.MemberDescriptor> myMembers = new EnumerationDescriptorBase.MembersList0(myIndex, myMember_interaction_0, myMember_not_yet_treated_0, myMember_never_treated_0);
 
   @Nullable
   @Override
