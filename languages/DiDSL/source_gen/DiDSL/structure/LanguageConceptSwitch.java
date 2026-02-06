@@ -26,16 +26,18 @@ public final class LanguageConceptSwitch {
   public static final int LoadDataset = 14;
   public static final int Omit = 15;
   public static final int PlotEventStudyMeans = 16;
-  public static final int RunAttEstimations = 17;
-  public static final int Script = 18;
-  public static final int Set = 19;
-  public static final int SetCovariates = 20;
-  public static final int ShowDataset = 21;
-  public static final int Statement = 22;
-  public static final int TimeColumnClause = 23;
-  public static final int TreatmentValues = 24;
-  public static final int Using = 25;
-  public static final int With = 26;
+  public static final int PostPeriod = 17;
+  public static final int PrePeriod = 18;
+  public static final int RunAttEstimations = 19;
+  public static final int Script = 20;
+  public static final int Set = 21;
+  public static final int SetCovariates = 22;
+  public static final int ShowDataset = 23;
+  public static final int Statement = 24;
+  public static final int TimeColumnClause = 25;
+  public static final int TreatmentValues = 26;
+  public static final int Using = 27;
+  public static final int With = 28;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0xe61e3c2843b94790L, 0x9950a30830b7e20fL);
@@ -56,6 +58,8 @@ public final class LanguageConceptSwitch {
     builder.put(0x3d7090ceae0fe3ccL, LoadDataset);
     builder.put(0x43695e8c68521db3L, Omit);
     builder.put(0x32a4f45c8adcc6dbL, PlotEventStudyMeans);
+    builder.put(0x9f81ddb98a4e815L, PostPeriod);
+    builder.put(0x9f81ddb989e8d19L, PrePeriod);
     builder.put(0x32a4f45c8b0e4315L, RunAttEstimations);
     builder.put(0x3d7090ceae0fe3c3L, Script);
     builder.put(0x3d7090ceae11373cL, Set);

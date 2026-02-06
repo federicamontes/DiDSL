@@ -8,6 +8,7 @@
   <imports>
     <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
+    <import index="yq40" ref="r:152b3fc0-83a1-4bab-a8cd-565eb8483785(com.mbeddr.core.pointers.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
@@ -171,10 +172,12 @@
     <property role="TrG5h" value="TreatmentValues" />
     <property role="34LRSv" value="with treatment values" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyi" id="3a$X5MaMDM4" role="1TKVEl">
-      <property role="IQ2nx" value="3649310276379647108" />
-      <property role="TrG5h" value="values" />
-      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    <node concept="1TJgyj" id="4uDgjJwe$vW" role="1TKVEi">
+      <property role="IQ2ns" value="5163730173177776124" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="values" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" to="tpee:f$Xl_Og" resolve="StringLiteral" />
     </node>
   </node>
   <node concept="1TIwiD" id="3a$X5MaNkiP">
@@ -186,6 +189,7 @@
       <property role="IQ2ns" value="3649310276379821240" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="treatmentValues" />
+      <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="3a$X5MaMDM1" resolve="TreatmentValues" />
     </node>
     <node concept="PrWs8" id="4dDnCLCi7nk" role="PzmwI">
@@ -197,18 +201,22 @@
     <property role="TrG5h" value="TimeColumnClause" />
     <property role="R4oN_" value="Optional clause for Set command when applied to time column, it is used for setting pre and post time periods" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyi" id="3a$X5MaNkj4" role="1TKVEl">
-      <property role="IQ2nx" value="3649310276379821252" />
-      <property role="TrG5h" value="prePeriodValues" />
-      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
-    </node>
-    <node concept="1TJgyi" id="3a$X5MaNkj5" role="1TKVEl">
-      <property role="IQ2nx" value="3649310276379821253" />
-      <property role="TrG5h" value="postPeriodValues" />
-      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
-    </node>
     <node concept="PrWs8" id="4dDnCLCi7GA" role="PzmwI">
       <ref role="PrY4T" node="4dDnCLCi7nj" resolve="IColumnClause" />
+    </node>
+    <node concept="1TJgyj" id="BS7tIoBCOo" role="1TKVEi">
+      <property role="IQ2ns" value="718356969561165080" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="prePeriodValues" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="BS7tIoBCOp" resolve="PrePeriod" />
+    </node>
+    <node concept="1TJgyj" id="BS7tIoDewk" role="1TKVEi">
+      <property role="IQ2ns" value="718356969561581588" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="postPeriodValues" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="BS7tIoDewl" resolve="PostPeriod" />
     </node>
   </node>
   <node concept="1TIwiD" id="3a$X5MaNGNJ">
@@ -311,15 +319,16 @@
     <property role="3F6X1D" value="3649310276380921939" />
     <property role="TrG5h" value="ControlStrategy" />
     <property role="3GE5qa" value="enum" />
-    <ref role="1H5jkz" node="3a$X5MaRx1k" resolve="interaction" />
-    <node concept="25R33" id="3a$X5MaRx1k" role="25R1y">
-      <property role="3tVfz5" value="3649310276380921940" />
-      <property role="TrG5h" value="interaction" />
-    </node>
+    <ref role="1H5jkz" node="3a$X5MaRx1q" resolve="never_treated" />
     <node concept="25R33" id="3a$X5MaRx1o" role="25R1y">
       <property role="3tVfz5" value="3649310276380921944" />
       <property role="TrG5h" value="not_yet_treated" />
       <property role="1L1pqM" value="not-yet-treated" />
+    </node>
+    <node concept="25R33" id="3a$X5MaRx1k" role="25R1y">
+      <property role="3tVfz5" value="3649310276380921940" />
+      <property role="TrG5h" value="interaction" />
+      <property role="1L1pqM" value="interaction" />
     </node>
     <node concept="25R33" id="3a$X5MaRx1q" role="25R1y">
       <property role="3tVfz5" value="3649310276380921946" />
@@ -428,14 +437,12 @@
       <property role="IQ2ns" value="1607826655212414776" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="using" />
-      <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="4dDnCLCkgbn" resolve="Using" />
     </node>
     <node concept="1TJgyj" id="1pg9tc3LN3h" role="1TKVEi">
       <property role="IQ2ns" value="1607826655202980049" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="with" />
-      <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="1pg9tc3JDfk" resolve="With" />
     </node>
     <node concept="1TJgyj" id="1pg9tc4mCBD" role="1TKVEi">
@@ -598,6 +605,30 @@
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="3dc8Xofbn1g" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="BS7tIoBCOp">
+    <property role="TrG5h" value="PrePeriod" />
+    <property role="EcuMT" value="718356969561165081" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="BS7tIoBCOq" role="1TKVEi">
+      <property role="IQ2ns" value="718356969561165082" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="values" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" to="yq40:5jmmCdx$f5R" resolve="StringLiteral" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="BS7tIoDewl">
+    <property role="TrG5h" value="PostPeriod" />
+    <property role="EcuMT" value="718356969561581589" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="BS7tIoDewm" role="1TKVEi">
+      <property role="IQ2ns" value="718356969561581590" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="values" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" to="yq40:5jmmCdx$f5R" resolve="StringLiteral" />
     </node>
   </node>
 </model>

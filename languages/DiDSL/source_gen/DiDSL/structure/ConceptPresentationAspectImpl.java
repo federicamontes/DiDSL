@@ -26,6 +26,8 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_LoadDataset;
   private ConceptPresentation props_Omit;
   private ConceptPresentation props_PlotEventStudyMeans;
+  private ConceptPresentation props_PostPeriod;
+  private ConceptPresentation props_PrePeriod;
   private ConceptPresentation props_RunAttEstimations;
   private ConceptPresentation props_Script;
   private ConceptPresentation props_Set;
@@ -164,6 +166,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_PlotEventStudyMeans = cpb.create();
         }
         return props_PlotEventStudyMeans;
+      case LanguageConceptSwitch.PostPeriod:
+        if (props_PostPeriod == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("PostPeriod");
+          props_PostPeriod = cpb.create();
+        }
+        return props_PostPeriod;
+      case LanguageConceptSwitch.PrePeriod:
+        if (props_PrePeriod == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("PrePeriod");
+          props_PrePeriod = cpb.create();
+        }
+        return props_PrePeriod;
       case LanguageConceptSwitch.RunAttEstimations:
         if (props_RunAttEstimations == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

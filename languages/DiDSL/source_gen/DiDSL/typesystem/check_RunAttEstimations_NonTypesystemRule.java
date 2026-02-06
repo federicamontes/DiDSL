@@ -17,7 +17,6 @@ import jetbrains.mps.errors.messageTargets.MessageTarget;
 import jetbrains.mps.errors.messageTargets.NodeMessageTarget;
 import jetbrains.mps.errors.IErrorReporter;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
-import jetbrains.mps.internal.collections.runtime.Sequence;
 import org.jetbrains.mps.openapi.language.SConcept;
 import org.jetbrains.mps.openapi.language.SProperty;
 import org.jetbrains.mps.openapi.language.SReferenceLink;
@@ -45,7 +44,7 @@ public class check_RunAttEstimations_NonTypesystemRule extends AbstractNonTypesy
         IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(runAttEstimations, "Error: if using clustering method id column must be set", "r:ad55364e-4a37-4c47-b02e-004b1fbd2e17(DiDSL.typesystem)", "7066666145101320768", null, errorTarget);
       }
     }
-    if (Sequence.fromIterable(SLinkOperations.collect(SLinkOperations.getChildren(runAttEstimations, LINKS.using$ZCtd), LINKS.covariates$JNrN)).isNotEmpty() && SNodeOperations.getNodeDescendants(SNodeOperations.cast(SNodeOperations.getParent(runAttEstimations), CONCEPTS.Script$3E), CONCEPTS.SetCovariates$e_, false, new SAbstractConcept[]{}).isEmpty()) {
+    if ((SLinkOperations.getTarget(SLinkOperations.getTarget(runAttEstimations, LINKS.using$ZCtd), LINKS.covariates$JNrN) != null) && SNodeOperations.getNodeDescendants(SNodeOperations.cast(SNodeOperations.getParent(runAttEstimations), CONCEPTS.Script$3E), CONCEPTS.SetCovariates$e_, false, new SAbstractConcept[]{}).isEmpty()) {
       {
         final MessageTarget errorTarget = new NodeMessageTarget();
         IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(runAttEstimations, "Error: is using covariates, Set covariates must be called before", "r:ad55364e-4a37-4c47-b02e-004b1fbd2e17(DiDSL.typesystem)", "7066666145101919579", null, errorTarget);

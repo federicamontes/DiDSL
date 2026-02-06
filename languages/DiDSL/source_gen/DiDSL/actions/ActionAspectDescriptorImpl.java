@@ -18,8 +18,6 @@ public class ActionAspectDescriptorImpl extends BaseActionAspectDescriptor imple
       switch (concept.getName()) {
         case "BasedOn":
           return Collections.<NodeFactory>singletonList(new BasedOn.NodeFactory_8650958172469053440());
-        case "Using":
-          return Collections.<NodeFactory>singletonList(new Using.NodeFactory_1607826655215087373());
         case "With":
           return Collections.<NodeFactory>singletonList(new With.NodeFactory_1607826655207420923());
         default:

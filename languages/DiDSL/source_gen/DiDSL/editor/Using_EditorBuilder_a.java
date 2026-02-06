@@ -77,10 +77,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
       editorCell.addEditorCell(createRefNode_0());
     }
     if (nodeCondition_8z97tw_a4a()) {
-      editorCell.addEditorCell(createConstant_3());
-    }
-    if (nodeCondition_8z97tw_a5a()) {
-      editorCell.addEditorCell(createProperty_1());
+      editorCell.addEditorCell(createCollection_2());
     }
     return editorCell;
   }
@@ -94,12 +91,6 @@ import org.jetbrains.mps.openapi.language.SConcept;
     return false;
   }
   private boolean nodeCondition_8z97tw_a4a() {
-    if (SNodeOperations.isInstanceOf(SNodeOperations.getParent(myNode), CONCEPTS.RunAttEstimations$3)) {
-      return true;
-    }
-    return false;
-  }
-  private boolean nodeCondition_8z97tw_a5a() {
     return SNodeOperations.isInstanceOf(SNodeOperations.getParent(myNode), CONCEPTS.RunAttEstimations$3);
   }
   private EditorCell createConstant_0() {
@@ -304,12 +295,20 @@ import org.jetbrains.mps.openapi.language.SConcept;
       return "<no covariates>";
     }
   }
-  private EditorCell createConstant_3() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "using");
-    editorCell.setCellId("Constant_8z97tw_e0");
+  private EditorCell createCollection_2() {
+    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Horizontal());
+    editorCell.setCellId("Collection_8z97tw_e0");
     Style style = new StyleImpl();
+    style.set(StyleAttributes.SELECTABLE, false);
     style.set(StyleAttributes.INDENT_LAYOUT_ON_NEW_LINE, true);
     editorCell.getStyle().putAll(style);
+    editorCell.addEditorCell(createConstant_3());
+    editorCell.addEditorCell(createProperty_1());
+    return editorCell;
+  }
+  private EditorCell createConstant_3() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "using control");
+    editorCell.setCellId("Constant_8z97tw_a4a");
     editorCell.setDefaultText("");
     return editorCell;
   }
@@ -318,7 +317,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     try {
       final SProperty property = PROPS.control$gtYh;
       getCellFactory().setPropertyInfo(new SPropertyInfo(myNode, property));
-      EditorCell_Property editorCell = EditorCell_Property.create(getEditorContext(), new SPropertyAccessor(myNode, property, false, true), myNode);
+      EditorCell_Property editorCell = EditorCell_Property.create(getEditorContext(), new SPropertyAccessor(myNode, property, false, false), myNode);
       editorCell.setDefaultText("<no control>");
       editorCell.setCellId("property_control");
       editorCell.setSubstituteInfo(new SPropertySubstituteInfo(editorCell, property));

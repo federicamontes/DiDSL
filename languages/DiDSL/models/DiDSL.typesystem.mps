@@ -102,14 +102,12 @@
       <concept id="1966870290088668512" name="jetbrains.mps.lang.smodel.structure.Enum_MemberLiteral" flags="ng" index="2ViDtV">
         <reference id="1966870290088668516" name="memberDeclaration" index="2ViDtZ" />
       </concept>
-      <concept id="3562215692195599741" name="jetbrains.mps.lang.smodel.structure.SLinkImplicitSelect" flags="nn" index="13MTOL">
-        <reference id="3562215692195600259" name="link" index="13MTZf" />
-      </concept>
       <concept id="1139613262185" name="jetbrains.mps.lang.smodel.structure.Node_GetParentOperation" flags="nn" index="1mfA1w" />
       <concept id="1139621453865" name="jetbrains.mps.lang.smodel.structure.Node_IsInstanceOfOperation" flags="nn" index="1mIQ4w">
         <child id="1177027386292" name="conceptArgument" index="cj9EA" />
       </concept>
       <concept id="1171999116870" name="jetbrains.mps.lang.smodel.structure.Node_IsNullOperation" flags="nn" index="3w_OXm" />
+      <concept id="1172008320231" name="jetbrains.mps.lang.smodel.structure.Node_IsNotNullOperation" flags="nn" index="3x8VRR" />
       <concept id="1144101972840" name="jetbrains.mps.lang.smodel.structure.OperationParm_Concept" flags="ng" index="1xMEDy">
         <child id="1207343664468" name="conceptArgument" index="ri$Ld" />
       </concept>
@@ -150,7 +148,6 @@
       <concept id="1162935959151" name="jetbrains.mps.baseLanguage.collections.structure.GetSizeOperation" flags="nn" index="34oBXx" />
       <concept id="1165530316231" name="jetbrains.mps.baseLanguage.collections.structure.IsEmptyOperation" flags="nn" index="1v1jN8" />
       <concept id="1202120902084" name="jetbrains.mps.baseLanguage.collections.structure.WhereOperation" flags="nn" index="3zZkjj" />
-      <concept id="1176501494711" name="jetbrains.mps.baseLanguage.collections.structure.IsNotEmptyOperation" flags="nn" index="3GX2aA" />
     </language>
   </registry>
   <node concept="18kY7G" id="4dDnCLCknHf">
@@ -1673,15 +1670,15 @@
                 <node concept="1YBJjd" id="68hPQGd4b_U" role="2Oq$k0">
                   <ref role="1YBMHb" node="68hPQGd2F$D" resolve="runAttEstimations" />
                 </node>
-                <node concept="3Tsc0h" id="68hPQGd4j1G" role="2OqNvi">
-                  <ref role="3TtcxE" to="tq4j:1pg9tc4lMsS" resolve="using" />
+                <node concept="3TrEf2" id="4WNYNtmag3_" role="2OqNvi">
+                  <ref role="3Tt5mk" to="tq4j:1pg9tc4lMsS" resolve="using" />
                 </node>
               </node>
-              <node concept="13MTOL" id="68hPQGd4oLQ" role="2OqNvi">
-                <ref role="13MTZf" to="tq4j:1pg9tc4onEt" resolve="covariates" />
+              <node concept="3TrEf2" id="4WNYNtmagjN" role="2OqNvi">
+                <ref role="3Tt5mk" to="tq4j:1pg9tc4onEt" resolve="covariates" />
               </node>
             </node>
-            <node concept="3GX2aA" id="68hPQGd4y8f" role="2OqNvi" />
+            <node concept="3x8VRR" id="4WNYNtmai0s" role="2OqNvi" />
           </node>
         </node>
       </node>

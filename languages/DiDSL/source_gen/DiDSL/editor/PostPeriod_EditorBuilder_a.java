@@ -26,11 +26,11 @@ import jetbrains.mps.editor.runtime.style.StyleAttributes;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SConcept;
 
-/*package*/ class TreatmentValues_EditorBuilder_a extends AbstractEditorBuilder {
+/*package*/ class PostPeriod_EditorBuilder_a extends AbstractEditorBuilder {
   @NotNull
   private SNode myNode;
 
-  public TreatmentValues_EditorBuilder_a(@NotNull EditorContext context, @NotNull SNode node) {
+  public PostPeriod_EditorBuilder_a(@NotNull EditorContext context, @NotNull SNode node) {
     super(context);
     myNode = node;
   }
@@ -47,7 +47,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
 
   private EditorCell createCollection_0() {
     EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
-    editorCell.setCellId("Collection_7aj1m1_a");
+    editorCell.setCellId("Collection_rgdzsl_a");
     editorCell.setBig(true);
     setCellContext(editorCell);
     editorCell.addEditorCell(createConstant_0());
@@ -55,23 +55,23 @@ import org.jetbrains.mps.openapi.language.SConcept;
     return editorCell;
   }
   private EditorCell createConstant_0() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "with treatment values");
-    editorCell.setCellId("Constant_7aj1m1_a0");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "post-period");
+    editorCell.setCellId("Constant_rgdzsl_a0");
     editorCell.setDefaultText("");
     return editorCell;
   }
   private EditorCell createRefNodeList_0() {
-    AbstractCellListHandler handler = new valuesListHandler_7aj1m1_b0(myNode, getEditorContext());
+    AbstractCellListHandler handler = new valuesListHandler_rgdzsl_b0(myNode, getEditorContext());
     EditorCell_Collection editorCell = handler.createCells(new CellLayout_Indent(), false);
     editorCell.setCellId("refNodeList_values");
     editorCell.setSRole(handler.getElementSRole());
     return editorCell;
   }
-  private static class valuesListHandler_7aj1m1_b0 extends RefNodeListHandler {
+  private static class valuesListHandler_rgdzsl_b0 extends RefNodeListHandler {
     @NotNull
     private SNode myNode;
 
-    public valuesListHandler_7aj1m1_b0(SNode ownerNode, EditorContext context) {
+    public valuesListHandler_rgdzsl_b0(SNode ownerNode, EditorContext context) {
       super(context, false);
       myNode = ownerNode;
     }
@@ -81,10 +81,10 @@ import org.jetbrains.mps.openapi.language.SConcept;
       return myNode;
     }
     public SContainmentLink getSLink() {
-      return LINKS.values$mHW3;
+      return LINKS.values$QM58;
     }
     public SAbstractConcept getChildSConcept() {
-      return CONCEPTS.StringLiteral$xu;
+      return CONCEPTS.StringLiteral$dJ;
     }
 
     private String getSeparatorText(SNode prevNode, SNode nextNode) {
@@ -97,7 +97,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     }
     public EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(valuesListHandler_7aj1m1_b0.this.getNode(), LINKS.values$mHW3));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(valuesListHandler_rgdzsl_b0.this.getNode(), LINKS.values$QM58));
       try {
         EditorCell emptyCell = null;
         emptyCell = super.createEmptyCell();
@@ -138,7 +138,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     }
     @Override
     public EditorCell createSeparatorCell(SNode prevNode, SNode nextNode) {
-      EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), getNode(), valuesListHandler_7aj1m1_b0.this.getSeparatorText(prevNode, nextNode));
+      EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), getNode(), valuesListHandler_rgdzsl_b0.this.getSeparatorText(prevNode, nextNode));
       editorCell.setSelectable(false);
       Style style = new StyleImpl();
       style.set(StyleAttributes.LAYOUT_CONSTRAINT, "");
@@ -151,10 +151,10 @@ import org.jetbrains.mps.openapi.language.SConcept;
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink values$mHW3 = MetaAdapterFactory.getContainmentLink(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x32a4f45c8aca9c81L, 0x47a9413be03a47fcL, "values");
+    /*package*/ static final SContainmentLink values$QM58 = MetaAdapterFactory.getContainmentLink(0xe61e3c2843b94790L, 0x9950a30830b7e20fL, 0x9f81ddb98a4e815L, 0x9f81ddb98a4e816L, "values");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept StringLiteral$xu = MetaAdapterFactory.getConcept(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf93d565d10L, "jetbrains.mps.baseLanguage.structure.StringLiteral");
+    /*package*/ static final SConcept StringLiteral$dJ = MetaAdapterFactory.getConcept(0x3bf5377ae9044dedL, 0x97545a516023bfaaL, 0x54d65a836190f177L, "com.mbeddr.core.pointers.structure.StringLiteral");
   }
 }
