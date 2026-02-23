@@ -512,11 +512,405 @@
   </node>
   <node concept="37lXYX" id="5GODz9QZx3Z">
     <property role="TrG5h" value="map_Script" />
-    <node concept="IQpmJ" id="5rqBun2d5hO" role="2QtU1L" />
+    <node concept="1lj4MQ" id="6mQwRN1wlL2" role="2QtU1L">
+      <property role="2F6P9D" value="msg" />
+      <property role="TrG5h" value="load_dataset_handler" />
+      <node concept="isgvk" id="6mQwRN1wlL4" role="37ngyo">
+        <property role="TrG5h" value="load_dataset_handlerHandler" />
+        <node concept="19Rifw" id="6mQwRN1wlL5" role="2C2TGm" />
+        <node concept="3XIRFW" id="6mQwRN1wlL6" role="3XIRFX">
+          <node concept="3XIRlf" id="4uDgjJw9nB$" role="3XIRFZ">
+            <property role="TrG5h" value="result" />
+            <node concept="26Vqph" id="4uDgjJw9nBy" role="2C2TGm" />
+            <node concept="3O_q_g" id="4uDgjJw9nBX" role="3XIe9u">
+              <ref role="3O_q_h" node="5GODz9QZx45" resolve="load_dataset" />
+              <node concept="4ZOvp" id="4uDgjJw9nCe" role="3O_q_j">
+                <ref role="2DPCA0" node="2ICLnfDcPec" resolve="path" />
+              </node>
+              <node concept="4ZOvp" id="4uDgjJw9nCG" role="3O_q_j">
+                <ref role="2DPCA0" node="5GODz9QZxBM" resolve="dataset_name" />
+              </node>
+              <node concept="Ea8Gl" id="4uDgjJw9nDa" role="3O_q_j" />
+              <node concept="3TlMhK" id="4uDgjJw9nEa" role="3O_q_j" />
+            </node>
+          </node>
+          <node concept="c0U19" id="4uDgjJw9nLG" role="3XIRFZ">
+            <node concept="3XIRFW" id="4uDgjJw9nLH" role="c0U17">
+              <node concept="1_9egQ" id="5rqBun2bKxG" role="3XIRFZ">
+                <node concept="3O_q_g" id="5rqBun2bKxU" role="1_9egR">
+                  <ref role="3O_q_h" node="5rqBun2bzNn" resolve="abort" />
+                </node>
+              </node>
+            </node>
+            <node concept="25Bbzn" id="4uDgjJw9nMz" role="c0U16">
+              <node concept="3TlMh9" id="4uDgjJw9nPp" role="3TlMhJ">
+                <property role="2hmy$m" value="0" />
+              </node>
+              <node concept="3ZVu4v" id="4uDgjJw9nM0" role="3TlMhI">
+                <ref role="3ZVs_2" node="4uDgjJw9nB$" resolve="result" />
+              </node>
+            </node>
+          </node>
+          <node concept="2iZ$PO" id="4uDgjJw9oto" role="3XIRFZ">
+            <node concept="2iUZJK" id="4uDgjJw9otq" role="2iUZJS" />
+            <node concept="2_DyK2" id="4uDgjJw9ots" role="BvGUO">
+              <property role="TrG5h" value="neighbors" />
+            </node>
+          </node>
+          <node concept="3XIRlf" id="4uDgjJw9oCy" role="3XIRFZ">
+            <property role="TrG5h" value="payload" />
+            <node concept="1sgJKr" id="4uDgjJw9oCx" role="2C2TGm">
+              <ref role="1sgJKq" node="4uDgjJw9lTD" resolve="PayloadMsg" />
+            </node>
+            <node concept="3o3WLD" id="4uDgjJw9oD9" role="3XIe9u">
+              <node concept="2xZu8t" id="4uDgjJw9oDw" role="3o3WLE">
+                <ref role="2xZoc7" node="4uDgjJw9mg1" resolve="dataStoreManager" />
+                <node concept="3wxyx2" id="4uDgjJw9oJF" role="2xZpY0">
+                  <node concept="1S7827" id="4uDgjJw9oKB" role="1_9fRO">
+                    <ref role="1S7826" node="4uDgjJw9ncK" resolve="global_manager" />
+                  </node>
+                </node>
+              </node>
+              <node concept="2xZu8t" id="6mQwRN16Osb" role="3o3WLE">
+                <ref role="2xZoc7" node="4ft8TN3Vge_" resolve="results" />
+                <node concept="Ea8Gl" id="6mQwRN16Xo0" role="2xZpY0" />
+              </node>
+              <node concept="2xZu8t" id="6mQwRN17k3e" role="3o3WLE">
+                <ref role="2xZoc7" node="4ft8TN3Vi_0" resolve="res" />
+                <node concept="3TlMh9" id="6mQwRN17thV" role="2xZpY0">
+                  <property role="2hmy$m" value="0" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3XISUE" id="6mQwRN1wNsj" role="3XIRFZ" />
+          <node concept="2_LUnm" id="4uDgjJw9oYw" role="3XIRFZ">
+            <ref role="2_LUnp" node="4uDgjJw9ots" resolve="neighbors" />
+            <node concept="Bk5ry" id="4uDgjJw9oYy" role="2_WIQ$">
+              <property role="TrG5h" value="actor" />
+            </node>
+            <node concept="3XIRFW" id="4uDgjJw9oY$" role="J9Q10">
+              <node concept="1lgcPy" id="4uDgjJw9p1X" role="3XIRFZ">
+                <property role="TrG5h" value="env" />
+                <property role="2uCmrR" value="5.0" />
+                <node concept="bwECK" id="BS7tIoIH3w" role="2RMc64">
+                  <ref role="bwECN" node="4uDgjJw9oYy" resolve="actor" />
+                </node>
+              </node>
+              <node concept="37lXYU" id="5rqBun21lgt" role="3XIRFZ">
+                <property role="TrG5h" value="dataset_msg" />
+                <ref role="3EijsY" node="4uDgjJw9p24" resolve="SET" />
+                <node concept="3g$k$6" id="5rqBun21nVm" role="GupN0">
+                  <node concept="3ZVu4v" id="5rqBun21otB" role="2I3v7r">
+                    <ref role="3ZVs_2" node="4uDgjJw9oCy" resolve="payload" />
+                  </node>
+                </node>
+                <node concept="GouGM" id="5rqBun21npa" role="34eGaj">
+                  <ref role="GouGP" node="4uDgjJw9p1X" resolve="env" />
+                </node>
+              </node>
+              <node concept="37lS4T" id="4uDgjJw9q0O" role="3XIRFZ">
+                <ref role="37lS4Y" node="5rqBun21lgt" resolve="dataset_msg" />
+                <node concept="3ZUYvv" id="4uDgjJw9q0Q" role="iMZ8y">
+                  <ref role="3ZUYvu" node="6mQwRN1wlLO" resolve="now" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="1_9egQ" id="6mQwRN1$nbC" role="3XIRFZ">
+            <node concept="3pqW6w" id="6mQwRN1$oUT" role="1_9egR">
+              <node concept="3TlMhK" id="6mQwRN1$p26" role="3TlMhJ" />
+              <node concept="2qmXGp" id="6mQwRN1$nI0" role="3TlMhI">
+                <node concept="1E4Tgc" id="6mQwRN1$oov" role="1ESnxz">
+                  <ref role="1E4Tge" node="5rqBun26SXh" resolve="canEnd" />
+                </node>
+                <node concept="3ZUYvv" id="6mQwRN1$nbA" role="1_9fRO">
+                  <ref role="3ZUYvu" node="6mQwRN1wlLJ" resolve="state" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="19RgSI" id="6mQwRN1wlLJ" role="1UOdpc">
+          <property role="TrG5h" value="state" />
+          <node concept="3wxxNl" id="6mQwRN1wlLK" role="2C2TGm">
+            <node concept="1sgJKr" id="6mQwRN1$b0L" role="2umbIo">
+              <ref role="1sgJKq" node="5rqBun26FAy" resolve="DataStoreManager" />
+            </node>
+          </node>
+        </node>
+        <node concept="19RgSI" id="6mQwRN1wlLM" role="1UOdpc">
+          <property role="TrG5h" value="me" />
+          <node concept="26Vqp1" id="6mQwRN1wlLN" role="2C2TGm" />
+        </node>
+        <node concept="19RgSI" id="6mQwRN1wlLO" role="1UOdpc">
+          <property role="TrG5h" value="now" />
+          <node concept="2fgwQN" id="6mQwRN1wlLP" role="2C2TGm" />
+        </node>
+        <node concept="19RgSI" id="6mQwRN1wlLQ" role="1UOdpc">
+          <property role="TrG5h" value="msg" />
+          <node concept="3wxxNl" id="6mQwRN1wlLR" role="2C2TGm">
+            <node concept="1sgJKr" id="6mQwRN1wlLS" role="2umbIo">
+              <ref role="1sgJKq" node="4uDgjJw9k_q" resolve="Message" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="isgvk" id="6mQwRN1wlL7" role="1liy4j">
+        <property role="TrG5h" value="load_dataset_handlerInit" />
+        <node concept="19Rifw" id="6mQwRN1wlL8" role="2C2TGm" />
+        <node concept="3XIRFW" id="6mQwRN1wlL9" role="3XIRFX" />
+        <node concept="19RgSI" id="6mQwRN1wlLT" role="1UOdpc">
+          <property role="TrG5h" value="state" />
+          <node concept="3wxxNl" id="6mQwRN1wlLU" role="2C2TGm">
+            <node concept="1sgJKr" id="6mQwRN1$b0K" role="2umbIo">
+              <ref role="1sgJKq" node="5rqBun26FAy" resolve="DataStoreManager" />
+            </node>
+          </node>
+        </node>
+        <node concept="19RgSI" id="6mQwRN1wlLW" role="1UOdpc">
+          <property role="TrG5h" value="me" />
+          <node concept="26Vqp1" id="6mQwRN1wlLX" role="2C2TGm" />
+        </node>
+        <node concept="19RgSI" id="6mQwRN1wlLY" role="1UOdpc">
+          <property role="TrG5h" value="now" />
+          <node concept="2fgwQN" id="6mQwRN1wlLZ" role="2C2TGm" />
+        </node>
+        <node concept="19RgSI" id="6mQwRN1wlM0" role="1UOdpc">
+          <property role="TrG5h" value="msg" />
+          <node concept="3wxxNl" id="6mQwRN1wlM1" role="2C2TGm">
+            <node concept="1sgJKr" id="6mQwRN1wlM2" role="2umbIo">
+              <ref role="1sgJKq" node="4uDgjJw9k_q" resolve="Message" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="isgvk" id="6mQwRN1wlLa" role="1liy4i">
+        <property role="TrG5h" value="load_dataset_handlerCleanup" />
+        <node concept="19Rifw" id="6mQwRN1wlLb" role="2C2TGm" />
+        <node concept="3XIRFW" id="6mQwRN1wlLc" role="3XIRFX" />
+        <node concept="19RgSI" id="6mQwRN1wlM3" role="1UOdpc">
+          <property role="TrG5h" value="state" />
+          <node concept="3wxxNl" id="6mQwRN1wlM4" role="2C2TGm">
+            <node concept="1sgJKr" id="6mQwRN1$b0M" role="2umbIo">
+              <ref role="1sgJKq" node="5rqBun26FAy" resolve="DataStoreManager" />
+            </node>
+          </node>
+        </node>
+        <node concept="19RgSI" id="6mQwRN1wlM6" role="1UOdpc">
+          <property role="TrG5h" value="me" />
+          <node concept="26Vqp1" id="6mQwRN1wlM7" role="2C2TGm" />
+        </node>
+        <node concept="19RgSI" id="6mQwRN1wlM8" role="1UOdpc">
+          <property role="TrG5h" value="now" />
+          <node concept="2fgwQN" id="6mQwRN1wlM9" role="2C2TGm" />
+        </node>
+        <node concept="19RgSI" id="6mQwRN1wlMa" role="1UOdpc">
+          <property role="TrG5h" value="msg" />
+          <node concept="3wxxNl" id="6mQwRN1wlMb" role="2C2TGm">
+            <node concept="1sgJKr" id="6mQwRN1wlMc" role="2umbIo">
+              <ref role="1sgJKq" node="4uDgjJw9k_q" resolve="Message" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1ldE1t" id="6mQwRN1wlLd" role="1ldE14">
+        <ref role="1ldE1s" node="4uDgjJw9p24" resolve="SET" />
+        <node concept="isgvk" id="6mQwRN1wlLe" role="1ldE1$">
+          <property role="TrG5h" value="setHandler" />
+          <node concept="19Rifw" id="6mQwRN1wlLf" role="2C2TGm" />
+          <node concept="3XIRFW" id="6mQwRN1wlLg" role="3XIRFX" />
+          <node concept="19RgSI" id="6mQwRN1wlMd" role="1UOdpc">
+            <property role="TrG5h" value="state" />
+            <node concept="3wxxNl" id="6mQwRN1wlMe" role="2C2TGm">
+              <node concept="1sgJKr" id="6mQwRN1$b0N" role="2umbIo">
+                <ref role="1sgJKq" node="5rqBun26FAy" resolve="DataStoreManager" />
+              </node>
+            </node>
+          </node>
+          <node concept="19RgSI" id="6mQwRN1wlMg" role="1UOdpc">
+            <property role="TrG5h" value="me" />
+            <node concept="26Vqp1" id="6mQwRN1wlMh" role="2C2TGm" />
+          </node>
+          <node concept="19RgSI" id="6mQwRN1wlMi" role="1UOdpc">
+            <property role="TrG5h" value="now" />
+            <node concept="2fgwQN" id="6mQwRN1wlMj" role="2C2TGm" />
+          </node>
+          <node concept="19RgSI" id="6mQwRN1wlMk" role="1UOdpc">
+            <property role="TrG5h" value="msg" />
+            <node concept="3wxxNl" id="6mQwRN1wlMl" role="2C2TGm">
+              <node concept="1sgJKr" id="6mQwRN1wlMm" role="2umbIo">
+                <ref role="1sgJKq" node="4uDgjJw9k_q" resolve="Message" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1ldE1t" id="6mQwRN1wlLh" role="1ldE14">
+        <ref role="1ldE1s" node="BS7tIoKYPZ" resolve="SET_COVARIATES" />
+        <node concept="isgvk" id="6mQwRN1wlLi" role="1ldE1$">
+          <property role="TrG5h" value="set_covariatesHandler" />
+          <node concept="19Rifw" id="6mQwRN1wlLj" role="2C2TGm" />
+          <node concept="3XIRFW" id="6mQwRN1wlLk" role="3XIRFX" />
+          <node concept="19RgSI" id="6mQwRN1wlMn" role="1UOdpc">
+            <property role="TrG5h" value="state" />
+            <node concept="3wxxNl" id="6mQwRN1wlMo" role="2C2TGm">
+              <node concept="1sgJKr" id="6mQwRN1$b0O" role="2umbIo">
+                <ref role="1sgJKq" node="5rqBun26FAy" resolve="DataStoreManager" />
+              </node>
+            </node>
+          </node>
+          <node concept="19RgSI" id="6mQwRN1wlMq" role="1UOdpc">
+            <property role="TrG5h" value="me" />
+            <node concept="26Vqp1" id="6mQwRN1wlMr" role="2C2TGm" />
+          </node>
+          <node concept="19RgSI" id="6mQwRN1wlMs" role="1UOdpc">
+            <property role="TrG5h" value="now" />
+            <node concept="2fgwQN" id="6mQwRN1wlMt" role="2C2TGm" />
+          </node>
+          <node concept="19RgSI" id="6mQwRN1wlMu" role="1UOdpc">
+            <property role="TrG5h" value="msg" />
+            <node concept="3wxxNl" id="6mQwRN1wlMv" role="2C2TGm">
+              <node concept="1sgJKr" id="6mQwRN1wlMw" role="2umbIo">
+                <ref role="1sgJKq" node="4uDgjJw9k_q" resolve="Message" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1ldE1t" id="6mQwRN1wlLl" role="1ldE14">
+        <ref role="1ldE1s" node="BS7tIoL1CW" resolve="IMPUTE_MISSING_MULTIPLE" />
+        <node concept="isgvk" id="6mQwRN1wlLm" role="1ldE1$">
+          <property role="TrG5h" value="impute_missing_multipleHandler" />
+          <node concept="19Rifw" id="6mQwRN1wlLn" role="2C2TGm" />
+          <node concept="3XIRFW" id="6mQwRN1wlLo" role="3XIRFX" />
+          <node concept="19RgSI" id="6mQwRN1wlMx" role="1UOdpc">
+            <property role="TrG5h" value="state" />
+            <node concept="3wxxNl" id="6mQwRN1wlMy" role="2C2TGm">
+              <node concept="1sgJKr" id="6mQwRN1$b0P" role="2umbIo">
+                <ref role="1sgJKq" node="5rqBun26FAy" resolve="DataStoreManager" />
+              </node>
+            </node>
+          </node>
+          <node concept="19RgSI" id="6mQwRN1wlM$" role="1UOdpc">
+            <property role="TrG5h" value="me" />
+            <node concept="26Vqp1" id="6mQwRN1wlM_" role="2C2TGm" />
+          </node>
+          <node concept="19RgSI" id="6mQwRN1wlMA" role="1UOdpc">
+            <property role="TrG5h" value="now" />
+            <node concept="2fgwQN" id="6mQwRN1wlMB" role="2C2TGm" />
+          </node>
+          <node concept="19RgSI" id="6mQwRN1wlMC" role="1UOdpc">
+            <property role="TrG5h" value="msg" />
+            <node concept="3wxxNl" id="6mQwRN1wlMD" role="2C2TGm">
+              <node concept="1sgJKr" id="6mQwRN1wlME" role="2umbIo">
+                <ref role="1sgJKq" node="4uDgjJw9k_q" resolve="Message" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1ldE1t" id="6mQwRN1wlLp" role="1ldE14">
+        <ref role="1ldE1s" node="4uDgjJw9ppo" resolve="CHECK_PARALLEL_TRENDS_STAGGERED" />
+        <node concept="isgvk" id="6mQwRN1wlLq" role="1ldE1$">
+          <property role="TrG5h" value="check_parallel_trends_staggeredHandler" />
+          <node concept="19Rifw" id="6mQwRN1wlLr" role="2C2TGm" />
+          <node concept="3XIRFW" id="6mQwRN1wlLs" role="3XIRFX" />
+          <node concept="19RgSI" id="6mQwRN1wlMF" role="1UOdpc">
+            <property role="TrG5h" value="state" />
+            <node concept="3wxxNl" id="6mQwRN1wlMG" role="2C2TGm">
+              <node concept="1sgJKr" id="6mQwRN1$b0Q" role="2umbIo">
+                <ref role="1sgJKq" node="5rqBun26FAy" resolve="DataStoreManager" />
+              </node>
+            </node>
+          </node>
+          <node concept="19RgSI" id="6mQwRN1wlMI" role="1UOdpc">
+            <property role="TrG5h" value="me" />
+            <node concept="26Vqp1" id="6mQwRN1wlMJ" role="2C2TGm" />
+          </node>
+          <node concept="19RgSI" id="6mQwRN1wlMK" role="1UOdpc">
+            <property role="TrG5h" value="now" />
+            <node concept="2fgwQN" id="6mQwRN1wlML" role="2C2TGm" />
+          </node>
+          <node concept="19RgSI" id="6mQwRN1wlMM" role="1UOdpc">
+            <property role="TrG5h" value="msg" />
+            <node concept="3wxxNl" id="6mQwRN1wlMN" role="2C2TGm">
+              <node concept="1sgJKr" id="6mQwRN1wlMO" role="2umbIo">
+                <ref role="1sgJKq" node="4uDgjJw9k_q" resolve="Message" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1ldE1t" id="6mQwRN1wlLt" role="1ldE14">
+        <ref role="1ldE1s" node="6SkjaWOCfwV" resolve="RUN_ATT_ESTIMATIONS" />
+        <node concept="isgvk" id="6mQwRN1wlLu" role="1ldE1$">
+          <property role="TrG5h" value="run_att_estimationsHandler" />
+          <node concept="19Rifw" id="6mQwRN1wlLv" role="2C2TGm" />
+          <node concept="3XIRFW" id="6mQwRN1wlLw" role="3XIRFX" />
+          <node concept="19RgSI" id="6mQwRN1wlMP" role="1UOdpc">
+            <property role="TrG5h" value="state" />
+            <node concept="3wxxNl" id="6mQwRN1wlMQ" role="2C2TGm">
+              <node concept="1sgJKr" id="6mQwRN1$b0R" role="2umbIo">
+                <ref role="1sgJKq" node="5rqBun26FAy" resolve="DataStoreManager" />
+              </node>
+            </node>
+          </node>
+          <node concept="19RgSI" id="6mQwRN1wlMS" role="1UOdpc">
+            <property role="TrG5h" value="me" />
+            <node concept="26Vqp1" id="6mQwRN1wlMT" role="2C2TGm" />
+          </node>
+          <node concept="19RgSI" id="6mQwRN1wlMU" role="1UOdpc">
+            <property role="TrG5h" value="now" />
+            <node concept="2fgwQN" id="6mQwRN1wlMV" role="2C2TGm" />
+          </node>
+          <node concept="19RgSI" id="6mQwRN1wlMW" role="1UOdpc">
+            <property role="TrG5h" value="msg" />
+            <node concept="3wxxNl" id="6mQwRN1wlMX" role="2C2TGm">
+              <node concept="1sgJKr" id="6mQwRN1wlMY" role="2umbIo">
+                <ref role="1sgJKq" node="4uDgjJw9k_q" resolve="Message" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1ldE1t" id="6mQwRN1wlLx" role="1ldE14">
+        <ref role="1ldE1s" node="4ft8TN3V0GI" resolve="PRINT_OUTPUT" />
+        <node concept="isgvk" id="6mQwRN1wlLy" role="1ldE1$">
+          <property role="TrG5h" value="print_outputHandler" />
+          <node concept="19Rifw" id="6mQwRN1wlLz" role="2C2TGm" />
+          <node concept="3XIRFW" id="6mQwRN1wlL$" role="3XIRFX" />
+          <node concept="19RgSI" id="6mQwRN1wlMZ" role="1UOdpc">
+            <property role="TrG5h" value="state" />
+            <node concept="3wxxNl" id="6mQwRN1wlN0" role="2C2TGm">
+              <node concept="1sgJKr" id="6mQwRN1$b0S" role="2umbIo">
+                <ref role="1sgJKq" node="5rqBun26FAy" resolve="DataStoreManager" />
+              </node>
+            </node>
+          </node>
+          <node concept="19RgSI" id="6mQwRN1wlN2" role="1UOdpc">
+            <property role="TrG5h" value="me" />
+            <node concept="26Vqp1" id="6mQwRN1wlN3" role="2C2TGm" />
+          </node>
+          <node concept="19RgSI" id="6mQwRN1wlN4" role="1UOdpc">
+            <property role="TrG5h" value="now" />
+            <node concept="2fgwQN" id="6mQwRN1wlN5" role="2C2TGm" />
+          </node>
+          <node concept="19RgSI" id="6mQwRN1wlN6" role="1UOdpc">
+            <property role="TrG5h" value="msg" />
+            <node concept="3wxxNl" id="6mQwRN1wlN7" role="2C2TGm">
+              <node concept="1sgJKr" id="6mQwRN1wlN8" role="2umbIo">
+                <ref role="1sgJKq" node="4uDgjJw9k_q" resolve="Message" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
     <node concept="IQpmJ" id="6SkjaWOCx5W" role="1bAXeI" />
     <node concept="37lXYJ" id="4uDgjJwdbye" role="37lXYW">
       <property role="TrG5h" value="load_dataset" />
-      <ref role="3GrvuQ" node="4uDgjJw9ktF" resolve="load_dataset_handler" />
+      <ref role="3GrvuQ" node="6mQwRN1wlL2" resolve="load_dataset_handler" />
       <ref role="1sy605" node="5rqBun26FAy" resolve="DataStoreManager" />
       <node concept="2uUgHn" id="4uDgjJwdbyg" role="2LyG1a" />
     </node>
@@ -1129,264 +1523,6 @@
         <property role="3mNxdG" value="true" />
         <property role="TrG5h" value="abort" />
         <node concept="19Rifw" id="5rqBun2bIV5" role="2C2TGm" />
-      </node>
-    </node>
-    <node concept="1lj4MQ" id="4uDgjJw9ktF" role="2QtU1L">
-      <property role="2F6P9D" value="msg" />
-      <property role="TrG5h" value="load_dataset_handler" />
-      <node concept="37lXYU" id="4uDgjJw9ktH" role="2F2NYG">
-        <property role="TrG5h" value="msg" />
-        <node concept="1lgcPH" id="4uDgjJw9ktI" role="GupN0">
-          <property role="TrG5h" value="msg.payload" />
-        </node>
-      </node>
-      <node concept="19RgSI" id="4uDgjJw9ktJ" role="1u8EhB">
-        <property role="TrG5h" value="msg" />
-        <node concept="3wxxNl" id="4uDgjJw9ktK" role="2C2TGm">
-          <node concept="19Rifw" id="4uDgjJw9ktL" role="2umbIo" />
-        </node>
-      </node>
-      <node concept="isgvk" id="4uDgjJw9ktP" role="37ngyo">
-        <property role="TrG5h" value="load_dataset_handlerHandler" />
-        <node concept="19Rifw" id="4uDgjJw9ktQ" role="2C2TGm" />
-        <node concept="3XIRFW" id="4uDgjJw9ktR" role="3XIRFX">
-          <node concept="1QiMYF" id="6mQwRN1sIIJ" role="3XIRFZ">
-            <node concept="OjmMv" id="6mQwRN1sIIL" role="3SJzmv">
-              <node concept="19SGf9" id="6mQwRN1sIIM" role="OjmMu">
-                <node concept="19SUe$" id="6mQwRN1sIIN" role="19SJt6">
-                  <property role="19SUeA" value="non genera gli event type " />
-                </node>
-              </node>
-            </node>
-          </node>
-          <node concept="1QiMYF" id="6mQwRN1sFBA" role="3XIRFZ">
-            <node concept="OjmMv" id="6mQwRN1sFBC" role="3SJzmv">
-              <node concept="19SGf9" id="6mQwRN1sFBD" role="OjmMu">
-                <node concept="19SUe$" id="6mQwRN1sFBE" role="19SJt6">
-                  <property role="19SUeA" value="manca declaration di topology all'inizio? " />
-                </node>
-              </node>
-            </node>
-          </node>
-          <node concept="1QiMYF" id="6mQwRN1rZ2L" role="3XIRFZ">
-            <node concept="OjmMv" id="6mQwRN1rZ2N" role="3SJzmv">
-              <node concept="19SGf9" id="6mQwRN1rZ2O" role="OjmMu">
-                <node concept="19SUe$" id="6mQwRN1rZ2P" role="19SJt6">
-                  <property role="19SUeA" value="manca event type LOAD_DATASET? " />
-                </node>
-              </node>
-            </node>
-          </node>
-          <node concept="1QiMYF" id="6mQwRN1sJne" role="3XIRFZ">
-            <node concept="OjmMv" id="6mQwRN1sJng" role="3SJzmv">
-              <node concept="19SGf9" id="6mQwRN1sJnh" role="OjmMu">
-                <node concept="19SUe$" id="6mQwRN1sJni" role="19SJt6">
-                  <property role="19SUeA" value="la variabile state non esiste, non è passata come parametri a load_dataset_handler" />
-                </node>
-              </node>
-            </node>
-          </node>
-          <node concept="1QiMYF" id="6mQwRN1sKxH" role="3XIRFZ">
-            <node concept="OjmMv" id="6mQwRN1sKxJ" role="3SJzmv">
-              <node concept="19SGf9" id="6mQwRN1sKxK" role="OjmMu">
-                <node concept="19SUe$" id="6mQwRN1sKxL" role="19SJt6">
-                  <property role="19SUeA" value="c'è case 0 della ProcessEvent replicati pù volte per ogni event type sembra" />
-                </node>
-              </node>
-            </node>
-          </node>
-          <node concept="3XIRlf" id="4uDgjJw9nB$" role="3XIRFZ">
-            <property role="TrG5h" value="result" />
-            <node concept="26Vqph" id="4uDgjJw9nBy" role="2C2TGm" />
-            <node concept="3O_q_g" id="4uDgjJw9nBX" role="3XIe9u">
-              <ref role="3O_q_h" node="5GODz9QZx45" resolve="load_dataset" />
-              <node concept="4ZOvp" id="4uDgjJw9nCe" role="3O_q_j">
-                <ref role="2DPCA0" node="2ICLnfDcPec" resolve="path" />
-              </node>
-              <node concept="4ZOvp" id="4uDgjJw9nCG" role="3O_q_j">
-                <ref role="2DPCA0" node="5GODz9QZxBM" resolve="dataset_name" />
-              </node>
-              <node concept="Ea8Gl" id="4uDgjJw9nDa" role="3O_q_j" />
-              <node concept="3TlMhK" id="4uDgjJw9nEa" role="3O_q_j" />
-            </node>
-          </node>
-          <node concept="c0U19" id="4uDgjJw9nLG" role="3XIRFZ">
-            <node concept="3XIRFW" id="4uDgjJw9nLH" role="c0U17">
-              <node concept="1_9egQ" id="5rqBun2bKxG" role="3XIRFZ">
-                <node concept="3O_q_g" id="5rqBun2bKxU" role="1_9egR">
-                  <ref role="3O_q_h" node="5rqBun2bzNn" resolve="abort" />
-                </node>
-              </node>
-            </node>
-            <node concept="25Bbzn" id="4uDgjJw9nMz" role="c0U16">
-              <node concept="3TlMh9" id="4uDgjJw9nPp" role="3TlMhJ">
-                <property role="2hmy$m" value="0" />
-              </node>
-              <node concept="3ZVu4v" id="4uDgjJw9nM0" role="3TlMhI">
-                <ref role="3ZVs_2" node="4uDgjJw9nB$" resolve="result" />
-              </node>
-            </node>
-          </node>
-          <node concept="1QiMYF" id="6mQwRN1sHI_" role="3XIRFZ">
-            <node concept="OjmMv" id="6mQwRN1sHIB" role="3SJzmv">
-              <node concept="19SGf9" id="6mQwRN1sHIC" role="OjmMu">
-                <node concept="19SUe$" id="6mQwRN1sHID" role="19SJt6">
-                  <property role="19SUeA" value="la mappa in GetAllNeighbors che non esiste in topology.h " />
-                </node>
-              </node>
-            </node>
-          </node>
-          <node concept="1QiMYF" id="6mQwRN1sIvx" role="3XIRFZ">
-            <node concept="OjmMv" id="6mQwRN1sIvz" role="3SJzmv">
-              <node concept="19SGf9" id="6mQwRN1sIv$" role="OjmMu">
-                <node concept="19SUe$" id="6mQwRN1sIv_" role="19SJt6">
-                  <property role="19SUeA" value="devo usare CountDirections e GetAllReceivers? " />
-                </node>
-              </node>
-            </node>
-          </node>
-          <node concept="2iZ$PO" id="4uDgjJw9oto" role="3XIRFZ">
-            <node concept="2iUZJK" id="4uDgjJw9otq" role="2iUZJS" />
-            <node concept="2_DyK2" id="4uDgjJw9ots" role="BvGUO">
-              <property role="TrG5h" value="neighbors" />
-            </node>
-          </node>
-          <node concept="3XIRlf" id="4uDgjJw9oCy" role="3XIRFZ">
-            <property role="TrG5h" value="payload" />
-            <node concept="1sgJKr" id="4uDgjJw9oCx" role="2C2TGm">
-              <ref role="1sgJKq" node="4uDgjJw9lTD" resolve="PayloadMsg" />
-            </node>
-            <node concept="3o3WLD" id="4uDgjJw9oD9" role="3XIe9u">
-              <node concept="2xZu8t" id="4uDgjJw9oDw" role="3o3WLE">
-                <ref role="2xZoc7" node="4uDgjJw9mg1" resolve="dataStoreManager" />
-                <node concept="3wxyx2" id="4uDgjJw9oJF" role="2xZpY0">
-                  <node concept="1S7827" id="4uDgjJw9oKB" role="1_9fRO">
-                    <ref role="1S7826" node="4uDgjJw9ncK" resolve="global_manager" />
-                  </node>
-                </node>
-              </node>
-              <node concept="2xZu8t" id="6mQwRN16Osb" role="3o3WLE">
-                <ref role="2xZoc7" node="4ft8TN3Vge_" resolve="results" />
-                <node concept="Ea8Gl" id="6mQwRN16Xo0" role="2xZpY0" />
-              </node>
-              <node concept="2xZu8t" id="6mQwRN17k3e" role="3o3WLE">
-                <ref role="2xZoc7" node="4ft8TN3Vi_0" resolve="res" />
-                <node concept="3TlMh9" id="6mQwRN17thV" role="2xZpY0">
-                  <property role="2hmy$m" value="0" />
-                </node>
-              </node>
-            </node>
-          </node>
-          <node concept="2_LUnm" id="4uDgjJw9oYw" role="3XIRFZ">
-            <ref role="2_LUnp" node="4uDgjJw9ots" resolve="neighbors" />
-            <node concept="Bk5ry" id="4uDgjJw9oYy" role="2_WIQ$">
-              <property role="TrG5h" value="actor" />
-            </node>
-            <node concept="3XIRFW" id="4uDgjJw9oY$" role="J9Q10">
-              <node concept="1lgcPy" id="4uDgjJw9p1X" role="3XIRFZ">
-                <property role="TrG5h" value="env" />
-                <property role="2uCmrR" value="5.0" />
-                <node concept="bwECK" id="BS7tIoIH3w" role="2RMc64">
-                  <ref role="bwECN" node="4uDgjJw9oYy" resolve="actor" />
-                </node>
-              </node>
-              <node concept="37lXYU" id="5rqBun21lgt" role="3XIRFZ">
-                <property role="TrG5h" value="dataset_msg" />
-                <ref role="3EijsY" node="4uDgjJw9p24" resolve="SET" />
-                <node concept="3g$k$6" id="5rqBun21nVm" role="GupN0">
-                  <node concept="3ZVu4v" id="5rqBun21otB" role="2I3v7r">
-                    <ref role="3ZVs_2" node="4uDgjJw9oCy" resolve="payload" />
-                  </node>
-                </node>
-                <node concept="GouGM" id="5rqBun21npa" role="34eGaj">
-                  <ref role="GouGP" node="4uDgjJw9p1X" resolve="env" />
-                </node>
-              </node>
-              <node concept="37lS4T" id="4uDgjJw9q0O" role="3XIRFZ">
-                <ref role="37lS4Y" node="5rqBun21lgt" resolve="dataset_msg" />
-                <node concept="3ZUYvv" id="4uDgjJw9q0Q" role="iMZ8y">
-                  <ref role="3ZUYvu" node="4uDgjJw9kua" resolve="now" />
-                </node>
-              </node>
-            </node>
-          </node>
-          <node concept="1_9egQ" id="5rqBun2am7f" role="3XIRFZ">
-            <node concept="3pqW6w" id="5rqBun2ancE" role="1_9egR">
-              <node concept="3TlMhK" id="5rqBun2anem" role="3TlMhJ" />
-              <node concept="2qmXGp" id="5rqBun2am7B" role="3TlMhI">
-                <node concept="1E4Tgc" id="5rqBun2amEg" role="1ESnxz">
-                  <ref role="1E4Tge" node="5rqBun26SXh" resolve="canEnd" />
-                </node>
-                <node concept="3ZUYvv" id="5rqBun2am7d" role="1_9fRO">
-                  <ref role="3ZUYvu" node="4uDgjJw9ku5" resolve="state" />
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="19RgSI" id="4uDgjJw9ku5" role="1UOdpc">
-          <property role="TrG5h" value="state" />
-          <node concept="3wxxNl" id="4uDgjJw9ku6" role="2C2TGm">
-            <property role="2c7vTL" value="true" />
-            <node concept="1sgJKr" id="5rqBun27j_S" role="2umbIo">
-              <ref role="1sgJKq" node="5rqBun26FAy" resolve="DataStoreManager" />
-            </node>
-          </node>
-        </node>
-        <node concept="19RgSI" id="4uDgjJw9ku8" role="1UOdpc">
-          <property role="TrG5h" value="me" />
-          <node concept="26Vqp1" id="4uDgjJw9ku9" role="2C2TGm" />
-        </node>
-        <node concept="19RgSI" id="4uDgjJw9kua" role="1UOdpc">
-          <property role="TrG5h" value="now" />
-          <node concept="2fgwQN" id="4uDgjJw9kub" role="2C2TGm" />
-        </node>
-      </node>
-      <node concept="isgvk" id="4uDgjJw9ktS" role="1liy4j">
-        <property role="TrG5h" value="load_dataset_handlerInit" />
-        <node concept="19Rifw" id="4uDgjJw9ktT" role="2C2TGm" />
-        <node concept="3XIRFW" id="4uDgjJw9ktU" role="3XIRFX">
-          <node concept="3XISUE" id="4uDgjJw9n7G" role="3XIRFZ" />
-        </node>
-        <node concept="19RgSI" id="4uDgjJw9kuc" role="1UOdpc">
-          <property role="TrG5h" value="state" />
-          <node concept="3wxxNl" id="4uDgjJw9kud" role="2C2TGm">
-            <property role="2c7vTL" value="true" />
-            <node concept="1sgJKr" id="5rqBun27j_R" role="2umbIo">
-              <ref role="1sgJKq" node="5rqBun26FAy" resolve="DataStoreManager" />
-            </node>
-          </node>
-        </node>
-        <node concept="19RgSI" id="4uDgjJw9kuf" role="1UOdpc">
-          <property role="TrG5h" value="me" />
-          <node concept="26Vqp1" id="4uDgjJw9kug" role="2C2TGm" />
-        </node>
-        <node concept="19RgSI" id="4uDgjJw9kuh" role="1UOdpc">
-          <property role="TrG5h" value="now" />
-          <node concept="2fgwQN" id="4uDgjJw9kui" role="2C2TGm" />
-        </node>
-      </node>
-      <node concept="isgvk" id="4uDgjJw9ktV" role="1liy4i">
-        <property role="TrG5h" value="load_dataset_handlerCleanup" />
-        <node concept="19Rifw" id="4uDgjJw9ktW" role="2C2TGm" />
-        <node concept="3XIRFW" id="4uDgjJw9ktX" role="3XIRFX" />
-        <node concept="19RgSI" id="4uDgjJw9kuj" role="1UOdpc">
-          <property role="TrG5h" value="state" />
-          <node concept="3wxxNl" id="4uDgjJw9kuk" role="2C2TGm">
-            <property role="2c7vTL" value="true" />
-            <node concept="1sgJKr" id="5rqBun27j_T" role="2umbIo">
-              <ref role="1sgJKq" node="5rqBun26FAy" resolve="DataStoreManager" />
-            </node>
-          </node>
-        </node>
-        <node concept="19RgSI" id="4uDgjJw9kum" role="1UOdpc">
-          <property role="TrG5h" value="me" />
-          <node concept="26Vqp1" id="4uDgjJw9kun" role="2C2TGm" />
-        </node>
-        <node concept="19RgSI" id="4uDgjJw9kuo" role="1UOdpc">
-          <property role="TrG5h" value="now" />
-          <node concept="2fgwQN" id="4uDgjJw9kup" role="2C2TGm" />
-        </node>
       </node>
     </node>
     <node concept="1lj4MQ" id="4uDgjJw9sGp" role="2QtU1L">
