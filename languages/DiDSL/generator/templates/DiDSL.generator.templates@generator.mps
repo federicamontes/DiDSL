@@ -211,6 +211,9 @@
       <concept id="7254843406768833938" name="com.mbeddr.core.statements.structure.ExpressionStatement" flags="ng" index="1_9egQ">
         <child id="7254843406768833939" name="expr" index="1_9egR" />
       </concept>
+      <concept id="1679452829930336984" name="com.mbeddr.core.statements.structure.CommentStatement" flags="ng" index="1QiMYF">
+        <child id="8624890525768479139" name="textblock" index="3SJzmv" />
+      </concept>
       <concept id="4185783222026475238" name="com.mbeddr.core.statements.structure.LocalVariableDeclaration" flags="ng" index="3XIRlf">
         <child id="4185783222026502647" name="init" index="3XIe9u" />
       </concept>
@@ -220,6 +223,14 @@
       <concept id="4185783222026464515" name="com.mbeddr.core.statements.structure.Statement" flags="ng" index="3XISUE" />
       <concept id="2093108837558113914" name="com.mbeddr.core.statements.structure.LocalVarRef" flags="ng" index="3ZVu4v">
         <reference id="2093108837558124071" name="var" index="3ZVs_2" />
+      </concept>
+    </language>
+    <language id="92d2ea16-5a42-4fdf-a676-c7604efe3504" name="de.slisson.mps.richtext">
+      <concept id="2557074442922380897" name="de.slisson.mps.richtext.structure.Text" flags="ng" index="19SGf9">
+        <child id="2557074442922392302" name="words" index="19SJt6" />
+      </concept>
+      <concept id="2557074442922438156" name="de.slisson.mps.richtext.structure.Word" flags="ng" index="19SUe$">
+        <property id="2557074442922438158" name="escapedValue" index="19SUeA" />
       </concept>
     </language>
     <language id="3bf5377a-e904-4ded-9754-5a516023bfaa" name="com.mbeddr.core.pointers">
@@ -294,6 +305,11 @@
       </concept>
       <concept id="7034214596253391076" name="com.mbeddr.core.udt.structure.GenericMemberRef" flags="ng" index="1E4Tgc">
         <reference id="7034214596253391078" name="member" index="1E4Tge" />
+      </concept>
+    </language>
+    <language id="d4280a54-f6df-4383-aa41-d1b2bffa7eb1" name="com.mbeddr.core.base">
+      <concept id="8375407818529178006" name="com.mbeddr.core.base.structure.TextBlock" flags="ng" index="OjmMv">
+        <child id="8375407818529178007" name="text" index="OjmMu" />
       </concept>
     </language>
     <language id="6d11763d-483d-4b2b-8efc-09336c1b0001" name="com.mbeddr.core.modules">
@@ -500,13 +516,13 @@
     <node concept="IQpmJ" id="6SkjaWOCx5W" role="1bAXeI" />
     <node concept="37lXYJ" id="4uDgjJwdbye" role="37lXYW">
       <property role="TrG5h" value="load_dataset" />
-      <ref role="3GrvuQ" node="4uDgjJw9ktF" resolve="load_dataset" />
+      <ref role="3GrvuQ" node="4uDgjJw9ktF" resolve="load_dataset_handler" />
       <ref role="1sy605" node="5rqBun26FAy" resolve="DataStoreManager" />
       <node concept="2uUgHn" id="4uDgjJwdbyg" role="2LyG1a" />
     </node>
     <node concept="37lXYJ" id="4uDgjJwdeW3" role="37lXYW">
       <property role="TrG5h" value="set" />
-      <ref role="3GrvuQ" node="4uDgjJw9sGp" resolve="set_column" />
+      <ref role="3GrvuQ" node="4uDgjJw9sGp" resolve="set_column_handler" />
       <ref role="1sy605" node="5rqBun26FAy" resolve="DataStoreManager" />
       <node concept="2uUgHn" id="4uDgjJwdeW5" role="2LyG1a" />
       <node concept="1W57fq" id="4uDgjJwdgcD" role="lGtFl">
@@ -536,7 +552,7 @@
     </node>
     <node concept="37lXYJ" id="BS7tIoL8jm" role="37lXYW">
       <property role="TrG5h" value="set_covariates" />
-      <ref role="3GrvuQ" node="BS7tIoLljT" resolve="set_covariates" />
+      <ref role="3GrvuQ" node="BS7tIoLljT" resolve="set_covariates_handler" />
       <ref role="1sy605" node="5rqBun26FAy" resolve="DataStoreManager" />
       <node concept="2uUgHn" id="BS7tIoL8jn" role="2LyG1a" />
       <node concept="1W57fq" id="BS7tIoL8jo" role="lGtFl">
@@ -566,7 +582,7 @@
     </node>
     <node concept="37lXYJ" id="BS7tIp1sii" role="37lXYW">
       <property role="TrG5h" value="impute_missing_multiple" />
-      <ref role="3GrvuQ" node="BS7tIp1Ysb" resolve="impute_missing_multiple" />
+      <ref role="3GrvuQ" node="BS7tIp1Ysb" resolve="impute_missing_multiple_handler" />
       <ref role="1sy605" node="5rqBun26FAy" resolve="DataStoreManager" />
       <node concept="2uUgHn" id="BS7tIp1sij" role="2LyG1a" />
       <node concept="1W57fq" id="BS7tIp1sik" role="lGtFl">
@@ -596,7 +612,7 @@
     </node>
     <node concept="37lXYJ" id="BS7tIp4onb" role="37lXYW">
       <property role="TrG5h" value="check_parallel_trends_staggered" />
-      <ref role="3GrvuQ" node="BS7tIp4WJI" resolve="check_parallel_trends_staggered" />
+      <ref role="3GrvuQ" node="BS7tIp4WJI" resolve="check_parallel_trends_staggered_handler" />
       <ref role="1sy605" node="5rqBun26FAy" resolve="DataStoreManager" />
       <node concept="2uUgHn" id="BS7tIp4onc" role="2LyG1a" />
       <node concept="1W57fq" id="BS7tIp4ond" role="lGtFl">
@@ -746,7 +762,7 @@
     </node>
     <node concept="37lXYJ" id="4WNYNtmksZI" role="37lXYW">
       <property role="TrG5h" value="print_output" />
-      <ref role="3GrvuQ" node="5rqBun23qh$" resolve="print_att_results" />
+      <ref role="3GrvuQ" node="5rqBun23qh$" resolve="print_att_results_handler" />
       <ref role="1sy605" node="5rqBun26FAy" resolve="DataStoreManager" />
       <node concept="2uUgHn" id="4WNYNtmksZJ" role="2LyG1a" />
     </node>
@@ -1117,7 +1133,7 @@
     </node>
     <node concept="1lj4MQ" id="4uDgjJw9ktF" role="2QtU1L">
       <property role="2F6P9D" value="msg" />
-      <property role="TrG5h" value="load_dataset" />
+      <property role="TrG5h" value="load_dataset_handler" />
       <node concept="37lXYU" id="4uDgjJw9ktH" role="2F2NYG">
         <property role="TrG5h" value="msg" />
         <node concept="1lgcPH" id="4uDgjJw9ktI" role="GupN0">
@@ -1131,9 +1147,54 @@
         </node>
       </node>
       <node concept="isgvk" id="4uDgjJw9ktP" role="37ngyo">
-        <property role="TrG5h" value="load_datasetHandler" />
+        <property role="TrG5h" value="load_dataset_handlerHandler" />
         <node concept="19Rifw" id="4uDgjJw9ktQ" role="2C2TGm" />
         <node concept="3XIRFW" id="4uDgjJw9ktR" role="3XIRFX">
+          <node concept="1QiMYF" id="6mQwRN1sIIJ" role="3XIRFZ">
+            <node concept="OjmMv" id="6mQwRN1sIIL" role="3SJzmv">
+              <node concept="19SGf9" id="6mQwRN1sIIM" role="OjmMu">
+                <node concept="19SUe$" id="6mQwRN1sIIN" role="19SJt6">
+                  <property role="19SUeA" value="non genera gli event type " />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="1QiMYF" id="6mQwRN1sFBA" role="3XIRFZ">
+            <node concept="OjmMv" id="6mQwRN1sFBC" role="3SJzmv">
+              <node concept="19SGf9" id="6mQwRN1sFBD" role="OjmMu">
+                <node concept="19SUe$" id="6mQwRN1sFBE" role="19SJt6">
+                  <property role="19SUeA" value="manca declaration di topology all'inizio? " />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="1QiMYF" id="6mQwRN1rZ2L" role="3XIRFZ">
+            <node concept="OjmMv" id="6mQwRN1rZ2N" role="3SJzmv">
+              <node concept="19SGf9" id="6mQwRN1rZ2O" role="OjmMu">
+                <node concept="19SUe$" id="6mQwRN1rZ2P" role="19SJt6">
+                  <property role="19SUeA" value="manca event type LOAD_DATASET? " />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="1QiMYF" id="6mQwRN1sJne" role="3XIRFZ">
+            <node concept="OjmMv" id="6mQwRN1sJng" role="3SJzmv">
+              <node concept="19SGf9" id="6mQwRN1sJnh" role="OjmMu">
+                <node concept="19SUe$" id="6mQwRN1sJni" role="19SJt6">
+                  <property role="19SUeA" value="la variabile state non esiste, non è passata come parametri a load_dataset_handler" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="1QiMYF" id="6mQwRN1sKxH" role="3XIRFZ">
+            <node concept="OjmMv" id="6mQwRN1sKxJ" role="3SJzmv">
+              <node concept="19SGf9" id="6mQwRN1sKxK" role="OjmMu">
+                <node concept="19SUe$" id="6mQwRN1sKxL" role="19SJt6">
+                  <property role="19SUeA" value="c'è case 0 della ProcessEvent replicati pù volte per ogni event type sembra" />
+                </node>
+              </node>
+            </node>
+          </node>
           <node concept="3XIRlf" id="4uDgjJw9nB$" role="3XIRFZ">
             <property role="TrG5h" value="result" />
             <node concept="26Vqph" id="4uDgjJw9nBy" role="2C2TGm" />
@@ -1163,6 +1224,24 @@
               </node>
               <node concept="3ZVu4v" id="4uDgjJw9nM0" role="3TlMhI">
                 <ref role="3ZVs_2" node="4uDgjJw9nB$" resolve="result" />
+              </node>
+            </node>
+          </node>
+          <node concept="1QiMYF" id="6mQwRN1sHI_" role="3XIRFZ">
+            <node concept="OjmMv" id="6mQwRN1sHIB" role="3SJzmv">
+              <node concept="19SGf9" id="6mQwRN1sHIC" role="OjmMu">
+                <node concept="19SUe$" id="6mQwRN1sHID" role="19SJt6">
+                  <property role="19SUeA" value="la mappa in GetAllNeighbors che non esiste in topology.h " />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="1QiMYF" id="6mQwRN1sIvx" role="3XIRFZ">
+            <node concept="OjmMv" id="6mQwRN1sIvz" role="3SJzmv">
+              <node concept="19SGf9" id="6mQwRN1sIv$" role="OjmMu">
+                <node concept="19SUe$" id="6mQwRN1sIv_" role="19SJt6">
+                  <property role="19SUeA" value="devo usare CountDirections e GetAllReceivers? " />
+                </node>
               </node>
             </node>
           </node>
@@ -1264,7 +1343,7 @@
         </node>
       </node>
       <node concept="isgvk" id="4uDgjJw9ktS" role="1liy4j">
-        <property role="TrG5h" value="load_datasetInit" />
+        <property role="TrG5h" value="load_dataset_handlerInit" />
         <node concept="19Rifw" id="4uDgjJw9ktT" role="2C2TGm" />
         <node concept="3XIRFW" id="4uDgjJw9ktU" role="3XIRFX">
           <node concept="3XISUE" id="4uDgjJw9n7G" role="3XIRFZ" />
@@ -1288,7 +1367,7 @@
         </node>
       </node>
       <node concept="isgvk" id="4uDgjJw9ktV" role="1liy4i">
-        <property role="TrG5h" value="load_datasetCleanup" />
+        <property role="TrG5h" value="load_dataset_handlerCleanup" />
         <node concept="19Rifw" id="4uDgjJw9ktW" role="2C2TGm" />
         <node concept="3XIRFW" id="4uDgjJw9ktX" role="3XIRFX" />
         <node concept="19RgSI" id="4uDgjJw9kuj" role="1UOdpc">
@@ -1312,7 +1391,7 @@
     </node>
     <node concept="1lj4MQ" id="4uDgjJw9sGp" role="2QtU1L">
       <property role="2F6P9D" value="msg" />
-      <property role="TrG5h" value="set_column" />
+      <property role="TrG5h" value="set_column_handler" />
       <node concept="37lXYU" id="4uDgjJw9sGr" role="2F2NYG">
         <property role="TrG5h" value="msg" />
         <node concept="1lgcPH" id="4uDgjJw9sGs" role="GupN0">
@@ -1326,7 +1405,7 @@
         </node>
       </node>
       <node concept="isgvk" id="4uDgjJw9sGz" role="37ngyo">
-        <property role="TrG5h" value="set_columnHandler" />
+        <property role="TrG5h" value="set_column_handlerHandler" />
         <node concept="19Rifw" id="4uDgjJw9sG$" role="2C2TGm" />
         <node concept="3XIRFW" id="4uDgjJw9sG_" role="3XIRFX">
           <node concept="3XISUE" id="5rqBun2i5qn" role="3XIRFZ" />
@@ -1352,7 +1431,7 @@
         </node>
       </node>
       <node concept="isgvk" id="4uDgjJw9sGA" role="1liy4j">
-        <property role="TrG5h" value="set_columnInit" />
+        <property role="TrG5h" value="set_column_handlerInit" />
         <node concept="19Rifw" id="4uDgjJw9sGB" role="2C2TGm" />
         <node concept="3XIRFW" id="4uDgjJw9sGC" role="3XIRFX" />
         <node concept="19RgSI" id="4uDgjJw9sHg" role="1UOdpc">
@@ -1374,7 +1453,7 @@
         </node>
       </node>
       <node concept="isgvk" id="4uDgjJw9sGD" role="1liy4i">
-        <property role="TrG5h" value="set_columnCleanup" />
+        <property role="TrG5h" value="set_column_handlerCleanup" />
         <node concept="19Rifw" id="4uDgjJw9sGE" role="2C2TGm" />
         <node concept="3XIRFW" id="4uDgjJw9sGF" role="3XIRFX" />
         <node concept="19RgSI" id="4uDgjJw9sHn" role="1UOdpc">
@@ -1401,6 +1480,15 @@
           <property role="TrG5h" value="setHandler" />
           <node concept="19Rifw" id="4uDgjJw9sGI" role="2C2TGm" />
           <node concept="3XIRFW" id="4uDgjJw9sGJ" role="3XIRFX">
+            <node concept="1QiMYF" id="6mQwRN1sOdr" role="3XIRFZ">
+              <node concept="OjmMv" id="6mQwRN1sOdt" role="3SJzmv">
+                <node concept="19SGf9" id="6mQwRN1sOdu" role="OjmMu">
+                  <node concept="19SUe$" id="6mQwRN1sOdv" role="19SJt6">
+                    <property role="19SUeA" value="tutti gli array del tipo  { &quot;2006&quot; } devono diventare compound literal → (const char *[]){&quot;2006&quot;} " />
+                  </node>
+                </node>
+              </node>
+            </node>
             <node concept="3XIRlf" id="4uDgjJw9sUS" role="3XIRFZ">
               <property role="TrG5h" value="result" />
               <node concept="26Vqph" id="4uDgjJw9sUQ" role="2C2TGm" />
@@ -2148,7 +2236,7 @@
     </node>
     <node concept="1lj4MQ" id="BS7tIoLljT" role="2QtU1L">
       <property role="2F6P9D" value="msg" />
-      <property role="TrG5h" value="set_covariates" />
+      <property role="TrG5h" value="set_covariates_handler" />
       <node concept="37lXYU" id="BS7tIoLljV" role="2F2NYG">
         <property role="TrG5h" value="msg" />
         <node concept="1lgcPH" id="BS7tIoLljW" role="GupN0">
@@ -2162,7 +2250,7 @@
         </node>
       </node>
       <node concept="isgvk" id="BS7tIoLlk3" role="37ngyo">
-        <property role="TrG5h" value="set_covariatesHandler" />
+        <property role="TrG5h" value="set_covariates_handlerHandler" />
         <node concept="19Rifw" id="BS7tIoLlk4" role="2C2TGm" />
         <node concept="3XIRFW" id="BS7tIoLlk5" role="3XIRFX">
           <node concept="3XISUE" id="BS7tIoTRNo" role="3XIRFZ" />
@@ -2187,7 +2275,7 @@
         </node>
       </node>
       <node concept="isgvk" id="BS7tIoLlk6" role="1liy4j">
-        <property role="TrG5h" value="set_covariatesInit" />
+        <property role="TrG5h" value="set_covariates_handlerInit" />
         <node concept="19Rifw" id="BS7tIoLlk7" role="2C2TGm" />
         <node concept="3XIRFW" id="BS7tIoLlk8" role="3XIRFX" />
         <node concept="19RgSI" id="BS7tIoLll6" role="1UOdpc">
@@ -2209,7 +2297,7 @@
         </node>
       </node>
       <node concept="isgvk" id="BS7tIoLlk9" role="1liy4i">
-        <property role="TrG5h" value="set_covariatesCleanup" />
+        <property role="TrG5h" value="set_covariates_handlerCleanup" />
         <node concept="19Rifw" id="BS7tIoLlka" role="2C2TGm" />
         <node concept="3XIRFW" id="BS7tIoLlkb" role="3XIRFX" />
         <node concept="19RgSI" id="BS7tIoLlld" role="1UOdpc">
@@ -2475,7 +2563,7 @@
     </node>
     <node concept="1lj4MQ" id="BS7tIp1Ysb" role="2QtU1L">
       <property role="2F6P9D" value="msg" />
-      <property role="TrG5h" value="impute_missing_multiple" />
+      <property role="TrG5h" value="impute_missing_multiple_handler" />
       <node concept="37lXYU" id="BS7tIp1Ysd" role="2F2NYG">
         <property role="TrG5h" value="msg" />
         <node concept="1lgcPH" id="BS7tIp1Yse" role="GupN0">
@@ -2489,7 +2577,7 @@
         </node>
       </node>
       <node concept="isgvk" id="BS7tIp1Ysl" role="37ngyo">
-        <property role="TrG5h" value="impute_missing_multipleHandler" />
+        <property role="TrG5h" value="impute_missing_multiple_handlerHandler" />
         <node concept="19Rifw" id="BS7tIp1Ysm" role="2C2TGm" />
         <node concept="3XIRFW" id="BS7tIp1Ysn" role="3XIRFX">
           <node concept="3XISUE" id="BS7tIp2U6W" role="3XIRFZ" />
@@ -2515,7 +2603,7 @@
         </node>
       </node>
       <node concept="isgvk" id="BS7tIp1Yso" role="1liy4j">
-        <property role="TrG5h" value="impute_missing_multipleInit" />
+        <property role="TrG5h" value="impute_missing_multiple_handlerInit" />
         <node concept="19Rifw" id="BS7tIp1Ysp" role="2C2TGm" />
         <node concept="3XIRFW" id="BS7tIp1Ysq" role="3XIRFX" />
         <node concept="19RgSI" id="BS7tIp1Yto" role="1UOdpc">
@@ -2537,7 +2625,7 @@
         </node>
       </node>
       <node concept="isgvk" id="BS7tIp1Ysr" role="1liy4i">
-        <property role="TrG5h" value="impute_missing_multipleCleanup" />
+        <property role="TrG5h" value="impute_missing_multiple_handlerCleanup" />
         <node concept="19Rifw" id="BS7tIp1Yss" role="2C2TGm" />
         <node concept="3XIRFW" id="BS7tIp1Yst" role="3XIRFX" />
         <node concept="19RgSI" id="BS7tIp1Ytv" role="1UOdpc">
@@ -2797,7 +2885,7 @@
     </node>
     <node concept="1lj4MQ" id="BS7tIp4WJI" role="2QtU1L">
       <property role="2F6P9D" value="msg" />
-      <property role="TrG5h" value="check_parallel_trends_staggered" />
+      <property role="TrG5h" value="check_parallel_trends_staggered_handler" />
       <node concept="37lXYU" id="BS7tIp4WJK" role="2F2NYG">
         <property role="TrG5h" value="msg" />
         <node concept="1lgcPH" id="BS7tIp4WJL" role="GupN0">
@@ -2811,7 +2899,7 @@
         </node>
       </node>
       <node concept="isgvk" id="BS7tIp4WJS" role="37ngyo">
-        <property role="TrG5h" value="check_parallel_trends_staggeredHandler" />
+        <property role="TrG5h" value="check_parallel_trends_staggered_handlerHandler" />
         <node concept="19Rifw" id="BS7tIp4WJT" role="2C2TGm" />
         <node concept="3XIRFW" id="BS7tIp4WJU" role="3XIRFX">
           <node concept="3XISUE" id="6SkjaWOCeUc" role="3XIRFZ" />
@@ -2837,7 +2925,7 @@
         </node>
       </node>
       <node concept="isgvk" id="BS7tIp4WJV" role="1liy4j">
-        <property role="TrG5h" value="check_parallel_trends_staggeredInit" />
+        <property role="TrG5h" value="check_parallel_trends_staggered_handlerInit" />
         <node concept="19Rifw" id="BS7tIp4WJW" role="2C2TGm" />
         <node concept="3XIRFW" id="BS7tIp4WJX" role="3XIRFX" />
         <node concept="19RgSI" id="BS7tIp4WKV" role="1UOdpc">
@@ -2859,7 +2947,7 @@
         </node>
       </node>
       <node concept="isgvk" id="BS7tIp4WJY" role="1liy4i">
-        <property role="TrG5h" value="check_parallel_trends_staggeredCleanup" />
+        <property role="TrG5h" value="check_parallel_trends_staggered_handlerCleanup" />
         <node concept="19Rifw" id="BS7tIp4WJZ" role="2C2TGm" />
         <node concept="3XIRFW" id="BS7tIp4WK0" role="3XIRFX" />
         <node concept="19RgSI" id="BS7tIp4WL2" role="1UOdpc">
@@ -8441,9 +8529,9 @@
     </node>
     <node concept="1lj4MQ" id="5rqBun23qh$" role="2QtU1L">
       <property role="2F6P9D" value="msg" />
-      <property role="TrG5h" value="print_att_results" />
+      <property role="TrG5h" value="print_att_results_handler" />
       <node concept="isgvk" id="5rqBun23qhA" role="37ngyo">
-        <property role="TrG5h" value="print_att_resultsHandler" />
+        <property role="TrG5h" value="print_att_results_handlerHandler" />
         <node concept="19Rifw" id="5rqBun23qhB" role="2C2TGm" />
         <node concept="3XIRFW" id="5rqBun23qhC" role="3XIRFX" />
         <node concept="19RgSI" id="5rqBun23qil" role="1UOdpc">
@@ -8472,7 +8560,7 @@
         </node>
       </node>
       <node concept="isgvk" id="5rqBun23qhD" role="1liy4j">
-        <property role="TrG5h" value="print_att_resultsInit" />
+        <property role="TrG5h" value="print_att_results_handlerInit" />
         <node concept="19Rifw" id="5rqBun23qhE" role="2C2TGm" />
         <node concept="3XIRFW" id="5rqBun23qhF" role="3XIRFX" />
         <node concept="19RgSI" id="5rqBun23qiv" role="1UOdpc">
@@ -8501,7 +8589,7 @@
         </node>
       </node>
       <node concept="isgvk" id="5rqBun23qhG" role="1liy4i">
-        <property role="TrG5h" value="print_att_resultsCleanup" />
+        <property role="TrG5h" value="print_att_results_handlerCleanup" />
         <node concept="19Rifw" id="5rqBun23qhH" role="2C2TGm" />
         <node concept="3XIRFW" id="5rqBun23qhI" role="3XIRFX" />
         <node concept="19RgSI" id="5rqBun23qiD" role="1UOdpc">
@@ -8797,6 +8885,7 @@
         <property role="TrG5h" value="topology" />
       </node>
     </node>
+    <node concept="IQpmJ" id="6mQwRN1nAVc" role="1fvW3h" />
     <node concept="IQpmJ" id="4uDgjJw9u5h" role="1fvW3h" />
     <node concept="1aDQos" id="5rqBun26FAy" role="1fvW3h">
       <property role="3mNxdG" value="true" />
