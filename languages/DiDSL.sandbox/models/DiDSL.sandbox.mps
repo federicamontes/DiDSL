@@ -114,10 +114,6 @@
       <node concept="lVFo7" id="3dc8XofjA8K" role="lEWhX" />
     </node>
     <node concept="F32tf" id="3dc8XofjA8L" role="2jvRc8" />
-    <node concept="2jvRc2" id="3dc8Xofu$j7" role="2jvRc8">
-      <property role="2jvRc3" value="dataset.csv" />
-      <property role="TrG5h" value="table2" />
-    </node>
     <node concept="F32tf" id="3dc8XofkM8e" role="2jvRc8" />
     <node concept="2joqvM" id="4uDgjJwg454" role="2jvRc8">
       <property role="2joy1V" value="3PK$cUI4F2K/group" />
