@@ -2,7 +2,7 @@
 <debug-info version="2">
   <root>
     <file name="Generator.java">
-      <unit at="17,0,51,0" name="DiDSL.generator.Generator" />
+      <unit at="17,0,52,0" name="DiDSL.generator.Generator" />
     </file>
   </root>
 </debug-info>

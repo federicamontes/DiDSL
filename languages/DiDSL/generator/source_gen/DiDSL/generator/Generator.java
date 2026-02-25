@@ -34,7 +34,7 @@ public class Generator extends TemplateModuleInterpreted2 {
 
   @Override
   public Collection<SLanguage> getTargetLanguages() {
-    SLanguage[] rv = new SLanguage[9];
+    SLanguage[] rv = new SLanguage[10];
     rv[0] = MetaAdapterFactory.getLanguage(0x10eda99958984cdeL, 0x9416196c5eca1268L, "ActorLanguage");
     rv[1] = MetaAdapterFactory.getLanguage(0xd4280a54f6df4383L, 0xaa41d1b2bffa7eb1L, "com.mbeddr.core.base");
     rv[2] = MetaAdapterFactory.getLanguage(0x61c69711ed614850L, 0x81d97714ff227fb0L, "com.mbeddr.core.expressions");
@@ -44,6 +44,7 @@ public class Generator extends TemplateModuleInterpreted2 {
     rv[6] = MetaAdapterFactory.getLanguage(0xefda956e491e4f00L, 0xba1436af2f213ecfL, "com.mbeddr.core.udt");
     rv[7] = MetaAdapterFactory.getLanguage(0x8ca79d43eb454791L, 0xbdd40d6130ff895bL, "de.itemis.mps.editor.diagram.layout");
     rv[8] = MetaAdapterFactory.getLanguage(0x92d2ea165a424fdfL, 0xa676c7604efe3504L, "de.slisson.mps.richtext");
+    rv[9] = MetaAdapterFactory.getLanguage(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, "jetbrains.mps.lang.core");
     return Arrays.asList(rv);
   }
 

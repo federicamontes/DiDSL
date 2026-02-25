@@ -20,6 +20,8 @@
       <concept id="718356969561165081" name="DiDSL.structure.PrePeriod" flags="ng" index="2hpD32">
         <child id="718356969561165082" name="values" index="2hpD31" />
       </concept>
+      <concept id="1607826655214186665" name="DiDSL.structure.Include" flags="ng" index="i8xlU" />
+      <concept id="1607826655213967959" name="DiDSL.structure.Exclude" flags="ng" index="ifJY4" />
       <concept id="4427197651063224124" name="DiDSL.structure.Set" flags="ng" index="2joqvM">
         <property id="4427197651063320757" name="columnType" index="2joy1V" />
         <reference id="4427197651063224125" name="dataset" index="2joqvN" />
@@ -45,6 +47,7 @@
       </concept>
       <concept id="4857517630234362583" name="DiDSL.structure.Using" flags="ng" index="Fe5Lr">
         <property id="4857517630234362584" name="clusteringMethod" index="Fe5Lk" />
+        <child id="4857517630234362700" name="columns" index="Fe5R0" />
       </concept>
       <concept id="4857517630234362698" name="DiDSL.structure.ColumnReference" flags="ng" index="Fe5R6">
         <reference id="4857517630234362699" name="column" index="Fe5R7" />
@@ -71,7 +74,9 @@
       </concept>
       <concept id="3649310276384080661" name="DiDSL.structure.RunAttEstimations" flags="ng" index="2TEFt9">
         <child id="1607826655212414776" name="using" index="i1KbF" />
+        <child id="1607826655214186672" name="include" index="i8xlz" />
         <child id="1607826655202980049" name="with" index="l_Lk2" />
+        <child id="3696368796443566546" name="exclude" index="X_O84" />
       </concept>
       <concept id="3696368796448944207" name="DiDSL.structure.Column" flags="ng" index="Wolep" />
       <concept id="8650958172469052051" name="DiDSL.structure.BasedOn" flags="ng" index="3WMq8c">
@@ -191,21 +196,39 @@
       </node>
       <node concept="Fe5Lr" id="6qlb_7nI5o6" role="Fe5Lo">
         <property role="Fe5Lk" value="3a$X5MaRx1w/clustered_id" />
+        <node concept="Fe5R6" id="5ShL34EeGHm" role="Fe5R0">
+          <ref role="Fe5R7" node="3dc8XofjA8F" resolve="countyreal" />
+        </node>
+        <node concept="Fe5R6" id="5ShL34EeGHn" role="Fe5R0">
+          <ref role="Fe5R7" node="3dc8XofjA8G" resolve="lpop" />
+        </node>
       </node>
     </node>
     <node concept="F32tf" id="6SkjaWOJq0k" role="2jvRc8" />
-    <node concept="F32tf" id="3dc8Xofmj8B" role="2jvRc8" />
-    <node concept="2TEFt9" id="4WNYNtm2Whd" role="2jvRc8">
+    <node concept="F32tf" id="5ShL34EARft" role="2jvRc8" />
+    <node concept="2TEFt9" id="5ShL34EGFFN" role="2jvRc8">
       <ref role="FaD9e" node="3dc8XofjA8H" resolve="lemp" />
       <ref role="FdCcH" node="3dc8XofjA8D" resolve="table" />
-      <node concept="lVFo7" id="4WNYNtm2Whf" role="l_Lk2">
+      <node concept="Fe5Lr" id="5ShL34EGFFP" role="i1KbF">
+        <property role="Fe5Lk" value="3a$X5MaRx1w/clustered_id" />
+        <node concept="Fe5R6" id="5ShL34EJ_tZ" role="Fe5R0">
+          <ref role="Fe5R7" node="3dc8XofjA8F" resolve="countyreal" />
+        </node>
+        <node concept="Fe5R6" id="5ShL34ESDUs" role="Fe5R0">
+          <ref role="Fe5R7" node="3dc8XofjA8I" resolve="first.treat" />
+        </node>
+        <node concept="Fe5R6" id="5ShL34ESDUu" role="Fe5R0">
+          <ref role="Fe5R7" node="3dc8XofjA8H" resolve="lemp" />
+        </node>
+      </node>
+      <node concept="lVFo7" id="5ShL34EGFFR" role="l_Lk2">
         <property role="lxQiH" value="0.05" />
         <property role="lGAoz" value="0.05" />
       </node>
-      <node concept="Fe5Lr" id="4WNYNtm2WhJ" role="i1KbF">
-        <property role="Fe5Lk" value="3a$X5MaRx1w/clustered_id" />
-      </node>
+      <node concept="ifJY4" id="5ShL34EGFFS" role="X_O84" />
+      <node concept="i8xlU" id="5ShL34EGFFU" role="i8xlz" />
     </node>
+    <node concept="F32tf" id="5ShL34EmZ$F" role="2jvRc8" />
   </node>
 </model>
 
